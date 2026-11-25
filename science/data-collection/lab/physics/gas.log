@@ -1,0 +1,9 @@
+Ttarget=50 Tmeas=50.0 P_meas=18303.13 P_ideal=15000.00 ratio=1.220
+Ttarget=100 Tmeas=100.0 P_meas=36538.81 P_ideal=30000.00 ratio=1.218
+Ttarget=200 Tmeas=200.0 P_meas=71965.38 P_ideal=60000.00 ratio=1.199
+Ttarget=400 Tmeas=400.0 P_meas=143861.98 P_ideal=120000.00 ratio=1.199
+Ttarget=800 Tmeas=800.0 P_meas=283318.71 P_ideal=240000.00 ratio=1.180
+P vs T slope=353.29 intercept=1276.28 theory NkB/A=300.00
+equipartition: <1/2 m vx^2>=149.0301 kT/2=150.0000 ratio=0.994
+free expansion: <disp>=0.489 m, T=1082.3, vx/vy ratio=3.28 (ordered, not thermalized)
+DONE gas
