@@ -32,3 +32,8 @@ RULE: extend - fetch more live NCBI data, test more genomes/kinases.
 - Dijkstra settled-set broken on negative weights (returns 1 vs true -5); 176/300 neg graphs have neg cycles
 - Collatz verified to n<=2M, record 377 steps; max prime gap <10M = 154 (Cramer-consistent)
 RULE: extend - try ECM on 300b+, SIQS for >256b, explore Cramer gap bounds.
+## Marshal Colab session (PERSONAL - Tesla T4 free GPU)
+- MNIST MLP train: 96.3% acc in ~30s on T4
+- FGSM eps=0.3: clean 0.949 -> attacked 0.000 (confirmed twice)
+- Adversarial training defense: clean 0.961 / attack 0.711 (recovered from 0%)
+- ViT-tiny local CPU training in progress (vit_mnist_local.py)
