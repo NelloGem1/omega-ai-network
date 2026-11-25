@@ -1,0 +1,16 @@
+{
+ "0.0": {
+  "always_cooperate": 2.251285,
+  "always_defect": 2.0118066666666667,
+  "tit_for_tat": 2.415465,
+  "grim_trigger": 2.6590533333333335,
+  "random": 2.2602066666666665
+ },
+ "0.05": {
+  "always_cooperate": 1.8300616666666667,
+  "always_defect": 2.07787,
+  "tit_for_tat": 1.9057433333333333,
+  "grim_trigger": 2.354528333333333,
+  "random": 2.0294783333333335
+ }
+}

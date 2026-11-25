@@ -1,0 +1,165 @@
+{
+ "ER": {
+  "n": 997,
+  "m": 3022,
+  "avg_deg": 6.062186559679037,
+  "max_deg": 19,
+  "clustering": 0.005824968435167453,
+  "asp": 4.0384768764123695,
+  "diameter": 9
+ },
+ "WS": {
+  "n": 1000,
+  "m": 3000,
+  "avg_deg": 6.0,
+  "max_deg": 9,
+  "clustering": 0.4494015873015873,
+  "asp": 6.07835035035035,
+  "diameter": 11
+ },
+ "BA": {
+  "n": 1000,
+  "m": 2991,
+  "avg_deg": 5.982,
+  "max_deg": 91,
+  "clustering": 0.030008688787052862,
+  "asp": 3.536038038038038,
+  "diameter": 6,
+  "pl_exponent": 1.3033845555270214
+ },
+ "six_ba": [
+  [
+   100,
+   2.57,
+   0.56
+  ],
+  [
+   300,
+   3.05,
+   0.54
+  ],
+  [
+   1000,
+   3.48,
+   0.5
+  ],
+  [
+   3000,
+   3.87,
+   0.48
+  ]
+ ],
+ "six_er": [
+  [
+   100,
+   2.78,
+   0.6
+  ],
+  [
+   300,
+   3.33,
+   0.58
+  ],
+  [
+   1000,
+   4.07,
+   0.59
+  ],
+  [
+   3000,
+   4.67,
+   0.58
+  ]
+ ],
+ "attack": {
+  "targeted": [
+   [
+    416,
+    0.873
+   ]
+  ],
+  "random": [
+   [
+    416,
+    0.917
+   ]
+  ]
+ },
+ "deffuant": {
+  "0.1": {
+   "clusters_gap": 2,
+   "nonempty_bins": 36,
+   "xrange": [
+    0.0,
+    1.0
+   ]
+  },
+  "0.2": {
+   "clusters_gap": 2,
+   "nonempty_bins": 10,
+   "xrange": [
+    0.01,
+    1.0
+   ]
+  },
+  "0.3": {
+   "clusters_gap": 3,
+   "nonempty_bins": 7,
+   "xrange": [
+    0.02,
+    0.99
+   ]
+  },
+  "0.4": {
+   "clusters_gap": 3,
+   "nonempty_bins": 3,
+   "xrange": [
+    0.07,
+    0.96
+   ]
+  },
+  "0.5": {
+   "clusters_gap": 1,
+   "nonempty_bins": 1,
+   "xrange": [
+    0.5,
+    0.5
+   ]
+  },
+  "stubborn": {
+   "clusters_with_stub": 2,
+   "clusters_baseline": 1,
+   "mean_abs_dev_stub": 0.49999998423061015,
+   "mean_abs_dev_base": 0.01889938456204983
+  }
+ },
+ "signaling": {
+  "cheap_talk_NE": [
+   [
+    "G",
+    "G",
+    "I",
+    "I"
+   ],
+   [
+    "G",
+    "G",
+    "I",
+    "N"
+   ],
+   [
+    "B",
+    "B",
+    "I",
+    "I"
+   ],
+   [
+    "B",
+    "B",
+    "N",
+    "I"
+   ]
+  ],
+  "note": "babbling: both types send same msg; receiver learns nothing, invests iff EV>=0"
+ }
+}
