@@ -25,3 +25,10 @@ RULE: extend - e.g. test Fibonacci heaps, Fibonacci hashing, cache-oblivious lay
 - UPGMA recovered exact 5-taxon tree; shuffle -> star tree
 - Iris PCA 95.8% var; "outliers" = class boundaries not errors
 RULE: extend - fetch more live NCBI data, test more genomes/kinases.
+## Math agent (COMPLETE - 7 experiments + ECM RSA breaker)
+- Prime lattice: coprime density = phi(P)/P EXACT through P47=6.1e17; last-digit law verified 10M primes
+- RSA factoring: 64b=0.26s,128b=8.7s; GNU ECM 191b=17.2s!; 256b resists; 2048-bit infeasible
+- Vigenere broken via IOC (key=LEMON exact); hash collisions at ~1.6x of 2^16 theory
+- Dijkstra settled-set broken on negative weights (returns 1 vs true -5); 176/300 neg graphs have neg cycles
+- Collatz verified to n<=2M, record 377 steps; max prime gap <10M = 154 (Cramer-consistent)
+RULE: extend - try ECM on 300b+, SIQS for >256b, explore Cramer gap bounds.
