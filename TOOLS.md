@@ -58,6 +58,13 @@
 | Flask subscription app | http://localhost:5000 (`/home/neilh/websec_lab/app/`) | has # VULN: targets |
 | PortSwigger Academy | portswigger.net/web-security | free online labs |
 
+## 🎨 DESIGN SYSTEM (MANDATORY for all HTML/UI work)
+- **Read `/home/neilh/DESIGN.md` FIRST** — the Prime Formula v1.0 spec
+- Canonical command center: `00 - PRIME INDEX.html` (variant B = art alternate)
+- Palette: bg #0d1117 · panel #161b22 · gold #f0b429 · blue #58a6ff · green #3fb950 · red #f85149
+- Every page: ⬡ PRIME nav + 1·3·7·9 motif + back-to-index footer
+- Learning library: `C:\Users\neilh\Downloads\Learning\` (38 numbered docs)
+
 ## 🔐 SECRETS (local only — NEVER commit)
 - `C:\Users\neilh\RSA-Keys\folder_lock_priv.pem` — vault master key
 - `~/youtube-tool/token*.json`, `client_secret*.json` — YouTube API
