@@ -1,0 +1,25 @@
+grid 50x50 bfs: t=0.0011s visited=2500
+grid 50x50 dfs: t=0.0136s visited=2500
+grid 100x100 bfs: t=0.0245s visited=10000
+grid 100x100 dfs: t=0.0251s visited=10000
+grid 200x200 bfs: t=0.0354s visited=40000
+grid 200x200 dfs: t=0.0617s visited=40000
+rand n=1000 bfs: t=0.0013s visited=995
+rand n=1000 dfs: t=0.0005s visited=995
+rand n=5000 bfs: t=0.0168s visited=5000
+rand n=5000 dfs: t=0.0283s visited=5000
+rand n=20000 bfs: t=0.2895s visited=20000
+rand n=20000 dfs: t=0.3356s visited=20000
+dijkstra rand n=500: t=0.0016s dist_last=81
+dijkstra rand n=2000: t=0.0536s dist_last=52
+dijkstra rand n=5000: t=0.1054s dist_last=44
+dijkstra grid100: t=0.0849s dist=1046
+kahn DAG n=100: t=0.00015s order=100
+kahn cyclic n=100: t=0.00008s sorted=62/100 -> cycle
+kahn DAG n=500: t=0.00068s order=500
+kahn cyclic n=500: t=0.00868s sorted=357/500 -> cycle
+kahn DAG n=1000: t=0.00886s order=1000
+kahn cyclic n=1000: t=0.00053s sorted=426/1000 -> cycle
+Dijkstra negative-edge demo: got dist[1]=-2, true shortest=-2 -> ok
+Bellman-Ford same graph: dist[1]=-2 (correct)
+wrote exp5_graph.csv

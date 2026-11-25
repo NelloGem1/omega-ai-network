@@ -10,3 +10,10 @@
 - RF 96.7% > LogReg 96.2% > MLP 95.8%; RF 140x slower inference
 - Digit 8 = confusion hub (->1,7,3)
 RULES FOR ALL AGENTS: read this file + sibling REPORT.md files first; cite prior results; never repeat a proven experiment - EXTEND it.
+## CS agent (COMPLETE - 7 experiments)
+- Timsort ~500x faster on presorted input (run detection); quicksort first-pivot superlinear worst case confirmed
+- BST sorted-insert -> height=n (51s @20k) vs AVL height=19 (0.15s)
+- Adversarial hash keys collapse linear probing to n/2 probes; Python dict immune (perturb-shift)
+- Dijkstra WITH settled-set BROKEN on negative edges (dist=2 vs true -4); Bellman-Ford correct; version w/o settled-set stays correct
+- KMP 40k comparisons vs naive 1M; Big-O exponents match theory (max=1.006, nested=2.051)
+RULE: extend - e.g. test Fibonacci heaps, Fibonacci hashing, cache-oblivious layouts.
