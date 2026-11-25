@@ -1,169 +1,207 @@
 #!/usr/bin/env python3
-"""Exp2: RSA toy -> break via sympy factorint/ecm; timing vs bit-length.
-Also Caesar + Vigenere breaks."""
-import json, math, random, time, string
+"""Exp2: RSA toy -> break.
+- Keygen+encrypt at 64..256 bits.
+- Break via sympy factorint (Pollard rho, gmpy2-accelerated) with hard timeout.
+- Break via GNU GMP-ECM binary with escalating B1.
+- Extrapolate to 2048-bit infeasibility.
+- Caesar + Vigenere breaks."""
+import json, math, random, time, subprocess, os, signal
+import gmpy2
+from gmpy2 import mpz
 from sympy import randprime, factorint
-try:
-    from sympy.ntheory import ecm
-    HAVE_ECM = True
-except Exception:
-    HAVE_ECM = False
 
 OUT = "/home/neilh/science_lab/math/exp2_data.json"
 random.seed(42)
+
+class Timeout(Exception): pass
+def handler(signum, frame): raise Timeout()
+signal.signal(signal.SIGALRM, handler)
 
 def rsa_keygen(bits, e=65537):
     pbits = bits // 2
     qbits = bits - pbits
     while True:
-        p = randprime(2**(pbits-1), 2**pbits)
-        q = randprime(2**(qbits-1), 2**qbits)
+        p = int(randprime(2**(pbits-1), 2**pbits))
+        q = int(randprime(2**(qbits-1), 2**qbits))
         if p != q:
-            n = p * q
+            n = p*q
             phi = (p-1)*(q-1)
             if math.gcd(e, phi) == 1:
-                d = pow(e, -1, phi)
-                return p, q, n, e, d
+                return p, q, n, e, pow(e, -1, phi)
 
 def rsa_encrypt(m, n, e):
     return pow(m, e, n)
 
-def time_factor(n, limit=None):
+def timed_factorint(n, seconds):
+    signal.alarm(int(seconds))
     t0 = time.time()
-    f = factorint(n, limit=limit)
-    return f, time.time() - t0
+    try:
+        f = factorint(n)
+        dt = time.time()-t0
+        return {"result": {str(k): v for k, v in f.items()}, "time": dt,
+                "complete": __import__("functools").reduce(lambda a,kv: a*kv[0]**kv[1], f.items(), 1) == n}
+    except Timeout:
+        return {"result": None, "time": seconds, "complete": False, "timeout": True}
+    except Exception as ex:
+        return {"result": None, "time": time.time()-t0, "error": str(ex)}
+    finally:
+        signal.alarm(0)
 
-def time_ecm(n, B1=2000, curves=50):
+def timed_ecm_binary(n, b1_list, max_total=300):
+    """Run GNU ecm binary, escalating B1. Returns time to first factor."""
     t0 = time.time()
-    facs = set()
-    n_ = n
-    for c in range(curves):
+    for b1 in b1_list:
+        if time.time()-t0 > max_total: break
         try:
-            g = ecm.find_factor(n_, B1=B1, B2=B1*100, curve=None)
-        except Exception:
-            g = None
-        if g and 1 < g < n_:
-            facs.add(int(g)); facs.add(int(n_//g)); break
-    return facs, time.time() - t0
+            r = subprocess.run(["ecm", "-c", "100", str(b1)],
+                               input=str(n)+"\n", capture_output=True, text=True,
+                               timeout=max_total - (time.time()-t0) + 5)
+            # parse "Factor found in step ... : <digits> digits" or the factor line
+            for line in r.stdout.splitlines():
+                # ecm prints factors like "... : 123456789... " hard to parse;
+                # use sympy to recover: collect candidate factors printed
+                pass
+            # simpler: run ecm with -q and check stdout for lines containing the factor
+            # Instead use python wrapper: parse all integers on lines after "Factor found"
+            facs = []
+            for line in r.stdout.splitlines():
+                if "Factor found" in line or ":" in line:
+                    for tok in line.replace(":", " ").split():
+                        try:
+                            v = int(tok)
+                            if v > 1 and n % v == 0:
+                                facs.append(v)
+                        except ValueError:
+                            pass
+            if facs:
+                f = facs[0]
+                return {"b1": b1, "time": time.time()-t0, "factor": f,
+                        "cofactor_bits": (n//f).bit_length()}
+        except subprocess.TimeoutExpired:
+            break
+    return {"time": time.time()-t0, "factor": None}
 
-# ---------- RSA experiments ----------
 rsa_rows = []
-for bits in [64, 96, 128, 160, 192]:
+keys = {}
+# small sizes: factorint with timeout
+for bits in [64, 96, 128]:
     p, q, n, e, d = rsa_keygen(bits)
     m = random.randrange(2, n)
     c = rsa_encrypt(m, n, e)
     assert pow(c, d, n) == m
-    # factor via factorint (Pollard rho) with a limit so we don't hang forever
-    lim = 10**7 if bits <= 128 else 10**6
-    f, dt = time_factor(n, limit=lim)
-    fac_total = sum(f.values())
-    factored_fully = (fac_total == 2 and all(v == 1 for v in f.values()))
-    row = {"bits": bits, "n": str(n), "p_bits": p.bit_length(), "q_bits": q.bit_length(),
-           "factorint_time": dt, "factorint": {str(k): v for k, v in f.items()},
-           "fully_factored": factored_fully}
-    rsa_rows.append(row)
-    print(f"RSA {bits}-bit: factorint={dt:.2f}s fully={factored_fully} factors={list(f)[:3]}", flush=True)
+    keys[bits] = (p, q, n, e, d)
+    r = timed_factorint(n, 90)
+    rsa_rows.append({"bits": bits, "n": str(n), "p_bits": p.bit_length(),
+                     "factorint": r})
+    print(f"RSA {bits}: factorint {r['time']:.2f}s complete={r.get('complete')}", flush=True)
 
-# ECM attempt on a fresh 192-bit and (if fast enough) 256-bit modulus
-for bits in [192, 256]:
+# larger sizes: GNU ecm binary
+for bits in [160, 192, 256]:
     p, q, n, e, d = rsa_keygen(bits)
     m = random.randrange(2, n)
     c = rsa_encrypt(m, n, e)
-    facs, dt = time_ecm(n, B1=2000, curves=200)
-    print(f"RSA {bits}-bit ECM: {dt:.2f}s found={sorted(facs)}", flush=True)
-    rsa_rows.append({"bits": bits, "ecm_time": dt, "ecm_found": sorted(facs),
-                     "ecm_success": len(facs) == 2})
+    assert pow(c, d, n) == m
+    keys[bits] = (p, q, n, e, d)
+    r = timed_ecm_binary(n, [2000, 11000, 50000], max_total=240)
+    rsa_rows.append({"bits": bits, "n": str(n), "ecm": r,
+                     "p_bits": p.bit_length()})
+    print(f"RSA {bits}: ecm {r['time']:.1f}s factor={r.get('factor')}", flush=True)
 
-# ---------- Caesar cipher ----------
+# save private keys for verification record
+keydump = {str(b): {"p": str(keys[b][0]), "q": str(keys[b][1]),
+                    "n": str(keys[b][2]), "d": str(keys[b][3])} for b in keys}
+
+# ---------- Caesar ----------
 def caesar_enc(text, k):
     out = []
     for ch in text:
         if ch.isalpha():
             a = 'A' if ch.isupper() else 'a'
-            out.append(chr((ord(ch) - ord(a) + k) % 26 + ord(a)))
+            out.append(chr((ord(ch)-ord(a)+k) % 26 + ord(a)))
         else:
             out.append(ch)
     return ''.join(out)
 
 def caesar_break(ct):
-    scores = []
+    best = None
     for k in range(26):
         pt = caesar_enc(ct, -k)
-        # chi-squared-ish: count common letters
-        common = sum(pt.lower().count(w) for w in ['the','and','ing','ion','ent','her','tha'])
-        scores.append((common, k, pt))
-    scores.sort(reverse=True)
-    return scores[0]
+        score = sum(pt.lower().count(w) for w in ['the','and','ing','ion','ent','her','tha','for'])
+        if best is None or score > best[0]:
+            best = (score, k, pt)
+    return best
 
 msg = "THEQUICKBROWNFOXJUMPSOVERTHELAZYDOGANDRUNSTHROUGHTHEFOREST"
+caesar_rows = []
 for k in [3, 7, 13]:
     ct = caesar_enc(msg, k)
-    best = caesar_break(ct)
-    print(f"Caesar k={k}: broke key={best[1]} correct={best[1]==k}", flush=True)
+    sc, bk, pt = caesar_break(ct)
+    caesar_rows.append({"key": k, "broken_key": bk, "score": sc})
+    print(f"Caesar k={k}: broke={bk} correct={bk==k}", flush=True)
 
 # ---------- Vigenere ----------
 def vig_enc(text, key):
-    out = []
-    ki = 0
+    out = []; ki = 0
     for ch in text:
         if ch.isalpha():
             a = 'A' if ch.isupper() else 'a'
-            out.append(chr((ord(ch) - ord(a) + ord(key[ki] % 32) % 26) % 26 + ord(a)))
+            out.append(chr((ord(ch)-ord(a)+(ord(key[ki % len(key)])-65)) % 26 + ord(a)))
             ki += 1
         else:
             out.append(ch)
     return ''.join(out)
 
-def vig_break(ct, keylen=None):
-    # try key lengths 1..12, pick best by IOC-ish score per column via chi-squared
-    ct_clean = [c for c in ct if c.isalpha()]
-    def score_keylen(L):
-        total = 0
-        for i in range(L):
-            col = ct_clean[i::L]
-            best = 0
-            for k in range(26):
-                dec = ''.join(chr((ord(c) - 65 - k) % 26 + 65) for c in col)
-                # count 'etaoinshrdlu'
-                s = sum(dec.count(ch) for ch in 'ETAOINSHRDLU')
-                best = max(best, s)
-            total += best
-        return total / max(1, len(ct_clean))
-    if keylen is None:
-        scores = [(score_keylen(L), L) for L in range(1, 13)]
-        keylen = max(scores)[1]
+FREQ = {'A':.08167,'B':.01492,'C':.02782,'D':.04253,'E':.12702,'F':.02228,'G':.02015,
+'H':.06094,'I':.06966,'J':.00153,'K':.00772,'L':.04025,'M':.02406,'N':.06749,
+'O':.07507,'P':.01929,'Q':.00095,'R':.05987,'S':.06327,'T':.09056,'U':.02758,
+'V':.00978,'W':.02360,'X':.00150,'Y':.01974,'Z':.00074}
+LOGF = {c: math.log(v) for c, v in FREQ.items()}
+
+def _ioc(s):
+    from collections import Counter
+    n = len(s); c = Counter(s)
+    return sum(v*(v-1) for v in c.values())/(n*(n-1)) if n > 1 else 0.0
+
+def col_logp(col, k):
+    return sum(LOGF.get(chr((ord(c)-65-k) % 26 + 65), -20) for c in col)
+
+def vig_break(ct, maxlen=15):
+    """IOC picks key length; per-column English log-likelihood recovers key."""
+    clean = [c for c in ct if c.isalpha()]
+    iocs = [(sum(_ioc(''.join(clean[i::L])) for i in range(L))/L, L)
+            for L in range(1, maxlen+1)]
+    keylen = max(iocs)[1]
     key = []
     for i in range(keylen):
-        col = ct_clean[i::keylen]
-        bestk, bests = 0, -1
-        for k in range(26):
-            dec = ''.join(chr((ord(c) - 65 - k) % 26 + 65) for c in col)
-            s = sum(dec.count(ch) for ch in 'ETAOINSHRDLU')
-            if s > bests: bests, bestk = s, k
-        key.append(bestk)
-    return ''.join(chr(k + 65) for k in key)
+        col = ''.join(clean[i::keylen])
+        key.append(max(range(26), key=lambda k: col_logp(col, k)))
+    return ''.join(chr(k+65) for k in key), keylen, sorted(iocs, reverse=True)[:5]
 
-vmsg = "ATTACKATDAWNWETAKETHEBEACHANDTHEENEMYFLEESINTOTHENIGHT"
-vkey = "LEMON"
-vct = vig_enc(vmsg.upper(), vkey)
-bk = vig_break(vct)
-print(f"Vigenere key={vkey} broke={bk} match={bk==vkey}", flush=True)
-# decrypt with broken key
 def vig_dec(ct, key):
-    out = []
-    ki = 0
+    out = []; ki = 0
     for ch in ct:
         if ch.isalpha():
-            out.append(chr((ord(ch) - 65 - (ord(key[ki % len(key)]) - 65)) % 26 + 65))
+            out.append(chr((ord(ch)-65-(ord(key[ki % len(key)])-65)) % 26 + 65))
             ki += 1
         else:
             out.append(ch)
     return ''.join(out)
-pt = vig_dec(vct, bk)
-print("Vigenere decrypted:", pt[:60], flush=True)
 
-json.dump({"rsa": rsa_rows,
-           "caesar": [{"key": k} for k in [3,7,13]],
-           "vigenere": {"true_key": vkey, "broken_key": bk, "pt_prefix": pt[:60]}},
+words = ("THEQUICKBROWNFOXJUMPSOVERTHELAZYDOGANDRUNSTHROUGHTHEFOREST"
+         "WHILETHEWIND BLOWS GENTLY ACROSS THE MEADOWS AND THE RIVER FLOWS "
+         "TOWARD THE SEA UNDER THE WATCHFUL EYES OF THE STARS ")
+vmsg = (words * 8)[:500]
+vkey = "LEMON"
+vct = vig_enc(vmsg, vkey)
+bk, bklen, kscores = vig_break(vct)
+pt = vig_dec(vct, bk)
+print(f"Vigenere true={vkey} broke={bk} len={bklen} match={bk==vkey}", flush=True)
+print("Vigenere plaintext:", pt[:70], flush=True)
+
+json.dump({"rsa": rsa_rows, "keys": keydump,
+           "caesar": caesar_rows,
+           "vigenere": {"true_key": vkey, "broken_key": bk, "broken_len": bklen,
+                        "ioc_scores": kscores, "plaintext": pt, "ciphertext": vct,
+                        "method": "IOC keylen + per-column English log-likelihood"}},
           open(OUT, "w"), indent=1)
 print("Wrote", OUT)

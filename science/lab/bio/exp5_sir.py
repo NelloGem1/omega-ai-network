@@ -44,15 +44,30 @@ t2 = sol2.t
 print(f"\n=== BREAK: SIRS (waning immunity, mean 1/w={1/w:.0f} days) ===")
 print(f"after transient (t>400): I mean={I2[t2>400].mean()*100:.2f}%, "
       f"min={I2[t2>400].min()*100:.2f}%, max={I2[t2>400].max()*100:.2f}%")
-# count oscillation peaks
+# count oscillation peaks in the transient (damped oscillations expected)
 from scipy.signal import find_peaks
-peaks, _ = find_peaks(I2[t2>400], prominence=0.001)
-print(f"persistent oscillations detected: {len(peaks)} peaks post-transient")
+peaks, _ = find_peaks(I2[t2<400], prominence=0.005)
+print(f"damped transient peaks: {len(peaks)} (decay to stable endemic eq.)")
 
-fig, axes = plt.subplots(1, 2, figsize=(13, 4.5))
+# BREAK2: add seasonal forcing beta(t) -> sustained oscillations
+def sirs_forced(t, y, beta0, gamma, w, eps, period):
+    beta_t = beta0 * (1 + eps * np.cos(2*np.pi*t/period))
+    S, I, R = y
+    return [-beta_t*S*I + w*R, beta_t*S*I - gamma*I, gamma*I - w*R]
+sol3 = solve_ivp(sirs_forced, (0, 1500), y0, args=(beta, gamma, 0.05, 0.3, 365.0),
+                 t_eval=np.linspace(0,1500,15000), rtol=1e-8)
+I3 = sol3.y[1]; t3 = sol3.t
+peaks3, _ = find_peaks(I3[t3>800], prominence=0.005)
+print(f"seasonally-forced SIRS: {len(peaks3)} sustained peaks post-transient "
+      f"(annual forcing period=365d, beta varies ±30%)")
+print(f"  I range late: {I3[t3>800].min()*100:.1f}%–{I3[t3>800].max()*100:.1f}%")
+
+fig, axes = plt.subplots(1, 3, figsize=(16, 4.5))
 axes[0].plot(t, S*100, label="S"); axes[0].plot(t, I*100, label="I"); axes[0].plot(t, R*100, label="R")
 axes[0].set_title(f"SIR (R0={beta/gamma:.0f})"); axes[0].legend(); axes[0].set_xlabel("day")
 axes[1].plot(t2, I2*100)
-axes[1].set_title(f"SIRS waning immunity w={w}/day"); axes[1].set_xlabel("day")
+axes[1].set_title(f"SIRS w={w}/day -> stable endemic eq."); axes[1].set_xlabel("day")
+axes[2].plot(t3, I3*100)
+axes[2].set_title("SIRS + seasonal beta(t)"); axes[2].set_xlabel("day")
 plt.tight_layout(); plt.savefig("/home/neilh/science_lab/bio/sir_sirs.png", dpi=120)
 print("saved sir_sirs.png")

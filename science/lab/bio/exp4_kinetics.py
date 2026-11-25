@@ -9,9 +9,6 @@ rng = np.random.default_rng(7)
 Vmax_true, Km_true = 100.0, 5.0
 
 def mm(S, Vmax, Km): return Vmax * S / (Km + S)
-def mm_comp(S, Vmax, Km, Ki):   # competitive: apparent Km up
-def mm_comp(S, Vmax, Km, Ki): return Vmax * S / (Km*(1 + S*0 + 1) , 0) if False else Vmax*S/(Km*(1+Ki/1e9)+S)
-# define properly with inhibitor conc I fixed
 def mm_competitive(S, Vmax, Km, Ki, I):
     return Vmax * S / (Km*(1 + I/Ki) + S)
 def mm_noncompetitive(S, Vmax, Km, Ki, I):

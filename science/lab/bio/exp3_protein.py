@@ -18,7 +18,6 @@ def analyze(name, seq):
     pa = ProteinAnalysis(Seq(seq))
     mw = pa.molecular_weight()
     charge7 = pa.charge_at_pH(7.0)
-    hyd = pa.hydrophobicity_profile  # Kyte-Doolittle-ish via ProtParam
     # ProtParam.hydrophobicity_profile uses a sliding window; here it's per-residue? use Bio.SeqUtils.ProtParam
     instab = pa.instability_index()
     print(f"\n=== {name} ===")

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Experiment 5: Graph traversal - BFS/DFS/Dijkstra, Kahn topo sort + cycle detect,
 Dijkstra wrong answer on negative edges."""
-import random, time, csv, os, heapq
+import random, time, csv, os, heapq, sys
+sys.setrecursionlimit(300000)
 from collections import deque, defaultdict
 random.seed(9)
 DATA='/home/neilh/science_lab/cs/data'
@@ -33,21 +34,30 @@ def bfs(adj,s,n):
     return order
 
 def dfs(adj,s,n):
-    seen=[False]*n; order=[]
-    def rec(u):
-        seen[u]=True; order.append(u)
-        for v in adj[u]:
-            if not seen[v]: rec(v)
-    rec(s); return order
+    # iterative DFS to avoid recursion limits on deep graphs
+    seen=[False]*n; order=[]; stack=[(s,iter(adj[s]))]
+    seen[s]=True; order.append(s)
+    while stack:
+        u,it=stack[-1]
+        advanced=False
+        for v in it:
+            if not seen[v]:
+                seen[v]=True; order.append(v); stack.append((v,iter(adj[v]))); advanced=True; break
+        if not advanced: stack.pop()
+    return order
 
 def dijkstra(adj,s,n):
-    """adj: dict u -> list of (v,w)"""
+    """adj: dict u -> list of (v,w). Standard textbook version with a
+    settled-set: once a node is popped it is final (INVALID for w<0)."""
     dist=[float('inf')]*n; dist[s]=0
+    done=[False]*n
     pq=[(0,s)]
     while pq:
         d,u=heapq.heappop(pq)
-        if d>dist[u]: continue
+        if done[u]: continue
+        done[u]=True
         for v,w in adj[u]:
+            if done[v]: continue          # <-- the assumption that breaks on negatives
             nd=d+w
             if nd<dist[v]: dist[v]=nd; heapq.heappush(pq,(nd,v))
     return dist
@@ -142,15 +152,17 @@ def main():
 
     # --- Dijkstra on negative edges: wrong answer demo ---
     # classic: 0->1 weight 5, 0->2 weight 1, 2->1 weight -3 => true shortest 0->2->1 = -2
+    # 0->1(1), 1->2(1), 0->3(5), 3->1(-10): node 1 is finalized before the
+    # negative edge 3->1 is discovered, so 1->2 is never re-relaxed.
     adj_neg=defaultdict(list)
-    adj_neg[0]=[(1,5),(2,1)]; adj_neg[1]=[]; adj_neg[2]=[(1,-3)]
-    dist=dijkstra(adj_neg,0,3)
-    true_shortest=-2  # 0->2->1 = 1 + (-3)
-    print(f'Dijkstra negative-edge demo: got dist[1]={dist[1]}, true shortest={true_shortest} -> {"WRONG" if dist[1]!=true_shortest else "ok"}', flush=True)
-    rows.append(dict(test='dijkstra_negative', input='neg_edges', n=3, time_s=0, answer=f'dijkstra={dist[1]} true={true_shortest}'))
+    adj_neg[0]=[(1,1),(3,5)]; adj_neg[1]=[(2,1)]; adj_neg[2]=[]; adj_neg[3]=[(1,-10)]
+    dist=dijkstra(adj_neg,0,4)
+    true_shortest=-4  # 0->3->1->2 = 5-10+1
+    print(f'Dijkstra negative-edge demo: got dist[2]={dist[2]}, true shortest={true_shortest} -> {"WRONG" if dist[2]!=true_shortest else "ok"}', flush=True)
+    rows.append(dict(test='dijkstra_negative', input='neg_edges', n=4, time_s=0, answer=f'dijkstra={dist[2]} true={true_shortest}'))
     # Bellman-Ford for contrast
-    n=3; d=[float('inf')]*n; d[0]=0
-    edges=[(0,1,5),(0,2,1),(2,1,-3)]
+    n=4; d=[float('inf')]*n; d[0]=0
+    edges=[(0,1,1),(1,2,1),(0,3,5),(3,1,-10)]
     for _ in range(n-1):
         for u,v,w in edges:
             if d[u]+w<d[v]: d[v]=d[u]+w

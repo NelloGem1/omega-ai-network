@@ -76,3 +76,29 @@
 - Permissions: FULL — install, download, execute freely
 - Scope: localhost/lab targets ONLY for attacks; never external sites
 - jwt_tool needs venv python; nuclei templates at ~/nuclei-templates
+
+## Science stack
+
+Python venv: /home/neilh/venv/bin/python (Python 3.14.4). IMPORTANT: use /home/neilh/venv/bin/python -m pip install <pkg> — the pip entry script has a broken shebang.
+
+| Package | Version |
+|---|---|
+| numpy | 2.5.5 |
+| scipy | 1.18.1 |
+| pandas | 3.1.1 |
+| matplotlib | 3.11.2 |
+| sympy | 1.14.0 |
+| networkx | 3.7 |
+| scikit-learn | 1.9.1 |
+| biopython | 1.88 |
+| periodictable | 2.1.0 |
+| statsmodels | 0.15.0 |
+| requests | 2.34.2 |
+| beautifulsoup4 | 4.15.0 |
+| rdkit | 2026.9.2 |
+| qutip | 5.3.1 |
+| pennylane | 0.45.1 (+ pennylane-lightning 0.45.0) |
+
+System tools verified present: sqlite3, jq, tree, bc, units (texlive intentionally skipped).
+
+NEED.md protocol: if a package/tool you need is missing, append NEED: <package> — <why> to /home/neilh/NEED.md. The tool-butler installs from that file. All imports verified.

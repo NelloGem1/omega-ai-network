@@ -23,7 +23,7 @@ for th,w,a in [(t1,w1,a1),(t2,w2,a2)]:
     # d/dt(dL/dw) = dL_dw_t + dL_dw_th1*w1'... use chain: dL_dw depends on t1,t2,w1,w2
     dtot=sum(sp.diff(dL_dw,v)*vv for v,vv in [(t1,w1),(t2,w2),(w1,a1),(w2,a2)])
     eqs.append(sp.Eq(dtot-dL_dth,0))
-sol=sp.solve(eqs,[a1,a2],simplify=True)
+sol=sp.solve(eqs,[a1,a2])
 f1=sp.lambdify((t1,t2,w1,w2,g,L1,L2,m1,m2),sol[a1],'numpy')
 f2=sp.lambdify((t1,t2,w1,w2,g,L1,L2,m1,m2),sol[a2],'numpy')
 print('EOM derived')

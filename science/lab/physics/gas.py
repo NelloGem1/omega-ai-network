@@ -10,7 +10,7 @@ N=300; Lx=Ly=1.0; mass=1.0; sigma=0.02; kB=1.0
 
 def init(T):
     v=rng.normal(0,1.0,(N,2))
-    v*=np.sqrt(2*kB*T/mass)/np.sqrt((v**2).sum(1)).mean()
+    v*=np.sqrt(2*kB*T/mass/ (v**2).sum(1).mean())  # <v^2>=2kT/m
     pos=np.column_stack([rng.uniform(0.02,Lx-0.02,N),rng.uniform(0.02,Ly-0.02,N)])
     return pos,v
 
@@ -22,15 +22,19 @@ def collide(pos,v):
     hit=r2[IU0,IU1]<sigma*sigma
     ii=IU0[hit]; jj=IU1[hit]
     if len(ii)==0: return
-    nx=dx[ii,jj]; ny=dy[ii,jj]; nn=np.hypot(nx,ny)
-    ok=nn>1e-9; ii,jj,nx,ny,nn=ii[ok],jj[ok],nx[ok],ny[ok],nn[ok]
-    nx/=nn; ny/=nn
-    dvx=v[jj,0]-v[ii,0]; dvy=v[jj,1]-v[ii,1]
-    p=dvx*nx+dvy*ny; m=p<0
-    ii,jj,nx,ny,p=ii[m],jj[m],nx[m],ny[m],p[m]
-    v[ii,0]+=p*nx; v[ii,1]+=p*ny; v[jj,0]-=p*nx; v[jj,1]-=p*ny
-    push=(sigma-np.hypot(pos[ii,0]-pos[jj,0],pos[ii,1]-pos[jj,1]))/2
-    pos[ii,0]-=nx*push; pos[ii,1]-=ny*push; pos[jj,0]+=nx*push; pos[jj,1]+=ny*push
+    # sequential resolution: each pairwise elastic collision conserves KE exactly
+    s2=sigma*sigma
+    for a,b in zip(ii,jj):
+        dx=pos[a,0]-pos[b,0]; dy=pos[a,1]-pos[b,1]
+        d2=dx*dx+dy*dy
+        if d2>=s2 or d2<1e-18: continue
+        d=np.sqrt(d2); nx=dx/d; ny=dy/d
+        dvx=v[b,0]-v[a,0]; dvy=v[b,1]-v[a,1]
+        p=dvx*nx+dvy*ny   # (v_b-v_a).n ; >0 approaching
+        if p>0:
+            v[a,0]+=p*nx; v[a,1]+=p*ny; v[b,0]-=p*nx; v[b,1]-=p*ny
+        push=(sigma-d)/2
+        pos[a,0]+=nx*push; pos[a,1]+=ny*push; pos[b,0]-=nx*push; pos[b,1]-=ny*push
 
 def walls(pos,v,imp=None):
     # imp: accumulator for momentum transferred to x=hi wall
@@ -52,8 +56,8 @@ def temp(v): return mass*(v**2).sum(1).mean()/(2*kB)
 Ts=[50,100,200,400,800]; Ps=[]; Ptheory=[]
 for T in Ts:
     pos,v=init(T)
-    for _ in range(2000): step(pos,v,2e-4)          # equilibrate
-    imp=np.zeros(1); nmeas=12000; dt=5e-4; tel=0.0
+    for _ in range(3000): step(pos,v,1e-4)          # equilibrate
+    imp=np.zeros(1); nmeas=8000; dt=1e-4; tel=0.0
     for _ in range(nmeas):
         step(pos,v,dt,imp=imp); tel+=dt
     Tm=temp(v)

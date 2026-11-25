@@ -1,0 +1,174 @@
+{
+ "rsa": [
+  {
+   "bits": 64,
+   "n": "8992671130923912479",
+   "p_bits": 32,
+   "factorint": {
+    "result": {
+     "2945498377": 1,
+     "3053021927": 1
+    },
+    "time": 0.2571256160736084,
+    "complete": true
+   }
+  },
+  {
+   "bits": 96,
+   "n": "28794414012092835599086243291",
+   "p_bits": 48,
+   "factorint": {
+    "result": {
+     "144022197452867": 1,
+     "199930389352073": 1
+    },
+    "time": 2.053744077682495,
+    "complete": true
+   }
+  },
+  {
+   "bits": 128,
+   "n": "180116523804438892455196892453561984189",
+   "p_bits": 64,
+   "factorint": {
+    "result": {
+     "11154688889290462027": 1,
+     "16147157988186250007": 1
+    },
+    "time": 8.660048484802246,
+    "complete": true
+   }
+  },
+  {
+   "bits": 160,
+   "n": "904043221305181123442274589501885561622912385161",
+   "ecm": {
+    "b1": 50000,
+    "time": 12.689278602600098,
+    "factor": 855383395575660493501081,
+    "cofactor_bits": 80
+   },
+   "p_bits": 80
+  },
+  {
+   "bits": 192,
+   "n": "3572809383849657928796074580125606589296929189600867874817",
+   "ecm": {
+    "time": 18.896472454071045,
+    "factor": null
+   },
+   "p_bits": 96
+  },
+  {
+   "bits": 256,
+   "n": "49227696900760456220262953435575361094118408214653661572165670660784661499821",
+   "ecm": {
+    "time": 14.905174732208252,
+    "factor": null
+   },
+   "p_bits": 128
+  },
+  {
+   "bits": 191,
+   "n": "2513926145337836225567597875310175749480706459360157452269",
+   "method": "GNU ecm B1=250000 500 curves",
+   "ecm_deep": {
+    "time": 17.164265155792236,
+    "factor": 52435974117473362494802875859,
+    "success": true
+   },
+   "note": "29-digit factors; earlier B1<=50000 failed in ~19s"
+  }
+ ],
+ "keys": {
+  "64": {
+   "p": "2945498377",
+   "q": "3053021927",
+   "n": "8992671130923912479",
+   "d": "65537"
+  },
+  "96": {
+   "p": "144022197452867",
+   "q": "199930389352073",
+   "n": "28794414012092835599086243291",
+   "d": "65537"
+  },
+  "128": {
+   "p": "11154688889290462027",
+   "q": "16147157988186250007",
+   "n": "180116523804438892455196892453561984189",
+   "d": "65537"
+  },
+  "160": {
+   "p": "855383395575660493501081",
+   "q": "1056886568036281882829681",
+   "n": "904043221305181123442274589501885561622912385161",
+   "d": "65537"
+  },
+  "192": {
+   "p": "50239517328106460122898098093",
+   "q": "71115519691723877499544824869",
+   "n": "3572809383849657928796074580125606589296929189600867874817",
+   "d": "65537"
+  },
+  "256": {
+   "p": "192870512995522863436206679800004985329",
+   "q": "255237029944039124630002003136685780349",
+   "n": "49227696900760456220262953435575361094118408214653661572165670660784661499821",
+   "d": "65537"
+  }
+ },
+ "caesar": [
+  {
+   "key": 3,
+   "broken_key": 3,
+   "score": 5
+  },
+  {
+   "key": 7,
+   "broken_key": 7,
+   "score": 5
+  },
+  {
+   "key": 13,
+   "broken_key": 13,
+   "score": 5
+  }
+ ],
+ "vigenere": {
+  "true_key": "LEMON",
+  "broken_key": "LEMON",
+  "broken_len": 5,
+  "plaintext": "THEQUICKBROWNFOXJUMPSOVERTHELAZYDOGANDRUNSTHROUGHTHEFORESTWHILETHEWIND BLOWS GENTLY ACROSS THE MEADOWS AND THE RIVER FLOWS TOWARD THE SEA UNDER THE WATCHFUL EYES OF THE STARS THEQUICKBROWNFOXJUMPSOVERTHELAZYDOGANDRUNSTHROUGHTHEFORESTWHILETHEWIND BLOWS GENTLY ACROSS THE MEADOWS AND THE RIVER FLOWS TOWARD THE SEA UNDER THE WATCHFUL EYES OF THE STARS THEQUICKBROWNFOXJUMPSOVERTHELAZYDOGANDRUNSTHROUGHTHEFORESTWHILETHEWIND BLOWS GENTLY ACROSS THE MEADOWS AND THE RIVER FLOWS TOWARD THE SEA UNDER THE WA",
+  "ciphertext": "ELQEHTGWPEZAZTBINGACDSHSEELQZNKCPCTLRPFHYWFVEZYSVGSIRCEPWFKUTPQHUPAUBQ MPAKF RIZHYJ EOFBDW FVR XIMRBHW MBQ ELQ FVGID TYZAE HBHEDR GSI ESN FRPSE ELQ KNEGTTHW IKSF ZJ FVR DXMFF ELQEHTGWPEZAZTBINGACDSHSEELQZNKCPCTLRPFHYWFVEZYSVGSIRCEPWFKUTPQHUPAUBQ MPAKF RIZHYJ EOFBDW FVR XIMRBHW MBQ ELQ FVGID TYZAE HBHEDR GSI ESN FRPSE ELQ KNEGTTHW IKSF ZJ FVR DXMFF ELQEHTGWPEZAZTBINGACDSHSEELQZNKCPCTLRPFHYWFVEZYSVGSIRCEPWFKUTPQHUPAUBQ MPAKF RIZHYJ EOFBDW FVR XIMRBHW MBQ ELQ FVGID TYZAE HBHEDR GSI ESN FRPSE ELQ KN",
+  "cipher_len": 445,
+  "ioc_by_keylen": [
+   [
+    5,
+    0.0812
+   ],
+   [
+    10,
+    0.0739
+   ],
+   [
+    15,
+    0.0608
+   ],
+   [
+    1,
+    0.0459
+   ],
+   [
+    2,
+    0.0444
+   ],
+   [
+    14,
+    0.0436
+   ]
+  ],
+  "success": true,
+  "method": "IOC for keylen + per-column English-freq log-likelihood key recovery"
+ }
+}

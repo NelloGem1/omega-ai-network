@@ -43,7 +43,8 @@ n_cod = len(codons)
 exp_counts = np.array([codon_exp.get(c, 0) * n_cod for c in cc])
 obs = np.array([cc[c] for c in cc])
 mask = exp_counts > 0.5  # avoid tiny-expected chi-square blowup
-chi2, p = chisquare(obs[mask], exp_counts[mask])
+e2 = exp_counts[mask]; e2 = e2/e2.sum()*obs[mask].sum()
+chi2, p = chisquare(obs[mask], e2)
 print(f"chi-square codon bias vs iid: chi2={chi2:.1f}, df={mask.sum()-1}, p={p:.3g}")
 
 # --- Dinucleotide spectrum ---
