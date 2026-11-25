@@ -28,3 +28,10 @@ The civilization-scale research + experiment fleet. Everything labeled, ordered,
 - `TOOLS.md` / `DESIGN.md` — arsenal manifest + Prime Formula design system
 
 *Convention: each experiment dir contains REPORT.md + scripts + data. Maps contain Sources section. Synced live to this private vault.*
+
+## 🧪 Lab additions (wave 2)
+| Dir | Agent | Method |
+|---|---|---|
+| ml/ | AI/ML hands-on — train models, adversarial attacks, poisoning, drift, NLP | train → measure → break |
+| formal/ | Lean 4 theorem proving + automata sims | prove → try to break (find counterexamples) |
+| social/ | Game theory, econ markets, network science, opinion dynamics | model → compute equilibrium → break assumptions |
