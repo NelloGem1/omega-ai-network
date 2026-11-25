@@ -4,3 +4,11 @@ ep2: loss=0.0811 (378s)
 ep3: loss=0.0755 (502s)
 ep4: loss=0.0722 (618s)
 ep5: loss=0.0681 (725s)
+ep6: loss=0.0690 (839s)
+ep7: loss=0.0654 (959s)
+saved → /home/neilh/science_lab/diffusion/ddpm.pt
+  denoise t=150
+  denoise t=100
+  denoise t=50
+  denoise t=0
+samples → /home/neilh/science_lab/diffusion/samples.png
