@@ -37,12 +37,15 @@ def collide(pos,v):
         pos[a,0]+=nx*push; pos[a,1]+=ny*push; pos[b,0]-=nx*push; pos[b,1]-=ny*push
 
 def walls(pos,v,imp=None):
-    # imp: accumulator for momentum transferred to x=hi wall
+    # imp[0] accumulates total momentum transferred to BOTH vertical walls (x=const),
+    # each reflection transfers 2*m*|v_x|
     for d,Ld in [(0,Lx),(1,Ly)]:
         lo,hi=0.005,Ld-0.005
-        m=pos[:,d]<lo;  pos[m,d]=2*lo-pos[m,d];  v[m,d]=-v[m,d]
+        m=pos[:,d]<lo
+        if imp is not None and d==0: imp[0]+=2*mass*np.abs(v[m,0]).sum()
+        pos[m,d]=2*lo-pos[m,d];  v[m,d]=-v[m,d]
         m=pos[:,d]>hi
-        if imp is not None and d==0: imp[0]+=np.abs(v[m,0]).sum()*mass
+        if imp is not None and d==0: imp[0]+=2*mass*np.abs(v[m,0]).sum()
         pos[m,d]=2*hi-pos[m,d];  v[m,d]=-v[m,d]
 
 def step(pos,v,dt,collide_on=True,imp=None):
@@ -61,9 +64,8 @@ for T in Ts:
     for _ in range(nmeas):
         step(pos,v,dt,imp=imp); tel+=dt
     Tm=temp(v)
-    # P on right wall = momentum flux / (wall length * time); wall length=Ly, and
-    # impulse counted only for x=hi hits -> P = imp/(Ly*tel)
-    P=imp[0]/(Ly*tel)
+    # impulse on both vertical walls over total wall length 2*Ly and elapsed time
+    P=imp[0]/(2*Ly*tel)
     Ps.append(P); Ptheory.append(N*kB*Tm/(Lx*Ly))
     print('Ttarget=%d Tmeas=%.1f P_meas=%.2f P_ideal=%.2f ratio=%.3f'%(T,Tm,P,Ptheory[-1],P/Ptheory[-1]),flush=True)
 Ps=np.array(Ps);Ptheory=np.array(Ptheory);Ts=np.array(Ts,float)
