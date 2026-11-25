@@ -1,0 +1,28 @@
+{
+  "tag": "fm_cnn",
+  "model": "cnn",
+  "dataset": "fashion",
+  "img_size": 112,
+  "ntrain": 8000,
+  "ntest": 2000,
+  "epochs": 3,
+  "batch": 128,
+  "lr": 0.001,
+  "seed": 0,
+  "params": 94410,
+  "clean_acc": 0.745,
+  "train_time_s": 87.09933233261108,
+  "epoch_times_s": [
+    29.10381555557251,
+    28.089603424072266,
+    29.905532360076904
+  ],
+  "infer_time_s": 3.3567636013031006,
+  "infer_ms_per_img": 1.6783818006515503,
+  "in_shape": [
+    1,
+    28,
+    28
+  ],
+  "num_classes": 10
+}

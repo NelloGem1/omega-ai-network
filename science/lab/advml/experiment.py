@@ -47,7 +47,7 @@ def train(model, loader, epochs, at=None, at_eps=EPS, at_alpha=ALPHA, at_steps=P
                         xa.requires_grad_(True)
                         loss=F.cross_entropy(model(xa),y)
                         g=torch.autograd.grad(loss,xa)[0]
-                        xa=(xa.detach()-at_alpha*g.sign()).clamp(x-at_eps,x+at_eps)
+                        xa=(xa.detach()+at_alpha*g.sign()).clamp(x-at_eps,x+at_eps)
                     xa=xa.detach()
                 opt.zero_grad(); loss=F.cross_entropy(model(xa),y); loss.backward(); opt.step()
             with torch.no_grad():
@@ -77,7 +77,7 @@ def pgd(model,X,y,eps=EPS,alpha=ALPHA,steps=PGD_STEPS,pre=None):
         inp=pre(Xp) if pre else Xp
         loss=F.cross_entropy(model(inp),y)
         g=torch.autograd.grad(loss,Xp)[0]
-        Xp=(Xp.detach()-alpha*g.sign()).clamp(X-eps,X+eps)
+        Xp=(Xp.detach()+alpha*g.sign()).clamp(X-eps,X+eps)
     return Xp.detach()
 
 def pgd_acc(model,X,y,pre=None):
