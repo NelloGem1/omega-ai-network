@@ -1,0 +1,1 @@
+The full story — every table, every wrong turn, every verification step — is live on GitHub Pages. But don't take our word for it — verify it yourself. The formula is simple: for every prime greater than five, p mod ten is one, three, seven, or nine — and p mod thirty lands in only eight residue classes. Three ways to check it — Python, Lean, or an AI. Here they are.
