@@ -64,7 +64,7 @@ theorem abb_accepts_aabb : runDFA ['a','a','b','b'] = .accept := by native_decid
 
 theorem abb_accepts_ababb : runDFA ['a','b','a','b','b'] = .accept := by native_decide
 
-theorem abb_rejects_aaab : runDFA ['a','a','a','b'] = .s0 := by native_decide
+theorem abb_aaab_ends_s2 : runDFA ['a','a','a','b'] = .s2 := by native_decide
 
 theorem abb_rejects_ba : runDFA ['b','a'] = .s1 := by native_decide
 
@@ -89,12 +89,11 @@ theorem break_add_le : ¬ (∀ a b : Nat, a + b ≤ a) := by
   intro h
   have h1 := h 0 1
   simp at h1
-  exact Nat.not_succ_le_zero 0 h1
 
 /-- BREAK 3: "every DFA run rejects" — 'abb' itself is a counterexample. -/
 theorem break_all_reject : ¬ (∀ l : List Char, runDFA l ≠ .accept) := by
   intro h
-  exact (h ['a','b','b']) (abb_accepts_abb ▸ rfl)
+  exact (h ['a','b','b']) abb_accepts_abb
 
 /-- BREAK 4: "abbTrans .s2 'b' stays in s2" — actually it ACCEPTS. -/
 theorem break_s2_b : abbTrans .s2 'b' ≠ .s2 := by
