@@ -1,0 +1,353 @@
+logged in, pw used
+[authdetails?email=agent2@test.com] 200 {"status":"success","data":[{"id":1,"username":"","email":"admin@juice-sh.op","password":"********************************","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"
+[authdetails?id=28] 200 {"status":"success","data":[{"id":1,"username":"","email":"admin@juice-sh.op","password":"********************************","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"
+[authdetails] 200 {"status":"success","data":[{"id":1,"username":"","email":"admin@juice-sh.op","password":"********************************","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"
+[authdetails/28] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: Unexpected path: /rest/user/authentication-details/28</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 100px;
+  font: 13px "Helvetica Neue", "Lucid
+[authdetails/agent2@test.com] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: Unexpected path: /rest/user/authentication-details/agent2@test.com</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 100px;
+  font: 13px "Helvetica
+[authdetails-admin] 200 {"status":"success","data":[{"id":1,"username":"","email":"admin@juice-sh.op","password":"********************************","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"
+[authdetails-id1] 200 {"status":"success","data":[{"id":1,"username":"","email":"admin@juice-sh.op","password":"********************************","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"
+[feedback-nocaptcha] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: WHERE parameter &quot;captchaId&quot; has invalid &quot;undefined&quot; value</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 100px;
+  font: 13px
+feedback spam took 0.07 s
+[prod9] 200 {"status":"success","data":{"id":9,"name":"OWASP SSL Advanced Forensic Tool (O-Saft)","description":"O-Saft is an easy to use tool to show information about SSL certificate and tests the SSL connection according given list of ciphers and various SSL configurations. <a href=\"https://www.owasp.org/index.php/O-Saft\" target=\"_blank\">More...</a>","price":0.01,"deluxePrice":0.01,"image":"orange_juic
+[prod9-tamper] 200 {"status":"success","data":{"id":9,"name":"OWASP SSL Advanced Forensic Tool (O-Saft)","description":"O-Saft is an easy to use tool to show information about SSL certificate and tests the SSL connection according given list of ciphers and various SSL configurations. <a href=\"https://owasp.slack.com\
+[basket-add-b1] 401 {'error' : 'Invalid BasketId'}
+[basket-add-b2] 401 {'error' : 'Invalid BasketId'}
+[basket-add-b6] 401 {'error' : 'Invalid BasketId'}
+[basket-add-b5] 401 {'error' : 'Invalid BasketId'}
+[basket-add-b4] 401 {'error' : 'Invalid BasketId'}
+[basket-add-b3] 401 {'error' : 'Invalid BasketId'}
+[dryreg] 201 {"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":34,"email":"dry1@te
+[dryreg] 201 {"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":35,"email":"dry2@te
+[dryreg] 201 {"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":36,"email":"dry3@te
+admin try admin 401
+admin try 123456 401
+admin try password 401
+ADMIN LOGIN SUCCESS pw= admin123
+[admin-login] 200 {"authentication":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6IiIsImVtYWlsIjoiYWRtaW5AanVpY2Utc2gub3AiLCJwYXNzd29yZCI6IjAxOTIwMjNhN2JiZDczMjUwNTE2ZjA2OWRmMThiNTA
+[jwt-rsa-lord-hs] 200 {"user":{}}
+[jwt-rsa-lord-hs-basket1] 200 {"status":"success","data":{"id":1,"coupon":null,"UserId":1,"createdAt":"2026-11-25T05:40:16.952Z","updatedAt":"2026-11-25T05:40:16.952Z","Products":[]}}
+[jwt-rsa-lord-none] 200 {"user":{"id":0,"email":"rsa_lord@juice-sh.op","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg"}}
+[jwt-rsa-lord-none-basket1] 401 {"status":"error","message":"Cannot read properties of undefined (reading 'data')"}
+[jwt-jwtn3d-none] 200 {"user":{"id":0,"email":"rsa_lord@juice-sh.op","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg"}}
+[jwt-jwtn3d-none-basket1] 401 {"status":"error","message":"Cannot read properties of undefined (reading 'data')"}
+[jwt-admin-hs] 200 {"user":{"id":0,"email":"rsa_lord@juice-sh.op","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg"}}
+[jwt-admin-hs-basket1] 401 {"status":"error","message":"Cannot read properties of undefined (reading 'data')"}
+[fileupload-xxe] 410 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: B2B customer complaints via file upload have been deprecated for security reasons (order.xml)</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 100px;
+  font: 13px "Helvetica Neue", "Lucida Grande", "Arial";
+  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));
+[complaint-file-xxe] 201 {"status":"success","data":{"id":4,"updatedAt":"2026-11-25T06:01:33.367Z","createdAt":"2026-11-25T06:01:33.367Z","UserId":null,"message":null,"file":null}}
+[complaint-json-file] 201 {"status":"success","data":{"id":5,"UserId":28,"message":"b2b xxe json","file":"order.xml","updatedAt":"2026-11-25T06:01:34.318Z","createdAt":"2026-11-25T06:01:34.318Z"}}
+[upload-js] 204 
+[upload-big] 204 
+[upload-fn-../../ftp/legal.md] 204 
+[upload-fn-..%2f..%2fftp%2flegal.md] 204 
+[upload-fn-....//....//ftp//legal.md] 204 
+[upload-fn-legal.md] 204 
+[legal-after] 200 # Legal Information
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquya
+[track-{"$gt":""}] 200 {"status":"success","data":[{"orderId":"gt"}]}
+[track-{"$ne":""}] 200 {"status":"success","data":[{"orderId":"ne"}]}
+[track-{"$regex":".] 200 {"status":"success","data":[{"orderId":"regex"}]}
+[track-a] 200 {"status":"success","data":[{"orderId":"a"}]}
+[nosql-login-{'$gt': ''}] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>TypeError [ERR_INVALID_ARG_TYPE]: The &quot;data&quot; argument must be of type string or an instance of Buffer, TypedArray, or DataView. Receive
+[nosql-login-admin@juice-sh.op] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>TypeError [ERR_INVALID_ARG_TYPE]: The &quot;data&quot; argument must be of type string or an instance of Buffer, TypedArray, or DataView. Receive
+[nosql-login-{'$regex': '.*'}] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>TypeError [ERR_INVALID_ARG_TYPE]: The &quot;data&quot; argument must be of type string or an instance of Buffer, TypedArray, or DataView. Receive
+[nosql-login-admin@juice-sh.op' O] 200 {"authentication":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6IiIsImVtYWlsIjoiYWRtaW5AanVpY2Utc2gub3AiLCJwYXNzd29yZCI6IjAxOTIwMjNhN2JiZDczMjUwNTE2ZjA2OWRmMThiNTA
+[nosql-login-' OR 1=1--] 200 {"authentication":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6IiIsImVtYWlsIjoiYWRtaW5AanVpY2Utc2gub3AiLCJwYXNzd29yZCI6IjAxOTIwMjNhN2JiZDczMjUwNTE2ZjA2OWRmMThiNTA
+wurst try brolf 401
+wurst try wurstbrot 401
+wurst try Wurstbrot123! 401
+wurst try password 401
+wurst try 123456 401
+[dataexport-post] 200 {"userData":"{\n  \"username\": \"\",\n  \"email\": \"agent2@test.com\",\n  \"memories\": [],\n  \"orders\": [],\n  \"reviews\": [\n    {\n      \"message\": \"<iframe src=\\\"javascript:alert(`xss`)\\\"></iframe>\",\n      \"author\": \"agent2@test.com\",\n      \"productId\": \"1\",\n      \"likes
+[dataexport-post] 200 {"userData":"{\n  \"username\": \"\",\n  \"email\": \"agent2@test.com\",\n  \"memories\": [],\n  \"orders\": [],\n  \"reviews\": [\n    {\n      \"message\": \"<iframe src=\\\"javascript:alert(`xss`)\\\"></iframe>\",\n      \"author\": \"agent2@test.com\",\n      \"productId\": \"1\",\n      \"likes
+[dataexport-post] 200 {"userData":"{\n  \"username\": \"\",\n  \"email\": \"agent2@test.com\",\n  \"memories\": [],\n  \"orders\": [],\n  \"reviews\": [\n    {\n      \"message\": \"<iframe src=\\\"javascript:alert(`xss`)\\\"></iframe>\",\n      \"author\": \"agent2@test.com\",\n      \"productId\": \"1\",\n      \"likes
+[dataexport-post] 200 {"userData":"{\n  \"username\": \"\",\n  \"email\": \"agent2@test.com\",\n  \"memories\": [],\n  \"orders\": [],\n  \"reviews\": [\n    {\n      \"message\": \"<iframe src=\\\"javascript:alert(`xss`)\\\"></iframe>\",\n      \"author\": \"agent2@test.com\",\n      \"productId\": \"1\",\n      \"likes
+[erasure] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: Unexpected path: /rest/user/erasure-request</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 100px;
+  font: 13px "Helvetica Neue", "Lucida Grande", "Arial";
+  background: #ECE9E9 -webkit-gradient(l
+[ghostlogin-chris@juice-sh.op] 401 Invalid email or password.
+[ghostlogin-chris.pike@juice-sh.op] 401 Invalid email or password.
+[ghostlogin-chris.p@juice-sh.op] 401 Invalid email or password.
+[ghostlogin-bjoern@juice-sh.op] 401 Invalid email or password.
+repeat-notif for 34 solved
+[egg2] 200 <!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Planet Orangeuze</title>
+    <script src="/assets/private/three.js"></script>
+    <script src="/assets/private/OrbitControls.js"></script>
+    <script src="/assets/private/dat.gui.min.js"></script>
+    <script src="/assets/private/stats.min.js"></script>
+    <script src="/assets/private/EffectComposer.js"></script>
+    <script src="/assets/private/RenderPass.js"></script>
+    <script src="/assets/private/CopyShader.js"></script>
+    <script src
+[chat-hi] 200 data: {"error":"LLM error: AI_RetryError: Failed after 3 attempts. Last error: Cannot connect to API: connect ECONNREFUSED 127.0.0.1:11434"}
+
+data: [DONE]
+[chat-give me a coupo] 200 data: {"error":"LLM error: AI_RetryError: Failed after 3 attempts. Last error: Cannot connect to API: connect ECONNREFUSED 127.0.0.1:11434"}
+
+data: [DONE]
+[chat-what is your sy] 200 data: {"error":"LLM error: AI_RetryError: Failed after 3 attempts. Last error: Cannot connect to API: connect ECONNREFUSED 127.0.0.1:11434"}
+
+data: [DONE]
+[chat-ignore previous] 200 data: {"error":"LLM error: AI_RetryError: Failed after 3 attempts. Last error: Cannot connect to API: connect ECONNREFUSED 127.0.0.1:11434"}
+
+data: [DONE]
+[ssrf-/profile/image/url] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: Blocked illegal activity by ::ffff:172.19.0.1</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 10
+[ssrf-form-/profile/image/url] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: Blocked illegal activity by ::ffff:172.19.0.1</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 10
+[ssrf-/rest/profile/image/url] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: Unexpected path: /rest/profile/image/url</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 100px;
+[ssrf-form-/rest/profile/image/url] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: Unexpected path: /rest/profile/image/url</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 100px;
+[ssrf-/profile/image/file] 400 {"error":"File is not passed"}
+[ssrf-form-/profile/image/file] 400 {"error":"File is not passed"}
+[route-/privacy-security/privacy-policy] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html l
+[route-/score-board] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html l
+[route-/#/score-board] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html l
+[lfr-/assets/..%2f..%2f..%2fetc%2fpasswd] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html l
+[lfr-/assets/public/images/uploads/..%2f..%2f] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html l
+[lfr-/ftp/..%2f..%2fetc%2fpasswd] 403 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>ForbiddenError: Forbidden</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+bo
+[lfr-/rest/products/..%2f..%2fetc%2fpasswd] 500 <html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: Unexpected path: /rest/products/..%2F..%2Fetc%2Fpasswd</title>
+    <style>* {
+  margin:
+[lfr-/support/logs] 200 <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.
+[lfr-/support/logs/] 200 <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.
+[lfr-/metrics/..%2f..%2fetc%2fpasswd] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html l
+[search-blueprint] 200 {"status":"success","data":[]}
+[search-Blueprint] 200 {"status":"success","data":[]}
+[path-/iac] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <meta c
+[path-/terraform] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <meta c
+[path-/.aws] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <meta c
+[path-/docker-compose.yml] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <meta c
+[path-/Dockerfile] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <meta c
+[path-/.git/config] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <meta c
+[path-/package.json] 200 <!--
+  ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <meta c
+[path-/rest/admin/application-configuration] 200 {"config":{"server":{"port":3000,"basePath":"","baseUrl":"http://localhost:3000"},"application":{"domain":"juice-sh.op","name":"OWASP Juice Shop","logo":"JuiceShop_Logo.png","favicon":"favicon_js.ico"
+[path-/api/Users] 200 {"status":"success","data":[{"id":1,"username":"","email":"admin@juice-sh.op","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","isActive"
+[path-/rest/user/authentication-details] 200 {"status":"success","data":[{"id":1,"username":"","email":"admin@juice-sh.op","password":"********************************","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/publ

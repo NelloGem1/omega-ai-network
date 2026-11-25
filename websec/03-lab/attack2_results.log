@@ -1,0 +1,88 @@
+TOKEN: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJkYXRhIjp7ImlkIjoyOCw ...
+PAYLOAD: b'{"data":{"id":28,"username":"","email":"agent2@test.com","password":"1fb3df8784a56cebb3233a2dad767a3b","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","totpSecret":"","isActive":true,"createdAt":"2026-11-25 05:52:33.661 +00:00","updatedAt":"2026-11-25 05:52:33.661 +00:00","deletedAt":null},"bid":7,"iat":1795586282}'
+[exposed-metrics] 200 # HELP juiceshop_llm_input_tokens_total Number of total input tokens processed # TYPE juiceshop_llm_input_tokens_total counter juiceshop_llm_input_tokens_total{app="juiceshop"} 0  # HELP juiceshop_llm_input_tokens Number of input tokens processed # TYPE juiceshop_llm_input_tokens counter  # HELP jui
+[csaf] 200 {   "canonical_url": "http://localhost:3000/.well-known/csaf/provider-metadata.json",   "distributions": [     {       "directory_url": "http://localhost:3000/.well-known/csaf/"     }   ],   "last_updated": "2024-03-05T20:20:56.169Z",   "list_on_CSAF_aggregators": false,   "metadata_version": "2.0",
+[sectxt] 200 Contact: mailto:donotreply@owasp-juice.shop Encryption: https://keybase.io/bkimminich/pgp_keys.asc?fingerprint=19c01cb7157e4645e9e2c863062a85a8cbfbdcda Acknowledgements: /#/score-board Preferred-languages: en, ar, az, bg, bn, ca, cs, da, de, ga, el, es, et, fa, fi, fr, ka, he, hi, hu, id, it, ja, ko
+[appver] 200 {"version":"20.4.0-SNAPSHOT"}
+[captcha-leak] 200 {"captchaId":4,"captcha":"9+2+10","answer":"21"}
+[repeatnotif] 200 OK
+[continuecode] 200 {"continueCode":"ZAVQh6tLuNc7sZiySBHnuatncaT8CQQhv2c5wTEZinZu49cEJIkLi36iNK0o"}
+[nftUnlocked] 200 {"status":false}
+[memories] 200 {"status":"success","data":[{"UserId":13,"id":1,"caption":"😼 #zatschi #whoneedsfourlegs","imagePath":"assets/public/images/uploads/ᓚᘏᗢ-#zatschi-#whoneedsfourlegs-1572600969477.jpg","createdAt":"2026-11-25T05:40:20.812Z","updatedAt":"2026-11-25T05:40:20.812Z","User":{"id":13,"username":"","email":"bj
+repeat-notification sprayed for all challenges
+[jwt-none-whoami] 200 {"user":{}}
+[jwt-none-admin-whoami] 200 {"user":{"id":28,"email":"agent2@test.com","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg"}}
+[jwt-none-admin-appver] 200 {"version":"20.4.0-SNAPSHOT"}
+[jwt-hs256-admin-whoami] 200 {"user":{"id":28,"email":"agent2@test.com","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg"}}
+[csrf-change-pw] 200 {"user":{"id":28,"username":"","email":"agent2@test.com","password":"e7ac9cdf8404c230eb331dba6222d856","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","totpSecret":"","isActive":true,"createdAt":"2026-11-25T05:52:33.661Z","updated
+[csrf-weakpw-back] 401 Current password is not correct.
+[weakpw-weak1@test.com] 201 {"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":29,"email":"weak1@test.com","updatedAt":"2026-11-25T05:58:05.796Z","createdAt":"2026-11-25T05:58:05.796Z","deletedAt":n
+[weakpw-weak2@test.com] 201 {"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":30,"email":"weak2@test.com","updatedAt":"2026-11-25T05:58:06.073Z","createdAt":"2026-11-25T05:58:06.073Z","deletedAt":n
+[weakpw-weak3@test.com] 201 {"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":31,"email":"weak3@test.com","updatedAt":"2026-11-25T05:58:06.192Z","createdAt":"2026-11-25T05:58:06.192Z","deletedAt":n
+[pw-repeat-eq] 201 {"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":32,"email":"rep@test.com","updatedAt":"2026-11-25T05:58:06.332Z","createdAt":"2026-11-25T05:58:06.332Z","deletedAt":nul
+[pw-repeat-ans] 201 {"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":33,"email":"rep2@test.com","updatedAt":"2026-11-25T05:58:06.484Z","createdAt":"2026-11-25T05:58:06.484Z","deletedAt":nu
+[basket7] 200 {"status":"success","data":{"id":7,"coupon":null,"UserId":28,"createdAt":"2026-11-25T05:52:33.982Z","updatedAt":"2026-11-25T05:52:33.982Z","Products":[]}}
+[basketitem p=-1 q=1] 500 <html>   <head>     <meta charset='utf-8'>      <title>Error: No such product found!</title>     <style>* {   margin: 0;   padding: 0;   outline: 0; }  body {   padding: 80px 100px;   font: 13px "Helvetica Neue", "Lucida Grande", "Arial";   background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%
+[basketitem p=99999 q=1] 500 <html>   <head>     <meta charset='utf-8'>      <title>Error: No such product found!</title>     <style>* {   margin: 0;   padding: 0;   outline: 0; }  body {   padding: 80px 100px;   font: 13px "Helvetica Neue", "Lucida Grande", "Arial";   background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%
+[basketitem p=1 q=-5] 200 {"status":"success","data":{"id":10,"ProductId":"1","BasketId":7,"quantity":-5,"updatedAt":"2026-11-25T05:58:06.706Z","createdAt":"2026-11-25T05:58:06.706Z"}}
+[basketitem p=1 q=0] 500 <html>   <head>     <meta charset='utf-8'>      <title>Error</title>     <style>* {   margin: 0;   padding: 0;   outline: 0; }  body {   padding: 80px 100px;   font: 13px "Helvetica Neue", "Lucida Grande", "Arial";   background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9
+[basketitem p=abc q=1] 500 <html>   <head>     <meta charset='utf-8'>      <title>Error: No such product found!</title>     <style>* {   margin: 0;   padding: 0;   outline: 0; }  body {   padding: 80px 100px;   font: 13px "Helvetica Neue", "Lucida Grande", "Arial";   background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%
+[basket-1] 200 {"status":"success","data":{"id":1,"coupon":null,"UserId":1,"createdAt":"2026-11-25T05:40:16.952Z","updatedAt":"2026-11-25T05:40:16.952Z","Products":[]}}
+[basket-2] 200 {"status":"success","data":{"id":2,"coupon":null,"UserId":2,"createdAt":"2026-11-25T05:40:16.952Z","updatedAt":"2026-11-25T05:40:16.952Z","Products":[{"id":4,"name":"Raspberry Juice (1000ml)","descrip
+[basket-6] 200 {"status":"success","data":{"id":6,"coupon":null,"UserId":27,"createdAt":"2026-11-25T05:45:46.119Z","updatedAt":"2026-11-25T05:45:46.119Z","Products":[]}}
+[basket-8] 200 {"status":"success","data":null}
+[deluxe-empty] 200 {"status":"success","data":{"confirmation":"Congratulations! You are now a deluxe member!","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjgsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJhZ2VudDJAdGVzdC5jb20iLCJwYXNzd29yZCI6ImU3YWM5Y2RmODQwNGMyMzBlYjMzMWRiYTYyMjJkODU2Iiw
+[deluxe-card] 400 {"status":"error","error":"Something went wrong. Please try again!"}
+[deluxe-wallet] 400 {"status":"error","error":"Something went wrong. Please try again!"}
+[deluxe-coupon] 400 {"status":"error","error":"Something went wrong. Please try again!"}
+[deluxe-none] 400 {"status":"error","error":"Something went wrong. Please try again!"}
+[deluxe-None] 400 {"status":"error","error":"Something went wrong. Please try again!"}
+[deluxe-get] 200 {"status":"success","data":{"membershipCost":49}}
+[coupon-old] 404 Invalid coupon.
+[complaint-captcha-answer] 201 {"status":"success","data":{"id":2,"UserId":28,"message":"test complaint","file":null,"updatedAt":"2026-11-25T05:58:07.598Z","createdAt":"2026-11-25T05:58:07.598Z"}}
+[complaint-captcha-wrong] 201 {"status":"success","data":{"id":3,"UserId":28,"message":"test2","updatedAt":"2026-11-25T05:58:07.673Z","createdAt":"2026-11-25T05:58:07.673Z","file":null}}
+[feedback-xss-0] 201 {"status":"success","data":{"id":11,"UserId":28,"comment":"","rating":1,"updatedAt":"2026-11-25T05:58:07.833Z","createdAt":"2026-11-25T05:58:07.833Z"}}
+[feedback-xss-1] 201 {"status":"success","data":{"id":12,"UserId":28,"comment":"<","rating":1,"updatedAt":"2026-11-25T05:58:07.982Z","createdAt":"2026-11-25T05:58:07.982Z"}}
+[feedback-xss-2] 201 {"status":"success","data":{"id":13,"UserId":28,"comment":"","rating":1,"updatedAt":"2026-11-25T05:58:08.142Z","createdAt":"2026-11-25T05:58:08.142Z"}}
+[feedback-xss-3] 201 {"status":"success","data":{"id":14,"UserId":28,"comment":"\" autofocus onfocus=alert(1) x=\"","rating":1,"updatedAt":"2026-11-25T05:58:08.712Z","createdAt":"2026-11-25T05:58:08.712Z"}}
+[feedback-zero] 201 {"status":"success","data":{"id":15,"UserId":28,"comment":"zero stars test","rating":0,"updatedAt":"2026-11-25T05:58:08.955Z","createdAt":"2026-11-25T05:58:08.955Z"}}
+[feedback-forged-admin] 201 {"status":"success","data":{"id":16,"UserId":1,"comment":"forged as admin?","rating":5,"updatedAt":"2026-11-25T05:58:09.207Z","createdAt":"2026-11-25T05:58:09.207Z"}}
+[review-xss] 201 {"status":"success"}
+[review-xss] 201 {"status":"success"}
+[review-xss] 201 {"status":"success"}
+[review-post-api] 404 {"error":"Not found"}
+[track-order] 200 {"status":"success","data":[{"promotionalAmount":"0","orderId":"5267-6bcee5757673160f","delivered":false,"email":"*dm*n@j**c*-sh.*p","totalPrice":29.99,"products":[{"quantity":1,"id":10,"name":"Christmas Super-Surprise-Box (2014 Edition)","price":29.99,"total":29.99,"bonus":3}],"bonus":3,"deliveryPr
+[track-nosql] 200 {"status":"success","data":[{"orderId":"ne"}]}
+[track-nosql2] 500 <html>   <head>     <meta charset='utf-8'>      <title>Error: Unexpected path: /rest/track-order?id%5B$ne%5D=x</title>     <style>* {   margin: 0;   padding: 0;   outline: 0; }  body {   padding: 80px 100px;   font: 13px "Helvetica Neue", "Lucida Grande", "Arial";   background: #ECE9E9 -webkit-gradi
+[search-{{7*7}}] 200 {"status":"success","data":[]}
+[search-<script>alert(1)</script>] 200 {"status":"success","data":[]}
+[search-<iframe src=javascript:alert(`xss`)>] 200 {"status":"success","data":[]}
+[search-${7*7}] 200 {"status":"success","data":[]}
+[search-#{7*7}] 200 {"status":"success","data":[]}
+[login-{'$ne': ''}-{'$ne': ''}] 500 <html>   <head>     <meta charset='utf-8'>      <title>TypeError [ERR_INVALID_ARG_TYPE]: The &quot;data&quot; argument must be of type string or an instance of Buffer, TypedArray, or DataView. Receive
+[login-admin@juice-sh.op'---x] 200 {"authentication":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6IiIsImVtYWlsIjoiYWRtaW5AanVpY2Utc2gub3AiLCJwYXNzd29yZCI6IjAxOTIwMjNhN2JiZDczMjUwNTE2ZjA2OWRmMThiNTA
+[login-admin@juice-sh.op-admin] 401 Invalid email or password.
+[login-mc.safesearch@juice-sh.op-rapper] 401 Invalid email or password.
+[login-mc.safesearch@juice-sh.op-MCsafeSearch] 401 Invalid email or password.
+[login-amy@juice-sh.op-K1f..............] 401 Invalid email or password.
+[login-amy@juice-sh.op-password] 401 Invalid email or password.
+[login-support@juice-sh.op-support] 401 Invalid email or password.
+[login-bjoern.kimminich@owasp.org-bjoern] 401 Invalid email or password.
+[secq-bjoern.kimminich@owasp.org] 200 {}
+[secq-jim@juice-sh.op] 200 {"question":{"id":1,"question":"Your eldest siblings middle name?","createdAt":"2026-11-25T05:40:11.832Z","updatedAt":"2026-11-25T05:40:11.832Z"}}
+[secq-morty@juice-sh.op] 200 {"question":{"id":7,"question":"Name of your favorite pet?","createdAt":"2026-11-25T05:40:11.833Z","updatedAt":"2026-11-25T05:40:11.833Z"}}
+[secq-uvogin@juice-sh.op] 200 {"question":{"id":12,"question":"Your favorite movie?","createdAt":"2026-11-25T05:40:11.834Z","updatedAt":"2026-11-25T05:40:11.834Z"}}
+[secq-bender@juice-sh.op] 200 {"question":{"id":10,"question":"Company you first work for as an adult?","createdAt":"2026-11-25T05:40:11.833Z","updatedAt":"2026-11-25T05:40:11.833Z"}}
+[secq-amy@juice-sh.op] 200 {"question":{"id":8,"question":"Last name of dentist when you were a teenager? (Do not include 'Dr.')","createdAt":"2026-11-25T05:40:11.833Z","updatedAt":"2026-11-25T05:40:11.833Z"}}
+[2fa-setup] 401 
+2fa parse Expecting value: line 1 column 1 (char 0)
+[order-history] 200 {"status":"success","data":[]}
+[orders] 403 {"error":"Malicious activity detected"}
+[wallet] 200 {"status":"success","data":0}
+[addresses] 200 {"status":"success","data":[]}
+[cards] 200 {"status":"success","data":[]}
+[recycles] 200 {"status":"success","data":{"err":"Sorry, this endpoint is not supported."}}
+[dataexport] 500 <html>   <head>     <meta charset='utf-8'>      <title>Error: Unexpected path: /rest/user/data-export?format=json</title>     <style>* {   margin: 0;   padding: 0;   outline: 0; }  body {   padding: 80px 100px;   font: 13px "Helvetica Neue", "Lucida Grande", "Arial";   background: #ECE9E9 -webkit-gr
+[product-tamper] 200 {"status":"success","data":{"id":1,"name":"Apple Juice (1000ml)","description":"PWNED BY AGENT2","price":1.99,"deluxePrice":0.99,"image":"apple_juice.jpg","alternateImages":[{"file":"apple_juice-1x.avif","format":"image/avif","density":"1x"},{"file":"apple_juice-2x.avif","format":"image/avif","densi
+[product1-after] 200 {"status":"success","data":{"id":1,"name":"Apple Juice (1000ml)","description":"PWNED BY AGENT2","price":1.99,"deluxePrice":0.99,"image":"apple_juice.jpg","alternateImages":[{"file":"apple_juice-1x.av
+[b2border] 500 <html>   <head>     <meta charset='utf-8'>      <title>Error: Unexpected path: /api/B2BOrder</title>     <style>* {   margin: 0;   padding: 0;   outline: 0; }  body {   padding: 80px 100px;   font: 13px "Helvetica Neue", "Lucida Grande", "Arial";   background: #ECE9E9 -webkit-gradient(linear, 0% 0%,
