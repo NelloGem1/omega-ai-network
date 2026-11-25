@@ -1,0 +1,52 @@
+digits: train=1347 test=450 features=64
+
+======================================================================
+EXP 1 — BASELINE MODEL COMPARISON
+======================================================================
+LogisticRegression     train=1.0000 test=0.9622 gap=+0.0378 fit=  1.09s infer=1.59us/sample
+RandomForest(200)      train=1.0000 test=0.9667 gap=+0.0333 fit=  0.85s infer=223.89us/sample
+MLP(128,64)            train=0.9777 test=0.9578 gap=+0.0200 fit=  2.63s infer=5.67us/sample
+
+best test acc: RandomForest(200) = 0.9667
+
+confusion matrix (rows=true, cols=pred):
+      0   1   2   3   4   5   6   7   8   9
+  0  43   0   0   0   2   0   0   0   0   0
+  1   0  44   0   1   0   1   0   0   0   0
+  2   0   0  44   0   0   0   0   0   0   0
+  3   0   0   0  46   0   0   0   0   0   0
+  4   0   0   0   0  45   0   0   0   0   0
+  5   0   0   0   0   0  44   0   0   0   2
+  6   0   0   0   0   0   0  44   0   1   0
+  7   0   0   0   0   0   0   0  45   0   0
+  8   0   3   0   1   0   0   0   1  38   0
+  9   0   0   0   1   0   0   0   1   1  42
+
+most-confused digits (off-diag errors):
+  true=8: 5 errors -> predicted [1 7 3] ([3, 1, 1])
+  true=9: 3 errors -> predicted [8 7 3] ([1, 1, 1])
+  true=5: 2 errors -> predicted [9 8 7] ([2, 0, 0])
+  true=0: 2 errors -> predicted [4 9 8] ([2, 0, 0])
+  true=1: 2 errors -> predicted [3 5 8] ([1, 1, 0])
+
+======================================================================
+EXP 2 — OVERFITTING LIVE: poly-degree x Ridge-alpha sweep
+======================================================================
+degree    alpha train_acc  val_acc      gap  n_features
+     1     0.01    0.2442   0.2267  +0.0176          64
+     1      1.0    0.2442   0.2267  +0.0176          64
+     1    100.0    0.2339   0.2156  +0.0183          64
+     2     0.01    1.0000   0.1911  +0.8089        2144
+     2      1.0    0.9889   0.2978  +0.6911        2144
+     2    100.0    0.7572   0.4911  +0.2661        2144
+     3     0.01    1.0000   0.5556  +0.4444       47904
+     3      1.0    1.0000   0.5556  +0.4444       47904
+     3    100.0    1.0000   0.5533  +0.4467       47904
+
+NOTE: Ridge regression on digit labels — gap grows with degree
+unless alpha compensates. True overfit showcase below:
+
+                             model    train      val      gap
+LogReg + poly(deg=1) C=10          1.0000   0.9644  +0.0356
+LogReg + poly(deg=2) C=10          1.0000   0.9689  +0.0311
+LogReg + poly(deg=3) C=10          1.0000   0.9733  +0.0267

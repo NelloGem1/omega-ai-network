@@ -41,12 +41,14 @@ class AVL(BST):
         n.height = 1 + max(self._h(n.left), self._h(n.right))
         bal = self._h(n.left) - self._h(n.right)
         if bal > 1:
-            if k < n.left.key: n.left = self._rotR(n.left)
+            if self._h(n.left.left) >= self._h(n.left.right): n.left = self._rotR(n.left)
             else: n.left = self._rotL(n.left)
-        elif bal < -1:
-            if k > n.right.key: n.right = self._rotL(n.right)
+            return self._rotR(n)
+        if bal < -1:
+            if self._h(n.right.right) >= self._h(n.right.left): n.right = self._rotL(n.right)
             else: n.right = self._rotR(n.right)
-        return self._rot(n)
+            return self._rotL(n)
+        return n
     @staticmethod
     def _h(n): return 0 if n is None else n.height
     @staticmethod

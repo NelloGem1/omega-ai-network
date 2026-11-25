@@ -93,8 +93,8 @@ ALGOS = {
 }
 
 def timsort_wrap(a):
-    t0 = sorted(a)
-    # comparison count for Timsort is not observable in C; estimate via cmp_to_key separately
+    t0 = time.perf_counter()
+    a.sort()  # in-place Timsort
     return 0
 
 def gen(kind, n):
