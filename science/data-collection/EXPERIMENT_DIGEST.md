@@ -44,3 +44,7 @@ RULE: extend - try ECM on 300b+, SIQS for >256b, explore Cramer gap bounds.
 - JPEG smoothing fails (5.6%); preprocessing evaluated adaptively (STE gradients)
 - Bug found: PGD must ASCEND loss (x + a*sign(grad))
 RULE: extend - EOT attacker vs bit-depth defense; test on CIFAR-10/ViT.
+## Marshal Colab ViT (PERSONAL - Tesla T4)
+- vit_tiny_patch16_224, full MNIST 60k, 224px, 5 epochs: TEST ACC 0.9738
+- BEATS MLP baseline 0.963 -> Transformer wins on MNIST
+- Local CPU ViT (12k,128px,2ep): 0.5965; full retrain 60k x5ep in progress
