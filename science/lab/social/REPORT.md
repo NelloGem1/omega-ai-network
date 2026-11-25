@@ -80,3 +80,11 @@ Date: Nov 25, 2026. Scripts: /home/neilh/science_lab/social/exp*.py ; data: exp*
 - exp2_nash.py, exp2_results.json — NE enumeration + mixed NE
 - exp34.py, exp34_results.json ; exp3b.py, exp3b_results.json — commons & market
 - exp567.py, exp567_results.json ; exp5fix.py, exp5fix.json — networks, Deffuant, signaling
+
+---
+
+## ERRATUM — EXP1 Prisoner's Dilemma (autopsy-found bug, now fixed)
+`play()` passed both players' histories to both seats and the wrapper always read player B's history, so TFT-as-player-A degenerated to always-cooperate; TFT/random/noise numbers were artifacts. Corrected run (`exp1_pd_fixed.py` → `exp1_results_fixed.json`; see CORRECTIONS.md):
+- Clean: grim 2.659 > **TFT 2.539** > AC 2.251 > AD 2.012 > **random 1.972**.
+- 5% noise: grim 2.120 > AD 2.078 > TFT 2.051 > random 2.002 > AC 1.830.
+- Conclusions survive: grim still beats true TFT; under noise TFT still falls below always-defect (2.051 vs 2.078, barely). Magnitudes above supersede the originals.

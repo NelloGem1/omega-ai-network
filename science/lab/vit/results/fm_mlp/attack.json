@@ -1,0 +1,10 @@
+{
+  "tag": "fm_mlp",
+  "model": "mlp",
+  "dataset": "fashion",
+  "eps": 0.3,
+  "n": 1000,
+  "clean_acc": 0.826,
+  "adv_acc": 0.001,
+  "drop": 0.825
+}

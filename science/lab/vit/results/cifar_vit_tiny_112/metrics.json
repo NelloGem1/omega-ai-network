@@ -1,0 +1,28 @@
+{
+  "tag": "cifar_vit_tiny_112",
+  "model": "vit",
+  "dataset": "cifar",
+  "img_size": 112,
+  "ntrain": 8000,
+  "ntest": 2000,
+  "epochs": 3,
+  "batch": 128,
+  "lr": 0.001,
+  "seed": 0,
+  "params": 5498122,
+  "clean_acc": 0.3195,
+  "train_time_s": 415.0862464904785,
+  "epoch_times_s": [
+    141.0578374862671,
+    136.84156584739685,
+    136.77516794204712
+  ],
+  "infer_time_s": 11.30422592163086,
+  "infer_ms_per_img": 5.65211296081543,
+  "in_shape": [
+    3,
+    32,
+    32
+  ],
+  "num_classes": 10
+}

@@ -1,0 +1,422 @@
+{
+ "primorial": [
+  {
+   "last_prime": 2,
+   "primorial": 2,
+   "phi": 1,
+   "bounds": [
+    {
+     "B": 2,
+     "coprime": 1,
+     "density": 0.5,
+     "expected_phi_density": 0.5
+    },
+    {
+     "B": 20,
+     "coprime": 10,
+     "density": 0.5,
+     "expected_phi_density": 0.5
+    }
+   ]
+  },
+  {
+   "last_prime": 3,
+   "primorial": 6,
+   "phi": 2,
+   "bounds": [
+    {
+     "B": 6,
+     "coprime": 2,
+     "density": 0.3333333333333333,
+     "expected_phi_density": 0.3333333333333333
+    },
+    {
+     "B": 60,
+     "coprime": 20,
+     "density": 0.3333333333333333,
+     "expected_phi_density": 0.3333333333333333
+    }
+   ]
+  },
+  {
+   "last_prime": 5,
+   "primorial": 30,
+   "phi": 8,
+   "bounds": [
+    {
+     "B": 30,
+     "coprime": 8,
+     "density": 0.26666666666666666,
+     "expected_phi_density": 0.26666666666666666
+    },
+    {
+     "B": 300,
+     "coprime": 80,
+     "density": 0.26666666666666666,
+     "expected_phi_density": 0.26666666666666666
+    }
+   ]
+  },
+  {
+   "last_prime": 7,
+   "primorial": 210,
+   "phi": 48,
+   "bounds": [
+    {
+     "B": 210,
+     "coprime": 48,
+     "density": 0.22857142857142856,
+     "expected_phi_density": 0.22857142857142856
+    },
+    {
+     "B": 2100,
+     "coprime": 480,
+     "density": 0.22857142857142856,
+     "expected_phi_density": 0.22857142857142856
+    }
+   ]
+  },
+  {
+   "last_prime": 11,
+   "primorial": 2310,
+   "phi": 480,
+   "bounds": [
+    {
+     "B": 2310,
+     "coprime": 480,
+     "density": 0.2077922077922078,
+     "expected_phi_density": 0.2077922077922078
+    },
+    {
+     "B": 23100,
+     "coprime": 4800,
+     "density": 0.2077922077922078,
+     "expected_phi_density": 0.2077922077922078
+    }
+   ]
+  },
+  {
+   "last_prime": 13,
+   "primorial": 30030,
+   "phi": 5760,
+   "bounds": [
+    {
+     "B": 30030,
+     "coprime": 5760,
+     "density": 0.1918081918081918,
+     "expected_phi_density": 0.1918081918081918
+    },
+    {
+     "B": 300300,
+     "coprime": 57600,
+     "density": 0.1918081918081918,
+     "expected_phi_density": 0.1918081918081918
+    }
+   ]
+  },
+  {
+   "last_prime": 17,
+   "primorial": 510510,
+   "phi": 92160,
+   "bounds": [
+    {
+     "B": 510510,
+     "coprime": 92160,
+     "density": 0.18052535699594524,
+     "expected_phi_density": 0.18052535699594524
+    },
+    {
+     "B": 5105100,
+     "coprime": 921600,
+     "density": 0.18052535699594524,
+     "expected_phi_density": 0.18052535699594524
+    }
+   ]
+  },
+  {
+   "last_prime": 19,
+   "primorial": 9699690,
+   "phi": 1658880,
+   "bounds": [
+    {
+     "B": 9699690,
+     "coprime": 1658880,
+     "density": 0.17102402241721126,
+     "expected_phi_density": 0.17102402241721126
+    },
+    {
+     "B": 10000000,
+     "coprime": 1710234,
+     "density": 0.1710234,
+     "expected_phi_density": 0.17102402241721126
+    }
+   ]
+  },
+  {
+   "last_prime": 23,
+   "primorial": 223092870,
+   "phi": 36495360,
+   "bounds": [
+    {
+     "B": 223092870,
+     "coprime": 36495360,
+     "density": 0.16358819535559338,
+     "expected_phi_density": 0.16358819535559338
+    },
+    {
+     "B": 10000000,
+     "coprime": 1635877,
+     "density": 0.1635877,
+     "expected_phi_density": 0.16358819535559338
+    }
+   ]
+  },
+  {
+   "last_prime": 29,
+   "primorial": 6469693230,
+   "phi": 1021870080,
+   "bounds": [
+    {
+     "B": 6469693230,
+     "coprime": 1021870080,
+     "density": 0.15794722310195225,
+     "expected_phi_density": 0.15794722310195225
+    },
+    {
+     "B": 10000000,
+     "coprime": 1579471,
+     "density": 0.1579471,
+     "expected_phi_density": 0.15794722310195225
+    }
+   ]
+  },
+  {
+   "last_prime": 31,
+   "primorial": 200560490130,
+   "phi": 30656102400,
+   "bounds": [
+    {
+     "B": 200560490130,
+     "coprime": 30656102400,
+     "density": 0.15285215138898603,
+     "expected_phi_density": 0.15285215138898603
+    },
+    {
+     "B": 10000000,
+     "coprime": 1528521,
+     "density": 0.1528521,
+     "expected_phi_density": 0.15285215138898603
+    }
+   ]
+  },
+  {
+   "last_prime": 37,
+   "primorial": 7420738134810,
+   "phi": 1103619686400,
+   "bounds": [
+    {
+     "B": 7420738134810,
+     "coprime": 1103619686400,
+     "density": 0.1487210121622567,
+     "expected_phi_density": 0.1487210121622567
+    },
+    {
+     "B": 10000000,
+     "coprime": 1487203,
+     "density": 0.1487203,
+     "expected_phi_density": 0.1487210121622567
+    }
+   ]
+  },
+  {
+   "last_prime": 41,
+   "primorial": 304250263527210,
+   "phi": 44144787456000,
+   "bounds": [
+    {
+     "B": 304250263527210,
+     "coprime": 44144787456000,
+     "density": 0.14509367040220164,
+     "expected_phi_density": 0.14509367040220164
+    },
+    {
+     "B": 10000000,
+     "coprime": 1450909,
+     "density": 0.1450909,
+     "expected_phi_density": 0.14509367040220164
+    }
+   ]
+  },
+  {
+   "last_prime": 43,
+   "primorial": 13082761331670030,
+   "phi": 1854081073152000,
+   "bounds": [
+    {
+     "B": 13082761331670030,
+     "coprime": 1854081073152000,
+     "density": 0.14171939899749927,
+     "expected_phi_density": 0.14171939899749927
+    },
+    {
+     "B": 10000000,
+     "coprime": 1417128,
+     "density": 0.1417128,
+     "expected_phi_density": 0.14171939899749927
+    }
+   ]
+  },
+  {
+   "last_prime": 47,
+   "primorial": 614889782588491410,
+   "phi": 85287729364992000,
+   "bounds": [
+    {
+     "B": 614889782588491410,
+     "coprime": 85287729364992000,
+     "density": 0.13870409263585035,
+     "expected_phi_density": 0.13870409263585035
+    },
+    {
+     "B": 10000000,
+     "coprime": 1386922,
+     "density": 0.1386922,
+     "expected_phi_density": 0.13870409263585035
+    }
+   ]
+  }
+ ],
+ "mertens": [
+  {
+   "last_prime": 2,
+   "product": 0.5,
+   "mertens_ratio": 0.6172726624514951
+  },
+  {
+   "last_prime": 3,
+   "product": 0.33333333333333337,
+   "mertens_ratio": 0.6522360151372854
+  },
+  {
+   "last_prime": 5,
+   "product": 0.2666666666666667,
+   "mertens_ratio": 0.76440679314776
+  },
+  {
+   "last_prime": 7,
+   "product": 0.22857142857142862,
+   "mertens_ratio": 0.792184432998769
+  },
+  {
+   "last_prime": 11,
+   "product": 0.20779220779220783,
+   "mertens_ratio": 0.8874441831917425
+  },
+  {
+   "last_prime": 13,
+   "product": 0.19180819180819186,
+   "mertens_ratio": 0.8762489774129407
+  },
+  {
+   "last_prime": 17,
+   "product": 0.18052535699594527,
+   "mertens_ratio": 0.9109594999306744
+  },
+  {
+   "last_prime": 19,
+   "product": 0.17102402241721132,
+   "mertens_ratio": 0.8968942777134215
+  },
+  {
+   "last_prime": 23,
+   "product": 0.16358819535559344,
+   "mertens_ratio": 0.913565190978998
+  },
+  {
+   "last_prime": 29,
+   "product": 0.15794722310195228,
+   "mertens_ratio": 0.9472723166600299
+  },
+  {
+   "last_prime": 31,
+   "product": 0.15285215138898609,
+   "mertens_ratio": 0.9348712550248975
+  },
+  {
+   "last_prime": 37,
+   "product": 0.14872101216225675,
+   "mertens_ratio": 0.9564703821398696
+  },
+  {
+   "last_prime": 41,
+   "product": 0.1450936704022017,
+   "mertens_ratio": 0.9596699623598578
+  },
+  {
+   "last_prime": 43,
+   "product": 0.14171939899749933,
+   "mertens_ratio": 0.9493739717763937
+  },
+  {
+   "last_prime": 47,
+   "product": 0.1387040926358504,
+   "mertens_ratio": 0.9511482934024953
+  }
+ ],
+ "last_digit": {
+  "0": 0,
+  "1": 166104,
+  "2": 1,
+  "3": 166230,
+  "4": 0,
+  "5": 1,
+  "6": 0,
+  "7": 166211,
+  "8": 0,
+  "9": 166032
+ },
+ "offenders": [],
+ "num_offenders": 0,
+ "last_two_digit_sample": {
+  "1": 16573,
+  "3": 16649,
+  "7": 16551,
+  "9": 16586,
+  "11": 16670,
+  "13": 16585,
+  "17": 16594,
+  "19": 16598,
+  "21": 16623,
+  "23": 16623,
+  "27": 16612,
+  "29": 16546,
+  "31": 16589,
+  "33": 16560,
+  "37": 16637,
+  "39": 16667,
+  "41": 16603,
+  "43": 16596,
+  "47": 16642,
+  "49": 16603,
+  "51": 16582,
+  "53": 16606,
+  "57": 16632,
+  "59": 16516,
+  "61": 16608,
+  "63": 16619,
+  "67": 16653,
+  "69": 16661,
+  "71": 16597,
+  "73": 16628,
+  "77": 16648,
+  "79": 16604,
+  "81": 16543,
+  "83": 16652,
+  "87": 16603,
+  "89": 16594,
+  "91": 16716,
+  "93": 16711,
+  "97": 16638,
+  "99": 16657
+ }
+}

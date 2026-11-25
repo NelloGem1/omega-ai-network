@@ -1,0 +1,19 @@
+fetched NM_000207.3 length = 465 nt
+header check: first 60nt AGCCCTCCAGGACAGGCTGCATCAGAAGAGGCCATCAAGCAGATCACTGTCCTTCTGCCA
+
+GC content: real=63.87%  synthetic(iid)=62.58%
+
+Top 10 codons in insulin CDS: [('TGG', 12), ('AGC', 8), ('ACC', 8), ('CAG', 7), ('GCA', 7), ('CCC', 7), ('TGC', 7), ('CCT', 6), ('GCC', 6), ('TCT', 6)]
+chi-square codon bias vs iid: chi2=85.2, df=44, p=0.000192
+
+dinucleotide chi-square: chi2=73.7, df=15, p=9.63e-10
+over-represented: [('TG', 1.85), ('CT', 1.75), ('AG', 1.38), ('CA', 1.25)]
+under-represented: [('TT', 0.63), ('GT', 0.6), ('TA', 0.53), ('CG', 0.32)]
+
+4-mer spectrum: 164 distinct, top5=[('GCAG', 12), ('CCTG', 12), ('CTGC', 11), ('GCCC', 10), ('CCCT', 10)]
+
+=== BREAK TEST ===
+GC after shuffle: 63.87% (unchanged: True)
+dinucleotide chi2 after shuffle: 16.9, p=0.328 (was p=9.63e-10)
+windowed-GC std: real=4.26  shuffled=3.70
+-> shuffle kills dinucleotide signal & local GC heterogeneity; GC% survives

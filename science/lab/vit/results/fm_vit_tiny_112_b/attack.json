@@ -1,0 +1,10 @@
+{
+  "tag": "fm_vit_tiny_112_b",
+  "model": "vit",
+  "dataset": "fashion",
+  "eps": 0.3,
+  "n": 1000,
+  "clean_acc": 0.706,
+  "adv_acc": 0.061,
+  "drop": 0.645
+}

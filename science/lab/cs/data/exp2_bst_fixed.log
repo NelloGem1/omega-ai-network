@@ -1,0 +1,25 @@
+n=1000 sorted  BST: h=1000 tins=0.087s tfind=0.0180s avgsteps=492.8 verified=True
+n=1000 sorted  AVL: h=10 tins=0.005s tfind=0.0004s avgsteps=9.1 verified=True
+n=1000 reverse BST: h=1000 tins=0.080s tfind=0.0198s avgsteps=496.8 verified=True
+n=1000 reverse AVL: h=10 tins=0.005s tfind=0.0004s avgsteps=9.0 verified=True
+n=1000 random  BST: h=20 tins=0.001s tfind=0.0006s avgsteps=12.0 verified=True
+n=1000 random  AVL: h=12 tins=0.005s tfind=0.0005s avgsteps=9.2 verified=True
+n=5000 sorted  BST: h=5000 tins=2.807s tfind=0.0983s avgsteps=2549.7 verified=True
+n=5000 sorted  AVL: h=13 tins=0.032s tfind=0.0015s avgsteps=11.3 verified=True
+n=5000 reverse BST: h=5000 tins=2.679s tfind=0.1074s avgsteps=2511.2 verified=True
+n=5000 reverse AVL: h=13 tins=0.031s tfind=0.0006s avgsteps=11.4 verified=True
+n=5000 random  BST: h=33 tins=0.010s tfind=0.0008s avgsteps=15.5 verified=True
+n=5000 random  AVL: h=15 tins=0.032s tfind=0.0006s avgsteps=11.6 verified=True
+n=10000 sorted  BST: h=10000 tins=12.895s tfind=0.2067s avgsteps=5134.4 verified=True
+n=10000 sorted  AVL: h=14 tins=0.069s tfind=0.0007s avgsteps=12.3 verified=True
+n=10000 reverse BST: h=10000 tins=11.737s tfind=0.2442s avgsteps=5085.4 verified=True
+n=10000 reverse AVL: h=14 tins=0.078s tfind=0.0007s avgsteps=12.4 verified=True
+n=10000 random  BST: h=30 tins=0.021s tfind=0.0008s avgsteps=16.2 verified=True
+n=10000 random  AVL: h=16 tins=0.078s tfind=0.0007s avgsteps=12.6 verified=True
+n=20000 sorted  BST: h=20000 tins=54.487s tfind=0.4087s avgsteps=10197.3 verified=True
+n=20000 sorted  AVL: h=15 tins=0.143s tfind=0.0008s avgsteps=13.3 verified=True
+n=20000 reverse BST: h=20000 tins=52.286s tfind=0.5244s avgsteps=10096.8 verified=True
+n=20000 reverse AVL: h=15 tins=0.134s tfind=0.0008s avgsteps=13.5 verified=True
+n=20000 random  BST: h=33 tins=0.068s tfind=0.0018s avgsteps=17.7 verified=True
+n=20000 random  AVL: h=17 tins=0.215s tfind=0.0009s avgsteps=13.7 verified=True
+wrote exp2_bst_fixed.csv

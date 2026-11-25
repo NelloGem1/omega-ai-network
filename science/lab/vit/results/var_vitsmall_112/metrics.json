@@ -1,0 +1,28 @@
+{
+  "tag": "var_vitsmall_112",
+  "model": "vit_small",
+  "dataset": "fashion",
+  "img_size": 112,
+  "ntrain": 3000,
+  "ntest": 2000,
+  "epochs": 3,
+  "batch": 48,
+  "lr": 0.001,
+  "seed": 0,
+  "params": 21613066,
+  "clean_acc": 0.3515,
+  "train_time_s": 551.9521429538727,
+  "epoch_times_s": [
+    185.33960247039795,
+    180.48218727111816,
+    185.80650448799133
+  ],
+  "infer_time_s": 40.04589247703552,
+  "infer_ms_per_img": 20.02294623851776,
+  "in_shape": [
+    1,
+    28,
+    28
+  ],
+  "num_classes": 10
+}

@@ -1,0 +1,10 @@
+{
+  "tag": "cifar_cnn",
+  "model": "cnn",
+  "dataset": "cifar",
+  "eps": 0.3,
+  "n": 1000,
+  "clean_acc": 0.458,
+  "adv_acc": 0.234,
+  "drop": 0.224
+}

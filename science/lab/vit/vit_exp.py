@@ -107,6 +107,8 @@ def run_train(args):
             tot += loss.item()*len(y); corr += (out.argmax(1)==y).sum().item()
         sched.step(); ep_times.append(time.time()-te)
         print(f'[{args.tag}] epoch {ep+1}/{args.epochs} loss={tot/len(perm_tr):.4f} acc={corr/len(perm_tr):.4f} t={ep_times[-1]:.1f}s', flush=True)
+        os.makedirs(os.path.join(ROOT,'results',args.tag), exist_ok=True)
+        torch.save(model.state_dict(), os.path.join(ROOT,'results',args.tag,'last.pt'))
     train_time = time.time()-t0
     model.eval()
     te_loader = get_loader(xs_te, ys_te, perm_te, 128, False)

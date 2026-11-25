@@ -1,0 +1,16 @@
+dict_lookup exponent 0.003 (expect ~0)
+list_max exponent 1.089
+sort exponent 1.178 (expect ~1.x)
+bisect exponent 0.152 (expect ~0)
+nested exponent 2.061 (expect ~2)
+fib naive 10 0.0
+fib naive 15 0.0001
+fib naive 20 0.001
+fib naive 25 0.0116
+fib naive 28 0.0581
+fib naive 30 0.132
+fib iter 1000 0.0001
+fib iter 10000 0.0016
+fib iter 100000 0.1165
+fib iter 1000000 12.4089
+wrote exp7_bigo_fixed.csv

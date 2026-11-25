@@ -1,0 +1,10 @@
+{
+  "tag": "cifar_vit_tiny_112",
+  "model": "vit",
+  "dataset": "cifar",
+  "eps": 0.3,
+  "n": 1000,
+  "clean_acc": 0.304,
+  "adv_acc": 0.003,
+  "drop": 0.301
+}

@@ -150,3 +150,13 @@ Top gaps: 154 after 4,652,353; 152 after 8,421,251; 148 after 7,230,331 and 2,01
 
 ## Files
 `scripts`: exp1_primes.py … exp7_gaps.py, ecm192.py · `data`: exp1_data.json … exp7_data.json, ecm192_result.json
+
+---
+
+## ERRATUM — EXP6 Collatz (autopsy-found bug, now fixed)
+The original `collatz_steps` aborted when a trajectory *value* exceeded 10M, truncating most runs — every number above was wrong. Corrected run (`exp6_collatz_fixed.py` → `exp6_data_fixed.json`, `exp6_collatz_fixed.csv`; see CORRECTIONS.md):
+- Record under 1M: **524 steps @ n=837,799** (not 377 @ 1,066,731); under 2M: **556 @ n=1,723,519**.
+- Mean steps (n≤1M): **131.4** (not 118.6); variance 3211.5.
+- Top-10 and histogram completely different; histogram tail now reaches 500+.
+- Zero non-trivial cycles for n<10,000 now genuinely verified (per-run cycle walk, no cap).
+- Lesson unchanged in spirit, corrected in magnitude: mean ~131, record 524.
