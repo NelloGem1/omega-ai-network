@@ -17,3 +17,11 @@ RULES FOR ALL AGENTS: read this file + sibling REPORT.md files first; cite prior
 - Dijkstra WITH settled-set BROKEN on negative edges (dist=2 vs true -4); Bellman-Ford correct; version w/o settled-set stays correct
 - KMP 40k comparisons vs naive 1M; Big-O exponents match theory (max=1.006, nested=2.051)
 RULE: extend - e.g. test Fibonacci heaps, Fibonacci hashing, cache-oblivious layouts.
+## Bio/Chem agent (COMPLETE - 7 experiments, fetched LIVE NCBI+UniProt data)
+- Periodic radius fits R2=0.89 main groups; lanthanide contraction flattens radii; d-block collapses fit
+- Human insulin CDS: GC=63.9%, CpG suppressed 0.32x, codon bias p~7e-19; shuffle kills dinucleotide signal
+- MM kinetics recovers Vmax/Km exactly; substrate inhibition biases plain fit 3x
+- SIR R0=4 -> 40% peak, 98% attack rate; HONEST NEGATIVE: SIRS gives stable endemic eq not oscillations
+- UPGMA recovered exact 5-taxon tree; shuffle -> star tree
+- Iris PCA 95.8% var; "outliers" = class boundaries not errors
+RULE: extend - fetch more live NCBI data, test more genomes/kinases.
