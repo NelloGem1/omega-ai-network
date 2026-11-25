@@ -1,0 +1,32 @@
+======================================================================
+EXP 3 — ADVERSARIAL ATTACK (FGSM on torch MLP)
+======================================================================
+torch MLP clean test acc = 0.9689
+ epsilon  test_acc  acc_drop
+     0.0    0.9689   +0.0000
+    0.05    0.8178   +0.1511
+     0.1    0.5311   +0.4378
+     0.2    0.0267   +0.9422
+     0.5    0.0000   +0.9689
+saved adversarial_digits.png
+
+======================================================================
+EXP 4 — DATA POISONING: flip training labels
+======================================================================
+clean train acc=1.0000 test acc=0.9622
+poison=  5%: train(on poisoned labels)=0.9436 test=0.8844 drop=+0.0778
+poison= 10%: train(on poisoned labels)=0.8834 test=0.8956 drop=+0.0667
+poison= 20%: train(on poisoned labels)=0.7691 test=0.8844 drop=+0.0778
+
+model agrees with poisoned labels on 7.5% of flipped samples — it memorized the lie
+
+======================================================================
+EXP 5 — CONCEPT DRIFT: train 0-4, test 5-9
+======================================================================
+in-domain val acc (digits 0-4):      0.9956
+unseen digits 5-9, raw preds:        0.0000 (model can only emit labels 0-4)
+unseen digits 5-9, remap 0-4->5-9:   0.1920 (upper bound if drift were only a label shift)
+predicted-label histogram on 5-9: [131  98  27 479 161]
+
+after retrain on all 10 digits (fresh split): test acc=0.9622
+-> drift damage fully recovered once new-class data arrives

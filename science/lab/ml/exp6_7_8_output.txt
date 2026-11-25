@@ -1,0 +1,41 @@
+======================================================================
+EXP 6 — UNSUPERVISED: KMeans on raw pixels + PCA
+======================================================================
+KMeans(k=10) ARI vs true digits = 0.6489  (1.0=perfect, 0=random)
+cluster->digit mapping (Hungarian):
+  cluster 0:  108/ 202 = digit 9
+  cluster 1:   73/ 172 = digit 8
+  cluster 2:  134/ 139 = digit 6
+  cluster 3:   43/  66 = digit 1
+  cluster 4:   92/ 101 = digit 5
+  cluster 5:  123/ 124 = digit 4
+  cluster 6:  133/ 134 = digit 0
+  cluster 7:  108/ 126 = digit 2
+  cluster 8:  112/ 135 = digit 3
+  cluster 9:  129/ 148 = digit 7
+cluster purity after best mapping: 0.7832
+
+PCA explained variance (first 10): [0.146 0.138 0.117 0.088 0.057 0.049 0.042 0.036 0.034 0.03 ]
+cumulative: PC1=0.146, PC1-2=0.284, PC1-3=0.401, PC1-10=0.738
+-> 2D plot separates coarse digit shapes (loops vs lines) but overlaps similar digits (3/5/8, 4/9); 3rd dim adds stroke detail
+
+======================================================================
+EXP 7 — NLP-LITE: TF-IDF + LogReg on 20newsgroups (2 cats)
+======================================================================
+train=1073 test=713 cats=['alt.atheism', 'sci.space']
+TF-IDF+LogReg test acc = 0.8710
+
+top features for class '0':
+  god, religion, bible, atheism, say, islam, people, morality, islamic, don, objective, deletion
+
+top features for class '1':
+  space, nasa, moon, orbit, launch, earth, spacecraft, software, data, cost, shuttle, lunar
+
+======================================================================
+EXP 8 — MODEL EXTRACTION-ish: distillation fidelity
+======================================================================
+teacher test acc=0.9622
+student test acc=0.9622
+teacher/student agreement on test = 1.0000
+student==oracle agreement = 1.0000
+-> extraction: a second model CAN clone a linear model's decision boundary almost exactly (logreg is self-distillable); nonlinear teachers leak less
