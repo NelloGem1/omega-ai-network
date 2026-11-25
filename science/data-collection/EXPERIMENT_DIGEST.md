@@ -37,3 +37,10 @@ RULE: extend - try ECM on 300b+, SIQS for >256b, explore Cramer gap bounds.
 - FGSM eps=0.3: clean 0.949 -> attacked 0.000 (confirmed twice)
 - Adversarial training defense: clean 0.961 / attack 0.711 (recovered from 0%)
 - ViT-tiny local CPU training in progress (vit_mnist_local.py)
+## AdvML agent (COMPLETE - PGD attack/defense matrix on MNIST)
+- Strong PGD(30 steps): baseline acc 1.8% - nearly total kill
+- Defense must MATCH attacker strength: FGSM-AT 68.1% vs strong-PGD; PGD-AT-strong 71.8% best
+- SURPRISE: 3-bit depth reduction = best defense (73.4%) at ZERO training cost
+- JPEG smoothing fails (5.6%); preprocessing evaluated adaptively (STE gradients)
+- Bug found: PGD must ASCEND loss (x + a*sign(grad))
+RULE: extend - EOT attacker vs bit-depth defense; test on CIFAR-10/ViT.

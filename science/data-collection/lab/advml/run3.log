@@ -1,0 +1,5 @@
+ep 0 train_adv_acc 0.78125
+ep 1 train_adv_acc 0.71875
+ep 2 train_adv_acc 0.75
+ep 3 train_adv_acc 0.78125
+pgdAT_strong {'clean': 0.9436666369438171, 'fgsm': 0.7563333511352539, 'pgd10': 0.9036666750907898, 'pgd30s': 0.7176666855812073}
