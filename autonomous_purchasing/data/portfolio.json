@@ -1,0 +1,148 @@
+{
+  "assets": [
+    {
+      "asset_id": "asset-1",
+      "txn_id": 1,
+      "vendor": "datadog",
+      "item": "Infrastructure monitoring",
+      "cost": 15.0,
+      "capability": "monitoring",
+      "acquired": 1795676324.8111415,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    },
+    {
+      "asset_id": "asset-2",
+      "txn_id": 2,
+      "vendor": "crowdstrike",
+      "item": "Falcon Pro advanced",
+      "cost": 8.0,
+      "capability": "security",
+      "acquired": 1795676324.8523104,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    },
+    {
+      "asset_id": "asset-3",
+      "txn_id": 3,
+      "vendor": "aws",
+      "item": "Athena query service",
+      "cost": 5.0,
+      "capability": "data_pipelines",
+      "acquired": 1795676324.900947,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    },
+    {
+      "asset_id": "asset-4",
+      "txn_id": 4,
+      "vendor": "aws",
+      "item": "EC2 t3.small compute",
+      "cost": 15.0,
+      "capability": "compute",
+      "acquired": 1795676324.9524987,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    },
+    {
+      "asset_id": "asset-5",
+      "txn_id": 5,
+      "vendor": "aws",
+      "item": "S3 1TB storage",
+      "cost": 23.0,
+      "capability": "storage",
+      "acquired": 1795676324.9937913,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    },
+    {
+      "asset_id": "asset-6",
+      "txn_id": 6,
+      "vendor": "brave-search",
+      "item": "Search API Pro monthly",
+      "cost": 3.0,
+      "capability": "research_tools",
+      "acquired": 1795676325.03273,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    },
+    {
+      "asset_id": "asset-7",
+      "txn_id": 7,
+      "vendor": "datadog",
+      "item": "Infrastructure monitoring",
+      "cost": 15.0,
+      "capability": "monitoring",
+      "acquired": 1795676330.156175,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    },
+    {
+      "asset_id": "asset-8",
+      "txn_id": 8,
+      "vendor": "aws",
+      "item": "Athena query service",
+      "cost": 5.0,
+      "capability": "data_pipelines",
+      "acquired": 1795676330.196597,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    },
+    {
+      "asset_id": "asset-9",
+      "txn_id": 9,
+      "vendor": "aws",
+      "item": "EC2 t3.small compute",
+      "cost": 15.0,
+      "capability": "compute",
+      "acquired": 1795676330.2372365,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    },
+    {
+      "asset_id": "asset-10",
+      "txn_id": 10,
+      "vendor": "crowdstrike",
+      "item": "Falcon Pro advanced",
+      "cost": 8.0,
+      "capability": "security",
+      "acquired": 1795676330.283549,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    },
+    {
+      "asset_id": "asset-11",
+      "txn_id": 11,
+      "vendor": "aws",
+      "item": "S3 1TB storage",
+      "cost": 23.0,
+      "capability": "storage",
+      "acquired": 1795676330.3356404,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    },
+    {
+      "asset_id": "asset-12",
+      "txn_id": 12,
+      "vendor": "brave-search",
+      "item": "Search API Pro monthly",
+      "cost": 3.0,
+      "capability": "research_tools",
+      "acquired": 1795676330.3937287,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
+    }
+  ]
+}

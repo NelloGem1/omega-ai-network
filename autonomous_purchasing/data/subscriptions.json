@@ -1,0 +1,114 @@
+{
+  "subscriptions": [
+    {
+      "sub_id": "sub-1",
+      "txn_id": 1,
+      "vendor": "datadog",
+      "item": "Infrastructure monitoring",
+      "price_per_cycle": 15.0,
+      "cycle_days": 30,
+      "next_renewal": 1798268324.8113158,
+      "status": "active",
+      "usage_score": 0.0
+    },
+    {
+      "sub_id": "sub-2",
+      "txn_id": 2,
+      "vendor": "crowdstrike",
+      "item": "Falcon Pro advanced",
+      "price_per_cycle": 8.0,
+      "cycle_days": 30,
+      "next_renewal": 1798268324.8528936,
+      "status": "active",
+      "usage_score": 0.0
+    },
+    {
+      "sub_id": "sub-4",
+      "txn_id": 4,
+      "vendor": "aws",
+      "item": "EC2 t3.small compute",
+      "price_per_cycle": 15.0,
+      "cycle_days": 30,
+      "next_renewal": 1798268324.9529939,
+      "status": "active",
+      "usage_score": 0.0
+    },
+    {
+      "sub_id": "sub-5",
+      "txn_id": 5,
+      "vendor": "aws",
+      "item": "S3 1TB storage",
+      "price_per_cycle": 23.0,
+      "cycle_days": 30,
+      "next_renewal": 1798268324.9942276,
+      "status": "active",
+      "usage_score": 0.0
+    },
+    {
+      "sub_id": "sub-6",
+      "txn_id": 6,
+      "vendor": "brave-search",
+      "item": "Search API Pro monthly",
+      "price_per_cycle": 3.0,
+      "cycle_days": 30,
+      "next_renewal": 1798268325.033066,
+      "status": "active",
+      "usage_score": 0.0
+    },
+    {
+      "sub_id": "sub-7",
+      "txn_id": 7,
+      "vendor": "datadog",
+      "item": "Infrastructure monitoring",
+      "price_per_cycle": 15.0,
+      "cycle_days": 30,
+      "next_renewal": 1798268330.1569743,
+      "status": "active",
+      "usage_score": 0.0
+    },
+    {
+      "sub_id": "sub-9",
+      "txn_id": 9,
+      "vendor": "aws",
+      "item": "EC2 t3.small compute",
+      "price_per_cycle": 15.0,
+      "cycle_days": 30,
+      "next_renewal": 1798268330.2379668,
+      "status": "active",
+      "usage_score": 0.0
+    },
+    {
+      "sub_id": "sub-10",
+      "txn_id": 10,
+      "vendor": "crowdstrike",
+      "item": "Falcon Pro advanced",
+      "price_per_cycle": 8.0,
+      "cycle_days": 30,
+      "next_renewal": 1798268330.2845654,
+      "status": "active",
+      "usage_score": 0.0
+    },
+    {
+      "sub_id": "sub-11",
+      "txn_id": 11,
+      "vendor": "aws",
+      "item": "S3 1TB storage",
+      "price_per_cycle": 23.0,
+      "cycle_days": 30,
+      "next_renewal": 1798268330.3366015,
+      "status": "active",
+      "usage_score": 0.0
+    },
+    {
+      "sub_id": "sub-12",
+      "txn_id": 12,
+      "vendor": "brave-search",
+      "item": "Search API Pro monthly",
+      "price_per_cycle": 3.0,
+      "cycle_days": 30,
+      "next_renewal": 1798268330.3944297,
+      "status": "active",
+      "usage_score": 0.0
+    }
+  ]
+}

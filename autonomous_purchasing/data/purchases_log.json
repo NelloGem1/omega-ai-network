@@ -1,0 +1,350 @@
+[
+  {
+    "ts": 1795676324.8104568,
+    "txn_id": 1,
+    "offer_id": "datadog:infra-host",
+    "vendor": "datadog",
+    "item": "Infrastructure monitoring",
+    "price": 15.0,
+    "capability": "monitoring",
+    "capability_gain_expected": 0.3,
+    "capabilities_before": {
+      "compute": 0.1,
+      "data_pipelines": 0.05,
+      "api_access": 0.0,
+      "research_tools": 0.15,
+      "storage": 0.1,
+      "monitoring": 0.0,
+      "security": 0.05
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 1,
+      "capability": "monitoring",
+      "gain_applied": 0.3,
+      "cost": 15.0,
+      "roi_score": 2.0,
+      "new_capability_level": 0.3
+    }
+  },
+  {
+    "ts": 1795676324.8500142,
+    "txn_id": 2,
+    "offer_id": "crowdstrike:falcon-pro",
+    "vendor": "crowdstrike",
+    "item": "Falcon Pro advanced",
+    "price": 8.0,
+    "capability": "security",
+    "capability_gain_expected": 0.45,
+    "capabilities_before": {
+      "compute": 0.1,
+      "data_pipelines": 0.05,
+      "api_access": 0.0,
+      "research_tools": 0.15,
+      "storage": 0.1,
+      "monitoring": 0.3,
+      "security": 0.05
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 2,
+      "capability": "security",
+      "gain_applied": 0.45,
+      "cost": 8.0,
+      "roi_score": 5.62,
+      "new_capability_level": 0.5
+    }
+  },
+  {
+    "ts": 1795676324.8980372,
+    "txn_id": 3,
+    "offer_id": "aws:athena",
+    "vendor": "aws",
+    "item": "Athena query service",
+    "price": 5.0,
+    "capability": "data_pipelines",
+    "capability_gain_expected": 0.2,
+    "capabilities_before": {
+      "compute": 0.1,
+      "data_pipelines": 0.05,
+      "api_access": 0.0,
+      "research_tools": 0.15,
+      "storage": 0.1,
+      "monitoring": 0.3,
+      "security": 0.5
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 3,
+      "capability": "data_pipelines",
+      "gain_applied": 0.2,
+      "cost": 5.0,
+      "roi_score": 4.0,
+      "new_capability_level": 0.25
+    }
+  },
+  {
+    "ts": 1795676324.950036,
+    "txn_id": 4,
+    "offer_id": "aws:ec2-t3-small",
+    "vendor": "aws",
+    "item": "EC2 t3.small compute",
+    "price": 15.0,
+    "capability": "compute",
+    "capability_gain_expected": 0.25,
+    "capabilities_before": {
+      "compute": 0.1,
+      "data_pipelines": 0.25,
+      "api_access": 0.0,
+      "research_tools": 0.15,
+      "storage": 0.1,
+      "monitoring": 0.3,
+      "security": 0.5
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 4,
+      "capability": "compute",
+      "gain_applied": 0.25,
+      "cost": 15.0,
+      "roi_score": 1.67,
+      "new_capability_level": 0.35
+    }
+  },
+  {
+    "ts": 1795676324.9916515,
+    "txn_id": 5,
+    "offer_id": "aws:s3-1tb",
+    "vendor": "aws",
+    "item": "S3 1TB storage",
+    "price": 23.0,
+    "capability": "storage",
+    "capability_gain_expected": 0.3,
+    "capabilities_before": {
+      "compute": 0.35,
+      "data_pipelines": 0.25,
+      "api_access": 0.0,
+      "research_tools": 0.15,
+      "storage": 0.1,
+      "monitoring": 0.3,
+      "security": 0.5
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 5,
+      "capability": "storage",
+      "gain_applied": 0.3,
+      "cost": 23.0,
+      "roi_score": 1.3,
+      "new_capability_level": 0.4
+    }
+  },
+  {
+    "ts": 1795676325.030696,
+    "txn_id": 6,
+    "offer_id": "brave-search:pro-month",
+    "vendor": "brave-search",
+    "item": "Search API Pro monthly",
+    "price": 3.0,
+    "capability": "research_tools",
+    "capability_gain_expected": 0.35,
+    "capabilities_before": {
+      "compute": 0.35,
+      "data_pipelines": 0.25,
+      "api_access": 0.0,
+      "research_tools": 0.15,
+      "storage": 0.4,
+      "monitoring": 0.3,
+      "security": 0.5
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 6,
+      "capability": "research_tools",
+      "gain_applied": 0.35,
+      "cost": 3.0,
+      "roi_score": 11.67,
+      "new_capability_level": 0.5
+    }
+  },
+  {
+    "ts": 1795676330.1544342,
+    "txn_id": 7,
+    "offer_id": "datadog:infra-host",
+    "vendor": "datadog",
+    "item": "Infrastructure monitoring",
+    "price": 15.0,
+    "capability": "monitoring",
+    "capability_gain_expected": 0.3,
+    "capabilities_before": {
+      "compute": 0.35,
+      "data_pipelines": 0.25,
+      "api_access": 0.0,
+      "research_tools": 0.5,
+      "storage": 0.4,
+      "monitoring": 0.3,
+      "security": 0.5
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 7,
+      "capability": "monitoring",
+      "gain_applied": 0.3,
+      "cost": 15.0,
+      "roi_score": 2.0,
+      "new_capability_level": 0.6
+    }
+  },
+  {
+    "ts": 1795676330.193098,
+    "txn_id": 8,
+    "offer_id": "aws:athena",
+    "vendor": "aws",
+    "item": "Athena query service",
+    "price": 5.0,
+    "capability": "data_pipelines",
+    "capability_gain_expected": 0.2,
+    "capabilities_before": {
+      "compute": 0.35,
+      "data_pipelines": 0.25,
+      "api_access": 0.0,
+      "research_tools": 0.5,
+      "storage": 0.4,
+      "monitoring": 0.6,
+      "security": 0.5
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 8,
+      "capability": "data_pipelines",
+      "gain_applied": 0.2,
+      "cost": 5.0,
+      "roi_score": 4.0,
+      "new_capability_level": 0.45
+    }
+  },
+  {
+    "ts": 1795676330.2342331,
+    "txn_id": 9,
+    "offer_id": "aws:ec2-t3-small",
+    "vendor": "aws",
+    "item": "EC2 t3.small compute",
+    "price": 15.0,
+    "capability": "compute",
+    "capability_gain_expected": 0.25,
+    "capabilities_before": {
+      "compute": 0.35,
+      "data_pipelines": 0.45,
+      "api_access": 0.0,
+      "research_tools": 0.5,
+      "storage": 0.4,
+      "monitoring": 0.6,
+      "security": 0.5
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 9,
+      "capability": "compute",
+      "gain_applied": 0.25,
+      "cost": 15.0,
+      "roi_score": 1.67,
+      "new_capability_level": 0.6
+    }
+  },
+  {
+    "ts": 1795676330.2802129,
+    "txn_id": 10,
+    "offer_id": "crowdstrike:falcon-pro",
+    "vendor": "crowdstrike",
+    "item": "Falcon Pro advanced",
+    "price": 8.0,
+    "capability": "security",
+    "capability_gain_expected": 0.45,
+    "capabilities_before": {
+      "compute": 0.6,
+      "data_pipelines": 0.45,
+      "api_access": 0.0,
+      "research_tools": 0.5,
+      "storage": 0.4,
+      "monitoring": 0.6,
+      "security": 0.5
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 10,
+      "capability": "security",
+      "gain_applied": 0.45,
+      "cost": 8.0,
+      "roi_score": 5.62,
+      "new_capability_level": 0.95
+    }
+  },
+  {
+    "ts": 1795676330.3322191,
+    "txn_id": 11,
+    "offer_id": "aws:s3-1tb",
+    "vendor": "aws",
+    "item": "S3 1TB storage",
+    "price": 23.0,
+    "capability": "storage",
+    "capability_gain_expected": 0.3,
+    "capabilities_before": {
+      "compute": 0.6,
+      "data_pipelines": 0.45,
+      "api_access": 0.0,
+      "research_tools": 0.5,
+      "storage": 0.4,
+      "monitoring": 0.6,
+      "security": 0.95
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 11,
+      "capability": "storage",
+      "gain_applied": 0.3,
+      "cost": 23.0,
+      "roi_score": 1.3,
+      "new_capability_level": 0.7
+    }
+  },
+  {
+    "ts": 1795676330.3905144,
+    "txn_id": 12,
+    "offer_id": "brave-search:pro-month",
+    "vendor": "brave-search",
+    "item": "Search API Pro monthly",
+    "price": 3.0,
+    "capability": "research_tools",
+    "capability_gain_expected": 0.35,
+    "capabilities_before": {
+      "compute": 0.6,
+      "data_pipelines": 0.45,
+      "api_access": 0.0,
+      "research_tools": 0.5,
+      "storage": 0.7,
+      "monitoring": 0.6,
+      "security": 0.95
+    },
+    "provider": "simulated",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 12,
+      "capability": "research_tools",
+      "gain_applied": 0.35,
+      "cost": 3.0,
+      "roi_score": 11.67,
+      "new_capability_level": 0.85
+    }
+  }
+]

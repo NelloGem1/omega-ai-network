@@ -1,0 +1,9 @@
+{
+  "compute": 0.6,
+  "data_pipelines": 0.45,
+  "api_access": 0.0,
+  "research_tools": 0.85,
+  "storage": 0.7,
+  "monitoring": 0.6,
+  "security": 0.95
+}
