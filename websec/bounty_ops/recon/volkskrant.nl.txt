@@ -47,3 +47,19 @@ Config leaks: APPLICATION_ID=abonnement.titel.nl, Storyblok token
 BcSilyZpsodozvMILkVxtQtt (CMS draft access possible?), bugsnag key
 SSO: pip.isSsoEnabled=true → data calls need login session
 No /api/* routes exposed; backend likely Nitro server routes or SSO-gated
+
+## SESSION 2c — wijzigen API map + webwinkel discovery
+wijzigen.volkskrant.nl = Nuxt + /front-office/* API (Laravel backend)
+Session auth via cookies works (authId UUID). Endpoints:
+  /v2/account/subscriptions (needs title param)
+  /v1/contract-documents (needs campaign param)
+  /v4/propositions, /v4/retention-propositions (need valid mid)
+  /v2/brand-data (public, all DPG brands), /v3/storyblok proxy
+BLOCKER: no subscription = flow walled before params discovered.
+  Requires paid sub (~EUR1 intro) to reach deep endpoints.
+
+webwinkel.volkskrant.nl = SHOPIFY (volkskrant.myshopify.com)
+  products.json + cart.js public (standard Shopify)
+  sells books via Centraal Boekhuis
+  Shopify core = likely OOS (3rd-party infra); only custom
+  checkout/theme code is DPG-controlled.
