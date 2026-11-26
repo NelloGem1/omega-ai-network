@@ -1,0 +1,15 @@
+# RECON — dpgmedia.nl / dpgmedia.be (2026-11-26)
+crt.sh: 69 .nl subs + 148 .be subs (many tickets.* = 3rd-party ticketing SaaS)
+
+LIVE interesting hosts (.nl):
+- covertool.dpgmedia.nl → 200 Next.js 'CTM Covertool' (magazine cover catalog, /img/*)
+- businessportal.dpgmedia.nl → 200 (108KB, title empty)
+- backoffice-onlinerouwbericht.dpgmedia.nl → 302 /login (auth app)
+- login-nonprod.dpgmedia.nl → 406 'Inlogpoging geblokkeerd' (NONPROD login!)
+- acc-mymaterial.dpgmedia.nl → 404 Tomcat
+- intranet.dpgmedia.nl → 301 LumApps SaaS (likely OUT of scope)
+- admin-covertool.dpgmedia.nl → timeout (allowlist?)
+- bi.dpgmedia.nl → timeout
+
+NEXT: verify Intigriti scope (*.dpgmedia.nl in scope?) then probe
+covertool API routes + businessportal auth surface.
