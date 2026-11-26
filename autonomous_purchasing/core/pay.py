@@ -49,8 +49,11 @@ class SimulatedProvider:
 class ApiKeyProvider:
     """Phase 2 — real API purchases via vendor adapters + hard caps."""
     name = 'apikey'
+
+    def __init__(self, cash=100.0):
+        self.c = ledger.init_cash(cash)
     CAPS = {'aws': 20.0, 'vercel': 20.0, 'namecheap': 30.0,
-            'brave-search': 5.0, 'tavily': 5.0}
+            'brave-search': 5.0, 'tavily': 5.0, 'wikipedia': 0.0}
     ADAPTERS = {}
 
     def _adapter(self, vendor):

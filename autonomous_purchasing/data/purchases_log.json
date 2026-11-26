@@ -346,5 +346,34 @@
       "roi_score": 11.67,
       "new_capability_level": 0.85
     }
+  },
+  {
+    "ts": 1795677490.5384834,
+    "txn_id": 13,
+    "offer_id": "wikipedia:api-access",
+    "vendor": "wikipedia",
+    "item": "Wikipedia API access (free)",
+    "price": 0.0,
+    "capability": "research_tools",
+    "capability_gain_expected": 0.5,
+    "capabilities_before": {
+      "compute": 0.6,
+      "data_pipelines": 0.45,
+      "api_access": 0.0,
+      "research_tools": 0.85,
+      "storage": 0.7,
+      "monitoring": 0.6,
+      "security": 0.95
+    },
+    "provider": "apikey",
+    "status": "measured",
+    "measurement": {
+      "txn_id": 13,
+      "capability": "research_tools",
+      "gain_applied": 0.5,
+      "cost": 0.0,
+      "roi_score": 5000.0,
+      "new_capability_level": 1.35
+    }
   }
 ]

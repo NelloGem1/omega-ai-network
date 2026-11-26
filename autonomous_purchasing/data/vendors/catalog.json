@@ -1,67 +1,292 @@
 {
   "vendors": [
-    {"id": "aws", "name": "Amazon Web Services", "risk_score": 0.2, "reputation": 0.95,
-     "items": [
-       {"sku": "ec2-t3-small", "name": "EC2 t3.small compute", "price": 15.0,
-        "capabilities": ["compute"], "capability_gain": {"compute": 0.25},
-        "recurring": true, "currency": "USD", "specs": {"lockin": true}},
-       {"sku": "s3-1tb", "name": "S3 1TB storage", "price": 23.0,
-        "capabilities": ["storage"], "capability_gain": {"storage": 0.3},
-        "recurring": true, "currency": "USD", "specs": {}},
-       {"sku": "athena", "name": "Athena query service", "price": 5.0,
-        "capabilities": ["data_pipelines"], "capability_gain": {"data_pipelines": 0.2},
-        "recurring": false, "currency": "USD", "specs": {}}
-     ]},
-    {"id": "vercel", "name": "Vercel", "risk_score": 0.25, "reputation": 0.9,
-     "items": [
-       {"sku": "pro", "name": "Vercel Pro hosting", "price": 20.0,
-        "capabilities": ["compute", "api_access"], "capability_gain": {"compute": 0.15, "api_access": 0.4},
-        "recurring": true, "currency": "USD", "specs": {}},
-       {"sku": "edge-cdn", "name": "Edge CDN add-on", "price": 10.0,
-        "capabilities": ["compute"], "capability_gain": {"compute": 0.1},
-        "recurring": true, "currency": "USD", "specs": {}}
-     ]},
-    {"id": "datadog", "name": "Datadog", "risk_score": 0.4, "reputation": 0.85,
-     "items": [
-       {"sku": "infra-host", "name": "Infrastructure monitoring", "price": 15.0,
-        "capabilities": ["monitoring"], "capability_gain": {"monitoring": 0.3},
-        "recurring": true, "currency": "USD", "specs": {"lockin": true}},
-       {"sku": "logs-1tb", "name": "Log management 1TB", "price": 0.10,
-        "capabilities": ["monitoring", "security"], "capability_gain": {"monitoring": 0.1, "security": 0.1},
-        "recurring": true, "currency": "USD", "specs": {}}
-     ]},
-    {"id": "crowdstrike", "name": "CrowdStrike", "risk_score": 0.5, "reputation": 0.9,
-     "items": [
-       {"sku": "falcon-go", "name": "Falcon Go endpoint security", "price": 4.0,
-        "capabilities": ["security"], "capability_gain": {"security": 0.25},
-        "recurring": true, "currency": "USD", "specs": {}},
-       {"sku": "falcon-pro", "name": "Falcon Pro advanced", "price": 8.0,
-        "capabilities": ["security"], "capability_gain": {"security": 0.45},
-        "recurring": true, "currency": "USD", "specs": {"lockin": true}}
-     ]},
-    {"id": "brave-search", "name": "Brave Search API", "risk_score": 0.15, "reputation": 0.8,
-     "items": [
-       {"sku": "pro-month", "name": "Search API Pro monthly", "price": 3.0,
-        "capabilities": ["research_tools"], "capability_gain": {"research_tools": 0.35},
-        "recurring": true, "currency": "USD", "specs": {}},
-       {"sku": "base-month", "name": "Search API base monthly", "price": 1.0,
-        "capabilities": ["research_tools"], "capability_gain": {"research_tools": 0.15},
-        "recurring": true, "currency": "USD", "specs": {}}
-     ]},
-    {"id": "tavily", "name": "Tavily", "risk_score": 0.2, "reputation": 0.75,
-     "items": [
-       {"sku": "research-month", "name": "Research API monthly", "price": 5.0,
-        "capabilities": ["research_tools", "data_pipelines"], "capability_gain": {"research_tools": 0.4, "data_pipelines": 0.2},
-        "recurring": true, "currency": "USD", "specs": {}},
-       {"sku": "payg", "name": "Pay-per-query credits", "price": 2.0,
-        "capabilities": ["research_tools"], "capability_gain": {"research_tools": 0.1},
-        "recurring": false, "currency": "USD", "specs": {}}
-     ]},
-    {"id": "shady-deals", "name": "ShadyDeals Inc", "risk_score": 0.95, "reputation": 0.1,
-     "items": [
-       {"sku": "miracle", "name": "Miracle compute bundle", "price": 999.0,
-        "capabilities": ["compute"], "capability_gain": {"compute": 0.9},
-        "recurring": false, "currency": "USD", "specs": {"lockin": true}}
-     ]}
+    {
+      "id": "aws",
+      "name": "Amazon Web Services",
+      "risk_score": 0.2,
+      "reputation": 0.95,
+      "items": [
+        {
+          "sku": "ec2-t3-small",
+          "name": "EC2 t3.small compute",
+          "price": 15.0,
+          "capabilities": [
+            "compute"
+          ],
+          "capability_gain": {
+            "compute": 0.25
+          },
+          "recurring": true,
+          "currency": "USD",
+          "specs": {
+            "lockin": true
+          }
+        },
+        {
+          "sku": "s3-1tb",
+          "name": "S3 1TB storage",
+          "price": 23.0,
+          "capabilities": [
+            "storage"
+          ],
+          "capability_gain": {
+            "storage": 0.3
+          },
+          "recurring": true,
+          "currency": "USD",
+          "specs": {}
+        },
+        {
+          "sku": "athena",
+          "name": "Athena query service",
+          "price": 5.0,
+          "capabilities": [
+            "data_pipelines"
+          ],
+          "capability_gain": {
+            "data_pipelines": 0.2
+          },
+          "recurring": false,
+          "currency": "USD",
+          "specs": {}
+        }
+      ]
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "risk_score": 0.25,
+      "reputation": 0.9,
+      "items": [
+        {
+          "sku": "pro",
+          "name": "Vercel Pro hosting",
+          "price": 20.0,
+          "capabilities": [
+            "compute",
+            "api_access"
+          ],
+          "capability_gain": {
+            "compute": 0.15,
+            "api_access": 0.4
+          },
+          "recurring": true,
+          "currency": "USD",
+          "specs": {}
+        },
+        {
+          "sku": "edge-cdn",
+          "name": "Edge CDN add-on",
+          "price": 10.0,
+          "capabilities": [
+            "compute"
+          ],
+          "capability_gain": {
+            "compute": 0.1
+          },
+          "recurring": true,
+          "currency": "USD",
+          "specs": {}
+        }
+      ]
+    },
+    {
+      "id": "datadog",
+      "name": "Datadog",
+      "risk_score": 0.4,
+      "reputation": 0.85,
+      "items": [
+        {
+          "sku": "infra-host",
+          "name": "Infrastructure monitoring",
+          "price": 15.0,
+          "capabilities": [
+            "monitoring"
+          ],
+          "capability_gain": {
+            "monitoring": 0.3
+          },
+          "recurring": true,
+          "currency": "USD",
+          "specs": {
+            "lockin": true
+          }
+        },
+        {
+          "sku": "logs-1tb",
+          "name": "Log management 1TB",
+          "price": 0.1,
+          "capabilities": [
+            "monitoring",
+            "security"
+          ],
+          "capability_gain": {
+            "monitoring": 0.1,
+            "security": 0.1
+          },
+          "recurring": true,
+          "currency": "USD",
+          "specs": {}
+        }
+      ]
+    },
+    {
+      "id": "crowdstrike",
+      "name": "CrowdStrike",
+      "risk_score": 0.5,
+      "reputation": 0.9,
+      "items": [
+        {
+          "sku": "falcon-go",
+          "name": "Falcon Go endpoint security",
+          "price": 4.0,
+          "capabilities": [
+            "security"
+          ],
+          "capability_gain": {
+            "security": 0.25
+          },
+          "recurring": true,
+          "currency": "USD",
+          "specs": {}
+        },
+        {
+          "sku": "falcon-pro",
+          "name": "Falcon Pro advanced",
+          "price": 8.0,
+          "capabilities": [
+            "security"
+          ],
+          "capability_gain": {
+            "security": 0.45
+          },
+          "recurring": true,
+          "currency": "USD",
+          "specs": {
+            "lockin": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "brave-search",
+      "name": "Brave Search API",
+      "risk_score": 0.15,
+      "reputation": 0.8,
+      "items": [
+        {
+          "sku": "pro-month",
+          "name": "Search API Pro monthly",
+          "price": 3.0,
+          "capabilities": [
+            "research_tools"
+          ],
+          "capability_gain": {
+            "research_tools": 0.35
+          },
+          "recurring": true,
+          "currency": "USD",
+          "specs": {}
+        },
+        {
+          "sku": "base-month",
+          "name": "Search API base monthly",
+          "price": 1.0,
+          "capabilities": [
+            "research_tools"
+          ],
+          "capability_gain": {
+            "research_tools": 0.15
+          },
+          "recurring": true,
+          "currency": "USD",
+          "specs": {}
+        }
+      ]
+    },
+    {
+      "id": "tavily",
+      "name": "Tavily",
+      "risk_score": 0.2,
+      "reputation": 0.75,
+      "items": [
+        {
+          "sku": "research-month",
+          "name": "Research API monthly",
+          "price": 5.0,
+          "capabilities": [
+            "research_tools",
+            "data_pipelines"
+          ],
+          "capability_gain": {
+            "research_tools": 0.4,
+            "data_pipelines": 0.2
+          },
+          "recurring": true,
+          "currency": "USD",
+          "specs": {}
+        },
+        {
+          "sku": "payg",
+          "name": "Pay-per-query credits",
+          "price": 2.0,
+          "capabilities": [
+            "research_tools"
+          ],
+          "capability_gain": {
+            "research_tools": 0.1
+          },
+          "recurring": false,
+          "currency": "USD",
+          "specs": {}
+        }
+      ]
+    },
+    {
+      "id": "shady-deals",
+      "name": "ShadyDeals Inc",
+      "risk_score": 0.95,
+      "reputation": 0.1,
+      "items": [
+        {
+          "sku": "miracle",
+          "name": "Miracle compute bundle",
+          "price": 999.0,
+          "capabilities": [
+            "compute"
+          ],
+          "capability_gain": {
+            "compute": 0.9
+          },
+          "recurring": false,
+          "currency": "USD",
+          "specs": {
+            "lockin": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia API",
+      "risk_score": 0.05,
+      "reputation": 0.99,
+      "items": [
+        {
+          "sku": "api-access",
+          "name": "Wikipedia API access (free)",
+          "price": 0.0,
+          "capabilities": [
+            "research_tools"
+          ],
+          "capability_gain": {
+            "research_tools": 0.5
+          },
+          "recurring": false,
+          "currency": "USD",
+          "specs": {}
+        }
+      ]
+    }
   ]
 }

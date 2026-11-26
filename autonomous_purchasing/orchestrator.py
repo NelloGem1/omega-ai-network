@@ -15,7 +15,7 @@ def frozen():
 def cmd_run(args):
     if frozen():
         print('ENGINE FROZEN — remove data/FROZEN to resume'); return
-    provider = pay.get_provider('simulated', cash=args.cash)
+    provider = pay.get_provider(getattr(args, 'provider', 'simulated'), cash=args.cash)
     detected = needs.detect_needs()
     print(f'== NEEDS ({len(detected)}) ==')
     for n in detected:
@@ -108,7 +108,8 @@ def main():
     ap = argparse.ArgumentParser(description='Autonomous Purchasing Engine')
     sub = ap.add_subparsers(dest='cmd', required=True)
     r = sub.add_parser('run'); r.add_argument('--cash', type=float, default=10000)
-    r.add_argument('--budget', type=float, default=2000); r.set_defaults(f=cmd_run)
+    r.add_argument('--budget', type=float, default=2000)
+    r.add_argument('--provider', default='simulated', choices=['simulated', 'apikey']); r.set_defaults(f=cmd_run)
     sub.add_parser('status').set_defaults(f=cmd_status)
     sub.add_parser('ledger').set_defaults(f=cmd_ledger)
     a = sub.add_parser('approve'); a.add_argument('txn_id', type=int); a.set_defaults(f=cmd_approve)

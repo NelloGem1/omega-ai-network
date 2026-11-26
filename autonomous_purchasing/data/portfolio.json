@@ -143,6 +143,18 @@
       "status": "active",
       "renewal": null,
       "usage_count": 0
+    },
+    {
+      "asset_id": "asset-13",
+      "txn_id": 13,
+      "vendor": "wikipedia",
+      "item": "Wikipedia API access (free)",
+      "cost": 0.0,
+      "capability": "research_tools",
+      "acquired": 1795677490.5424125,
+      "status": "active",
+      "renewal": null,
+      "usage_count": 0
     }
   ]
 }

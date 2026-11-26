@@ -23,9 +23,9 @@ def risk_check(offer, need=None):
         allowed = False
         reasons.append(f"vendor {offer['vendor']} quarantined: {q[offer['vendor']].get('reason','')}")
     # extreme price?
-    if offer['price'] <= 0:
+    if offer['price'] < 0:
         allowed = False
-        reasons.append('non-positive price')
+        reasons.append('negative price')
     # low reputation + high price combo
     if offer.get('reputation', 1) < 0.3 and offer['price'] > 500:
         allowed = False

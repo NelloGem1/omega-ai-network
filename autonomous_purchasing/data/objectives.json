@@ -1,14 +1,66 @@
 [
-  {"id": "obj-research", "requires": [
-    {"capability": "research_tools", "target": 0.6, "budget_hint": 400},
-    {"capability": "data_pipelines", "target": 0.4, "budget_hint": 250}
-  ], "urgency": "high"},
-  {"id": "obj-infra", "requires": [
-    {"capability": "compute", "target": 0.5, "budget_hint": 300},
-    {"capability": "storage", "target": 0.5, "budget_hint": 200}
-  ], "urgency": "normal"},
-  {"id": "obj-security", "requires": [
-    {"capability": "security", "target": 0.7, "budget_hint": 350},
-    {"capability": "monitoring", "target": 0.6, "budget_hint": 200}
-  ], "urgency": "high"}
+  {
+    "id": "obj-research",
+    "requires": [
+      {
+        "capability": "research_tools",
+        "target": 0.6,
+        "budget_hint": 400
+      },
+      {
+        "capability": "data_pipelines",
+        "target": 0.4,
+        "budget_hint": 250
+      }
+    ],
+    "urgency": "high"
+  },
+  {
+    "id": "obj-infra",
+    "requires": [
+      {
+        "capability": "compute",
+        "target": 0.5,
+        "budget_hint": 300
+      },
+      {
+        "capability": "storage",
+        "target": 0.5,
+        "budget_hint": 200
+      }
+    ],
+    "urgency": "normal"
+  },
+  {
+    "id": "obj-security",
+    "requires": [
+      {
+        "capability": "security",
+        "target": 0.7,
+        "budget_hint": 350
+      },
+      {
+        "capability": "monitoring",
+        "target": 0.6,
+        "budget_hint": 200
+      }
+    ],
+    "urgency": "high"
+  },
+  {
+    "id": "obj-knowledge",
+    "requires": [
+      {
+        "capability": "research_tools",
+        "target": 0.95,
+        "budget_hint": 100
+      },
+      {
+        "capability": "api_access",
+        "target": 0.3,
+        "budget_hint": 150
+      }
+    ],
+    "urgency": "normal"
+  }
 ]
