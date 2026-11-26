@@ -1,5 +1,5 @@
 """AINET demo — 3 AI agents solve a problem, cross-verify, improve."""
-import bus, protocol
+import bus, protocol, rank
 import agents.agents as agents, json, time, os
 
 def run_demo():
@@ -62,6 +62,19 @@ def run_demo():
             bus.share_knowledge(problem['topic'],
                 f'{name} solved n={problem["n"]}: answer={sol["answer"]} via {sol["method"]}',
                 name, verified=1)
+
+    # Phase 4.5: RANK & PROMOTION CEREMONY
+    print('\n[4.5] RANK & PROMOTION CEREMONY')
+
+    for name, sol in solutions.items():
+        votes = [v['verified'] for (verifier, vn), v in verifications.items() if vn == name]
+        won = sum(votes) > len(votes)/2 if votes else False
+        row = rank.record(name, win=won, contribution=won)
+        tag = ' ⬆ PROMOTED!' if row.get('_promoted') else ''
+        print(f'  {name}: {row["rank"]} (score={row["score"]}, wins={row["verified_wins"]}, fails={row["verified_fails"]}){tag}')
+    print('  — RANK BOARD —')
+    for r in rank.board():
+        print(f'    {r["rank"]:<14} {r["agent"]:<8} score={r["score"]}')
 
     # Phase 5: improvement proposals
     print('\n[5] IMPROVEMENT PROPOSALS')
