@@ -91,6 +91,10 @@ def cmd_approve(args):
     else:
         print('not found or not pending')
 
+def cmd_creds(args):
+    p = pay.ApiKeyProvider()
+    print(json.dumps(p.credentials_report(), indent=2))
+
 def cmd_freeze(args):
     open(os.path.join(DATA, 'FROZEN'), 'w').write('frozen by operator')
     print('ENGINE FROZEN')
@@ -108,6 +112,7 @@ def main():
     sub.add_parser('status').set_defaults(f=cmd_status)
     sub.add_parser('ledger').set_defaults(f=cmd_ledger)
     a = sub.add_parser('approve'); a.add_argument('txn_id', type=int); a.set_defaults(f=cmd_approve)
+    sub.add_parser('credentials').set_defaults(f=cmd_creds)
     sub.add_parser('freeze').set_defaults(f=cmd_freeze)
     sub.add_parser('unfreeze').set_defaults(f=cmd_unfreeze)
     args = ap.parse_args()

@@ -47,16 +47,55 @@ class SimulatedProvider:
         return False
 
 class ApiKeyProvider:
-    """Phase 2 stub — real API purchases with spend caps."""
+    """Phase 2 — real API purchases via vendor adapters + hard caps."""
     name = 'apikey'
-    CAPS = {'aws': 20.0, 'vercel': 10.0, 'domain': 30.0}
+    CAPS = {'aws': 20.0, 'vercel': 20.0, 'namecheap': 30.0,
+            'brave-search': 5.0, 'tavily': 5.0}
+    ADAPTERS = {}
+
+    def _adapter(self, vendor):
+        if vendor not in self.ADAPTERS:
+            try:
+                import importlib
+                mod = importlib.import_module(f'providers.{vendor.replace("-","_")}')
+                for attr in dir(mod):
+                    cls = getattr(mod, attr)
+                    if isinstance(cls, type) and hasattr(cls, 'vendor_id') and cls.vendor_id == vendor:
+                        self.ADAPTERS[vendor] = cls()
+                        break
+            except Exception:
+                pass
+        return self.ADAPTERS.get(vendor)
 
     def spend(self, offer, need=None):
         vendor_cap = self.CAPS.get(offer['vendor'], 5.0)
         if offer['price'] > vendor_cap:
             return {'ok': False, 'reason': f'price exceeds {vendor_cap} cap for {offer["vendor"]}'}
-        # TODO phase 2: real API call with key from secrets store
-        return {'ok': False, 'reason': 'ApiKeyProvider not wired yet (Phase 2)'}
+        ad = self._adapter(offer['vendor'])
+        if not ad:
+            return {'ok': False, 'reason': f'no adapter for {offer["vendor"]}'}
+        if not ad.credentials_ok():
+            return {'ok': False, 'reason': f'missing creds: {ad.missing()}',
+                    'requires_human': True}
+        res = ad.purchase(offer)
+        if res.get('ok'):
+            # route through real ledger
+            txn_id = ledger.post_transaction(
+                ledger.init_cash(0), offer['vendor'], offer['price'],
+                f"API-PURCHASE {offer['item']}",
+                capability_tag=offer.get('capability'),
+                meta={'offer': offer['offer_id'], 'provider': self.name})
+            res['txn_id'] = txn_id
+            res['settled'] = True
+        return res
+
+    def credentials_report(self):
+        out = {}
+        for v in self.CAPS:
+            ad = self._adapter(v)
+            out[v] = 'READY' if (ad and ad.credentials_ok()) else \
+                     (f'MISSING {ad.missing()}' if ad else 'NO ADAPTER')
+        return out
 
 PROVIDERS = {'simulated': SimulatedProvider, 'apikey': ApiKeyProvider}
 
