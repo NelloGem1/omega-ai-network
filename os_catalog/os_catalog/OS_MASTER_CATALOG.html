@@ -1,0 +1,896 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>OS Master Catalog</title>
+<style>
+body{font-family:system-ui,Segoe UI,sans-serif;background:#0d1117;color:#e6edf3;margin:0;padding:24px}
+h1{color:#58a6ff} h2{color:#79c0ff;border-bottom:1px solid #30363d;padding-top:24px}
+.stats{display:flex;gap:16px;margin:16px 0}
+.stat{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:12px 20px;text-align:center}
+.num{font-size:28px;font-weight:700;color:#3fb950} .lbl{color:#8b949e;font-size:12px}
+nav{position:sticky;top:0;background:#0d1117;padding:10px 0;border-bottom:1px solid #30363d;z-index:9}
+nav a{color:#58a6ff;margin-right:14px;text-decoration:none;font-size:13px}
+nav a:hover{text-decoration:underline} .cnt{color:#8b949e}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px;margin-bottom:20px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:12px}
+.osname{font-weight:700;color:#f0f6fc;font-size:15px}
+.meta{font-size:12px;color:#8b949e;margin-top:3px}
+.meta b{color:#c9d1d9}
+.foot{color:#8b949e;font-size:12px;margin-top:30px}
+</style></head><body>
+<h1>🖥️ OS MASTER CATALOG</h1>
+<div class="stats"><div class="stat"><div class="num">218</div><div class="lbl">Operating Systems</div></div><div class="stat"><div class="num">149</div><div class="lbl">Active</div></div><div class="stat"><div class="num">40</div><div class="lbl">Discontinued</div></div><div class="stat"><div class="num">29</div><div class="lbl">Historical/Niche</div></div>
+<div class="stat"><div class="num">12</div><div class="lbl">Categories</div></div></div>
+<nav><a href="#cat1">Desktop OS <span class="cnt">19</span></a><a href="#cat2">Experimental &amp; Research <span class="cnt">16</span></a><a href="#cat3">Gaming &amp; Console <span class="cnt">13</span></a><a href="#cat4">Historical &amp; Discontinued <span class="cnt">24</span></a><a href="#cat5">Linux Distributions <span class="cnt">32</span></a><a href="#cat6">Mainframe &amp; Enterprise Legacy <span class="cnt">8</span></a><a href="#cat7">Mobile OS <span class="cnt">28</span></a><a href="#cat8">Real-Time &amp; Embedded <span class="cnt">19</span></a><a href="#cat9">Server &amp; Enterprise <span class="cnt">16</span></a><a href="#cat10">Specialized &amp; Security <span class="cnt">15</span></a><a href="#cat11">Supercomputing &amp; HPC <span class="cnt">8</span></a><a href="#cat12">Unix &amp; Unix-like <span class="cnt">20</span></a></nav>
+<h2 id="cat1">Desktop OS</h2><div class="grid"><div class="card"><div class="osname">AmigaOS</div>
+<div class="meta"><b>Dev:</b> Commodore · <b>Year:</b> 1985 · <b>Status:</b> Discontinued (niche alive)</div>
+<div class="meta"><b>Family:</b> Amiga · <b>Arch:</b> Motorola 68000</div>
+<div class="meta"><b>Purpose:</b> Creative/multimedia desktop</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Exec microkernel</div></div><div class="card"><div class="osname">BeOS</div>
+<div class="meta"><b>Dev:</b> Be Inc. · <b>Year:</b> 1995 · <b>Status:</b> Discontinued (1997-2000)</div>
+<div class="meta"><b>Family:</b> — · <b>Arch:</b> x86, PPC</div>
+<div class="meta"><b>Purpose:</b> Multimedia desktop</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> NewOS kernel</div></div><div class="card"><div class="osname">ChromeOS</div>
+<div class="meta"><b>Dev:</b> Google · <b>Year:</b> 2011 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Linux-based · <b>Arch:</b> x86-64, ARM</div>
+<div class="meta"><b>Purpose:</b> Cloud-centric laptop</div>
+<div class="meta"><b>License:</b> Proprietary (open components) · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">FreeBSD</div>
+<div class="meta"><b>Dev:</b> FreeBSD Project · <b>Year:</b> 1993 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> BSD · <b>Arch:</b> x86, ARM, many</div>
+<div class="meta"><b>Purpose:</b> General-purpose Unix</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> FreeBSD kernel</div></div><div class="card"><div class="osname">GhostBSD</div>
+<div class="meta"><b>Dev:</b> GhostBSD Team · <b>Year:</b> 2012 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> FreeBSD · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Desktop-focused BSD</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> FreeBSD kernel</div></div><div class="card"><div class="osname">Haiku</div>
+<div class="meta"><b>Dev:</b> Haiku Inc. · <b>Year:</b> 2001 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> BeOS clone · <b>Arch:</b> x86, x86-64, PPC, ARM</div>
+<div class="meta"><b>Purpose:</b> Desktop OS</div>
+<div class="meta"><b>License:</b> MIT-like (open) · <b>Kernel/Parent:</b> NewOS kernel</div></div><div class="card"><div class="osname">Kali Linux</div>
+<div class="meta"><b>Dev:</b> OffSec · <b>Year:</b> 2013 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Penetration testing</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Linux (generic)</div>
+<div class="meta"><b>Dev:</b> Linus Torvalds · <b>Year:</b> 1991 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Unix-like · <b>Arch:</b> x86, ARM, many</div>
+<div class="meta"><b>Purpose:</b> General-purpose</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">MS-DOS</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 1981 · <b>Status:</b> Discontinued (1995)</div>
+<div class="meta"><b>Family:</b> DOS · <b>Arch:</b> x86 16-bit</div>
+<div class="meta"><b>Purpose:</b> 16-bit PC OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> —</div></div><div class="card"><div class="osname">Microsoft Windows</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 1985 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Windows NT lineage · <b>Arch:</b> x86→x86-64, ARM64</div>
+<div class="meta"><b>Purpose:</b> General-purpose desktop</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> MS-DOS/NT kernel</div></div><div class="card"><div class="osname">NixOS</div>
+<div class="meta"><b>Dev:</b> NixOS Foundation · <b>Year:</b> 2003 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Linux/Nix · <b>Arch:</b> x86-64, ARM</div>
+<div class="meta"><b>Purpose:</b> Declarative package OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux+Nix</div></div><div class="card"><div class="osname">OS/2</div>
+<div class="meta"><b>Dev:</b> IBM/Microsoft · <b>Year:</b> 1987 · <b>Status:</b> Discontinued (2001)</div>
+<div class="meta"><b>Family:</b> DOS successor · <b>Arch:</b> x86 16/32-bit</div>
+<div class="meta"><b>Purpose:</b> Desktop OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom microkernel</div></div><div class="card"><div class="osname">Qubes OS</div>
+<div class="meta"><b>Dev:</b> Qubes OS Project · <b>Year:</b> 2010 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Xen-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Security-by-isolation desktop</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Xen hypervisor</div></div><div class="card"><div class="osname">ReactOS</div>
+<div class="meta"><b>Dev:</b> ReactOS Foundation · <b>Year:</b> 1998 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Windows-compatible · <b>Arch:</b> x86-32</div>
+<div class="meta"><b>Purpose:</b> Free Windows-compatible OS</div>
+<div class="meta"><b>License:</b> GPL/LGPL · <b>Kernel/Parent:</b> custom</div></div><div class="card"><div class="osname">Tails</div>
+<div class="meta"><b>Dev:</b> Tails Team · <b>Year:</b> 2009 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Amnesic privacy OS (live)</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">TrueNAS</div>
+<div class="meta"><b>Dev:</b> iXsystems · <b>Year:</b> 2005 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> FreeBSD · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> NAS appliance OS</div>
+<div class="meta"><b>License:</b> Proprietary+open · <b>Kernel/Parent:</b> FreeBSD kernel</div></div><div class="card"><div class="osname">Whonix</div>
+<div class="meta"><b>Dev:</b> Whonix · <b>Year:</b> 2012 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian/Kicksecure · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Anonymity OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">macOS</div>
+<div class="meta"><b>Dev:</b> Apple · <b>Year:</b> 2001 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Unix-like (Darwin) · <b>Arch:</b> x86-64, ARM64</div>
+<div class="meta"><b>Purpose:</b> Desktop/laptop OS</div>
+<div class="meta"><b>License:</b> Proprietary (open core XNU) · <b>Kernel/Parent:</b> BSD/Darwin XNU</div></div><div class="card"><div class="osname">pfSense</div>
+<div class="meta"><b>Dev:</b> Netgate · <b>Year:</b> 2004 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> FreeBSD · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Firewall/router OS</div>
+<div class="meta"><b>License:</b> Apache 2.0 · <b>Kernel/Parent:</b> FreeBSD kernel</div></div></div><h2 id="cat2">Experimental &amp; Research</h2><div class="grid"><div class="card"><div class="osname">AOS/VS</div>
+<div class="meta"><b>Dev:</b> Andreas Gerstmayr · <b>Year:</b> 2000s · <b>Status:</b> Niche</div>
+<div class="meta"><b>Family:</b> Open-source · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Research OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> AOS kernel</div></div><div class="card"><div class="osname">Cosmos</div>
+<div class="meta"><b>Dev:</b> Cosmos team · <b>Year:</b> 2015 · <b>Status:</b> Experimental</div>
+<div class="meta"><b>Family:</b> Capability · <b>Arch:</b> x86, ARM</div>
+<div class="meta"><b>Purpose:</b> Capability-based OS</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> Cosmos</div></div><div class="card"><div class="osname">Fuchsia</div>
+<div class="meta"><b>Dev:</b> Google · <b>Year:</b> 2016 · <b>Status:</b> Active (Google devices)</div>
+<div class="meta"><b>Family:</b> Zircon · <b>Arch:</b> ARM64, x86-64</div>
+<div class="meta"><b>Purpose:</b> Capability-secure OS</div>
+<div class="meta"><b>License:</b> BSD-style · <b>Kernel/Parent:</b> Zircon</div></div><div class="card"><div class="osname">GhostBSD</div>
+<div class="meta"><b>Dev:</b> GhostBSD team · <b>Year:</b> 2012 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> FreeBSD-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Desktop BSD</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> FreeBSD kernel</div></div><div class="card"><div class="osname">Haiku (R1)</div>
+<div class="meta"><b>Dev:</b> Haiku Inc. · <b>Year:</b> 2001 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> BeOS clone · <b>Arch:</b> x86, ARM, PPC</div>
+<div class="meta"><b>Purpose:</b> Desktop</div>
+<div class="meta"><b>License:</b> MIT · <b>Kernel/Parent:</b> NewOS</div></div><div class="card"><div class="osname">Inferno</div>
+<div class="meta"><b>Dev:</b> Bell Labs/Vita Nuova · <b>Year:</b> 1995 · <b>Status:</b> Niche</div>
+<div class="meta"><b>Family:</b> Plan 9 · <b>Arch:</b> x86, ARM</div>
+<div class="meta"><b>Purpose:</b> Mobile distributed OS</div>
+<div class="meta"><b>License:</b> GPL/LPL · <b>Kernel/Parent:</b> Inferno</div></div><div class="card"><div class="osname">Managarm</div>
+<div class="meta"><b>Dev:</b> managarm team · <b>Year:</b> 2018 · <b>Status:</b> Active (experimental)</div>
+<div class="meta"><b>Family:</b> Rust/C++ · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Capability microkernel</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> managarm</div></div><div class="card"><div class="osname">MidnightBSD</div>
+<div class="meta"><b>Dev:</b> MidnightBSD team · <b>Year:</b> 2008 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> FreeBSD-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Desktop BSD</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> FreeBSD kernel</div></div><div class="card"><div class="osname">Oberon</div>
+<div class="meta"><b>Dev:</b> Niklaus Wirth · <b>Year:</b> 1986 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> Pascal-based · <b>Arch:</b> NS32032, SPARC</div>
+<div class="meta"><b>Purpose:</b> Educational OS</div>
+<div class="meta"><b>License:</b> — · <b>Kernel/Parent:</b> Oberon</div></div><div class="card"><div class="osname">Plan 9 from Bell Labs</div>
+<div class="meta"><b>Dev:</b> Bell Labs · <b>Year:</b> 1992 · <b>Status:</b> Niche active</div>
+<div class="meta"><b>Family:</b> Unix successor · <b>Arch:</b> x86, MIPS, ARM</div>
+<div class="meta"><b>Purpose:</b> Distributed OS</div>
+<div class="meta"><b>License:</b> LPL · <b>Kernel/Parent:</b> Plan 9</div></div><div class="card"><div class="osname">Redox OS</div>
+<div class="meta"><b>Dev:</b> Redox team · <b>Year:</b> 2015 · <b>Status:</b> Active (experimental)</div>
+<div class="meta"><b>Family:</b> Rust microkernel · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Safe Rust OS</div>
+<div class="meta"><b>License:</b> MIT · <b>Kernel/Parent:</b> Redox kernel</div></div><div class="card"><div class="osname">SerenityOS</div>
+<div class="meta"><b>Dev:</b> SerenityOS team · <b>Year:</b> 2018 · <b>Status:</b> Active (hobby)</div>
+<div class="meta"><b>Family:</b> Custom · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> POSIX-ish hobby OS</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> Lagom kernel</div></div><div class="card"><div class="osname">SkiftOS</div>
+<div class="meta"><b>Dev:</b> SkiftOS team · <b>Year:</b> 2019 · <b>Status:</b> Active (experimental)</div>
+<div class="meta"><b>Family:</b> Custom · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Capability microkernel</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> SkiftOS</div></div><div class="card"><div class="osname">Sortix</div>
+<div class="meta"><b>Dev:</b> Sortix team · <b>Year:</b> 2014 · <b>Status:</b> Active (hobby)</div>
+<div class="meta"><b>Family:</b> Custom · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> POSIX-ish hobby OS</div>
+<div class="meta"><b>License:</b> ISC · <b>Kernel/Parent:</b> Sortix kernel</div></div><div class="card"><div class="osname">TempleOS</div>
+<div class="meta"><b>Dev:</b> Terry Davis · <b>Year:</b> 2013 · <b>Status:</b> Discontinued (2023)</div>
+<div class="meta"><b>Family:</b> Custom · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Single-user OS</div>
+<div class="meta"><b>License:</b> Public domain · <b>Kernel/Parent:</b> TempleOS</div></div><div class="card"><div class="osname">ToaruOS</div>
+<div class="meta"><b>Dev:</b> ToaruOS team · <b>Year:</b> 2011 · <b>Status:</b> Active (hobby)</div>
+<div class="meta"><b>Family:</b> Custom · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> POSIX-ish hobby OS</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> Toaru kernel</div></div></div><h2 id="cat3">Gaming &amp; Console</h2><div class="grid"><div class="card"><div class="osname">3DS OS</div>
+<div class="meta"><b>Dev:</b> Nintendo · <b>Year:</b> 2011 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> CTR OS · <b>Arch:</b> ARM11</div>
+<div class="meta"><b>Purpose:</b> 3DS handheld</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom</div></div><div class="card"><div class="osname">Batocera Linux</div>
+<div class="meta"><b>Dev:</b> Batocera team · <b>Year:</b> 2016 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Buildroot-derived · <b>Arch:</b> x86, ARM</div>
+<div class="meta"><b>Purpose:</b> Retro gaming</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Nintendo Switch OS</div>
+<div class="meta"><b>Dev:</b> Nintendo · <b>Year:</b> 2017 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Horizon-derived · <b>Arch:</b> ARM NVIDIA</div>
+<div class="meta"><b>Purpose:</b> Switch console</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Horizon</div></div><div class="card"><div class="osname">PS2 OS</div>
+<div class="meta"><b>Dev:</b> Sony · <b>Year:</b> 2000 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> PS-derived · <b>Arch:</b> Emotion Engine</div>
+<div class="meta"><b>Purpose:</b> PS2 console</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom</div></div><div class="card"><div class="osname">PS3 OS</div>
+<div class="meta"><b>Dev:</b> Sony · <b>Year:</b> 2006 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> Cell-derived · <b>Arch:</b> Cell BE</div>
+<div class="meta"><b>Purpose:</b> PS3 console</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom</div></div><div class="card"><div class="osname">PS4/PS5 OS</div>
+<div class="meta"><b>Dev:</b> Sony · <b>Year:</b> 2013 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> FreeBSD-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> PS4/PS5 console</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Orbis/Prospero</div></div><div class="card"><div class="osname">PlayStation OS</div>
+<div class="meta"><b>Dev:</b> Sony · <b>Year:</b> 1994 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> Custom · <b>Arch:</b> MIPS R3000</div>
+<div class="meta"><b>Purpose:</b> PS1 console</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom</div></div><div class="card"><div class="osname">PlayStation Vita OS</div>
+<div class="meta"><b>Dev:</b> Sony · <b>Year:</b> 2011 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> FreeBSD-derived · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Vita handheld</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom</div></div><div class="card"><div class="osname">RetroArch OS</div>
+<div class="meta"><b>Dev:</b> libretro · <b>Year:</b> — · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> — · <b>Arch:</b> multi</div>
+<div class="meta"><b>Purpose:</b> Emulation platform</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> libretro</div></div><div class="card"><div class="osname">SteamOS</div>
+<div class="meta"><b>Dev:</b> Valve · <b>Year:</b> 2013 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Arch-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Gaming Linux</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Wii U OS</div>
+<div class="meta"><b>Dev:</b> Nintendo · <b>Year:</b> 2012 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> Cafe OS · <b>Arch:</b> PowerPC</div>
+<div class="meta"><b>Purpose:</b> Wii U console</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom</div></div><div class="card"><div class="osname">Xbox OS</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 2001 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> Custom · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Xbox/Xbox 360</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom</div></div><div class="card"><div class="osname">Xbox Series OS</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 2020 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Custom · <b>Arch:</b> AMD Zen</div>
+<div class="meta"><b>Purpose:</b> Xbox Series</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom</div></div></div><h2 id="cat4">Historical &amp; Discontinued</h2><div class="grid"><div class="card"><div class="osname">BeOS R5</div>
+<div class="meta"><b>Dev:</b> Be Inc. · <b>Year:</b> 2000 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> BeOS · <b>Arch:</b> x86, PPC</div>
+<div class="meta"><b>Purpose:</b> Desktop</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> NewOS</div></div><div class="card"><div class="osname">CP/M</div>
+<div class="meta"><b>Dev:</b> Gary Kildall · <b>Year:</b> 1974 · <b>Status:</b> Discontinued (1981)</div>
+<div class="meta"><b>Family:</b> — · <b>Arch:</b> Intel 8080/Z80</div>
+<div class="meta"><b>Purpose:</b> 8-bit microcomputer OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> —</div></div><div class="card"><div class="osname">FlexOS</div>
+<div class="meta"><b>Dev:</b> IBM/others · <b>Year:</b> 1986 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> Multi-user · <b>Arch:</b> x86</div>
+<div class="meta"><b>Purpose:</b> Multi-user PC OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> —</div></div><div class="card"><div class="osname">GEOS</div>
+<div class="meta"><b>Dev:</b> Berkeley Softworks · <b>Year:</b> 1986 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> — · <b>Arch:</b> 6502, x86</div>
+<div class="meta"><b>Purpose:</b> GUI OS for C64/PC</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> —</div></div><div class="card"><div class="osname">MSX-DOS</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 1983 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> DOS-derived · <b>Arch:</b> Z80</div>
+<div class="meta"><b>Purpose:</b> MSX computer OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> —</div></div><div class="card"><div class="osname">Multics</div>
+<div class="meta"><b>Dev:</b> MIT/Bell Labs/GE · <b>Year:</b> 1969 · <b>Status:</b> Historical (1969-2000)</div>
+<div class="meta"><b>Family:</b> Time-sharing · <b>Arch:</b> GE-645</div>
+<div class="meta"><b>Purpose:</b> Multi-user OS</div>
+<div class="meta"><b>License:</b> — · <b>Kernel/Parent:</b> —</div></div><div class="card"><div class="osname">NeXTSTEP</div>
+<div class="meta"><b>Dev:</b> NeXT · <b>Year:</b> 1989 · <b>Status:</b> Discontinued→macOS</div>
+<div class="meta"><b>Family:</b> Mach+BSD · <b>Arch:</b> 68k, x86</div>
+<div class="meta"><b>Purpose:</b> Object-oriented desktop</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Mach</div></div><div class="card"><div class="osname">Newton OS</div>
+<div class="meta"><b>Dev:</b> Apple · <b>Year:</b> 1993 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> — · <b>Arch:</b> ARM 610</div>
+<div class="meta"><b>Purpose:</b> PDA OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> —</div></div><div class="card"><div class="osname">OS/2 Warp</div>
+<div class="meta"><b>Dev:</b> IBM · <b>Year:</b> 1992 · <b>Status:</b> Discontinued (2001)</div>
+<div class="meta"><b>Family:</b> OS/2 · <b>Arch:</b> x86</div>
+<div class="meta"><b>Purpose:</b> Desktop OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom</div></div><div class="card"><div class="osname">OpenVMS</div>
+<div class="meta"><b>Dev:</b> HPE/VMS Software · <b>Year:</b> 1992 · <b>Status:</b> Active (niche)</div>
+<div class="meta"><b>Family:</b> VMS-derived · <b>Arch:</b> Alpha, Itanium, x86</div>
+<div class="meta"><b>Purpose:</b> Open VMS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> VMS</div></div><div class="card"><div class="osname">Palm OS</div>
+<div class="meta"><b>Dev:</b> Palm/Access · <b>Year:</b> 1996 · <b>Status:</b> Discontinued (2009)</div>
+<div class="meta"><b>Family:</b> — · <b>Arch:</b> 68k, ARM</div>
+<div class="meta"><b>Purpose:</b> PalmPilot PDA OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> —</div></div><div class="card"><div class="osname">Pilot OS (Mac)</div>
+<div class="meta"><b>Dev:</b> Apple · <b>Year:</b> 1994 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> — · <b>Arch:</b> 68k</div>
+<div class="meta"><b>Purpose:</b> Early Mac OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> —</div></div><div class="card"><div class="osname">RISC OS</div>
+<div class="meta"><b>Dev:</b> Acorn · <b>Year:</b> 1987 · <b>Status:</b> Niche active</div>
+<div class="meta"><b>Family:</b> ARM-based · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Desktop (ARM)</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom</div></div><div class="card"><div class="osname">RSTS/E</div>
+<div class="meta"><b>Dev:</b> DEC · <b>Year:</b> 1970 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> RSX-derived · <b>Arch:</b> PDP-11</div>
+<div class="meta"><b>Purpose:</b> PDP-11 timesharing</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> RSTS</div></div><div class="card"><div class="osname">RSX-11</div>
+<div class="meta"><b>Dev:</b> DEC · <b>Year:</b> 1972 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> RSX lineage · <b>Arch:</b> PDP-11</div>
+<div class="meta"><b>Purpose:</b> PDP-11 real-time</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> RSX</div></div><div class="card"><div class="osname">TOPS-10</div>
+<div class="meta"><b>Dev:</b> DEC · <b>Year:</b> 1967 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> Timesharing · <b>Arch:</b> PDP-10</div>
+<div class="meta"><b>Purpose:</b> PDP-10 OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> TOPS</div></div><div class="card"><div class="osname">TOPS-20</div>
+<div class="meta"><b>Dev:</b> DEC · <b>Year:</b> 1976 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> TOPS-derived · <b>Arch:</b> PDP-10/20</div>
+<div class="meta"><b>Purpose:</b> PDP-10/20 OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> TOPS-20</div></div><div class="card"><div class="osname">UCSD p-System</div>
+<div class="meta"><b>Dev:</b> UCSD · <b>Year:</b> 1978 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> Portable OS · <b>Arch:</b> P-code</div>
+<div class="meta"><b>Purpose:</b> Portable systems</div>
+<div class="meta"><b>License:</b> — · <b>Kernel/Parent:</b> p-code VM</div></div><div class="card"><div class="osname">VMS</div>
+<div class="meta"><b>Dev:</b> DEC · <b>Year:</b> 1977 · <b>Status:</b> Discontinued (2023)</div>
+<div class="meta"><b>Family:</b> VAXcluster · <b>Arch:</b> VAX, Alpha</div>
+<div class="meta"><b>Purpose:</b> Enterprise OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> VMS</div></div><div class="card"><div class="osname">Windows 7</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 2009 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> Windows NT · <b>Arch:</b> x86-32/64</div>
+<div class="meta"><b>Purpose:</b> Desktop</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> NT kernel</div></div><div class="card"><div class="osname">Windows 95/98/ME</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 1995 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> Windows 9x · <b>Arch:</b> x86-32</div>
+<div class="meta"><b>Purpose:</b> Consumer desktop</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> DOS hybrid</div></div><div class="card"><div class="osname">Windows CE</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 1996 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> Windows embedded · <b>Arch:</b> ARM, MIPS</div>
+<div class="meta"><b>Purpose:</b> Embedded/mobile</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> NT-derived</div></div><div class="card"><div class="osname">Windows Vista</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 2006 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> Windows NT · <b>Arch:</b> x86-32/64</div>
+<div class="meta"><b>Purpose:</b> Desktop</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> NT kernel</div></div><div class="card"><div class="osname">Windows XP</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 2001 · <b>Status:</b> Discontinued (2014)</div>
+<div class="meta"><b>Family:</b> Windows NT · <b>Arch:</b> x86-32</div>
+<div class="meta"><b>Purpose:</b> Consumer desktop</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> NT kernel</div></div></div><h2 id="cat5">Linux Distributions</h2><div class="grid"><div class="card"><div class="osname">AlmaLinux</div>
+<div class="meta"><b>Dev:</b> AlmaLinux OS Foundation · <b>Year:</b> 2021 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> RHEL-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Community RHEL</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Alpine Linux</div>
+<div class="meta"><b>Dev:</b> Alpine Linux team · <b>Year:</b> 2005 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> BusyBox/musl · <b>Arch:</b> x86, ARM, many</div>
+<div class="meta"><b>Purpose:</b> Minimal containers/embedded</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Arch Linux</div>
+<div class="meta"><b>Dev:</b> Arch Linux team · <b>Year:</b> 2002 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> independent · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Rolling-release DIY</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">ArcoLinux</div>
+<div class="meta"><b>Dev:</b> ArcoLinux team · <b>Year:</b> 2021 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Arch-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> KDE gaming</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">CachyOS</div>
+<div class="meta"><b>Dev:</b> CachyOS team · <b>Year:</b> 2020 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Arch-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Performance-optimized</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">CentOS</div>
+<div class="meta"><b>Dev:</b> CentOS Project · <b>Year:</b> 2004 · <b>Status:</b> Discontinued (2020→Stream)</div>
+<div class="meta"><b>Family:</b> RHEL-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Community RHEL clone</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">CentOS Stream</div>
+<div class="meta"><b>Dev:</b> Red Hat · <b>Year:</b> 2020 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> RHEL-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Upstream RHEL</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Debian</div>
+<div class="meta"><b>Dev:</b> Debian Project · <b>Year:</b> 1993 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> independent · <b>Arch:</b> x86-64, ARM, many</div>
+<div class="meta"><b>Purpose:</b> General-purpose</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Elementary OS</div>
+<div class="meta"><b>Dev:</b> Elementary LLC · <b>Year:</b> 2011 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Ubuntu-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Polished desktop</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">EndeavourOS</div>
+<div class="meta"><b>Dev:</b> Endeavour team · <b>Year:</b> 2019 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Arch-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Arch simplified</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Fedora</div>
+<div class="meta"><b>Dev:</b> Fedora Project · <b>Year:</b> 2003 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> RHEL-derived · <b>Arch:</b> x86-64, ARM</div>
+<div class="meta"><b>Purpose:</b> Cutting-edge desktop</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Garuda Linux</div>
+<div class="meta"><b>Dev:</b> Garuda team · <b>Year:</b> 2021 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Arch-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Gaming/performance</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Gentoo</div>
+<div class="meta"><b>Dev:</b> Gentoo Foundation · <b>Year:</b> 2002 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Portage-based · <b>Arch:</b> x86-64, many</div>
+<div class="meta"><b>Purpose:</b> Source-compiled control</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">LFS</div>
+<div class="meta"><b>Dev:</b> Gerard Beekmans · <b>Year:</b> 1999 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> manual build · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Linux from Scratch</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Linux Mint</div>
+<div class="meta"><b>Dev:</b> Linux Mint Team · <b>Year:</b> 2006 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Ubuntu-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Beginner desktop</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">MX Linux</div>
+<div class="meta"><b>Dev:</b> MX Linux team · <b>Year:</b> 2018 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Midweight stable</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Manjaro</div>
+<div class="meta"><b>Dev:</b> Manjaro Team · <b>Year:</b> 2011 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Arch-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> User-friendly rolling</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Omarchy</div>
+<div class="meta"><b>Dev:</b> DHH · <b>Year:</b> 2025 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Arch-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Opinionated dev desktop</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Pop!_OS</div>
+<div class="meta"><b>Dev:</b> System76 · <b>Year:</b> 2017 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Ubuntu-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Dev/productivity desktop</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Puppy Linux</div>
+<div class="meta"><b>Dev:</b> Barry Kauler · <b>Year:</b> 2003 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> DSL-derived · <b>Arch:</b> x86, many</div>
+<div class="meta"><b>Purpose:</b> Lightweight persistent</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Red Hat Enterprise Linux</div>
+<div class="meta"><b>Dev:</b> Red Hat · <b>Year:</b> 2002 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Fedora-derived · <b>Arch:</b> x86-64, POWER</div>
+<div class="meta"><b>Purpose:</b> Enterprise server</div>
+<div class="meta"><b>License:</b> Commercial · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Rocky Linux</div>
+<div class="meta"><b>Dev:</b> Rocky Enterprise · <b>Year:</b> 2020 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> RHEL-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Community RHEL</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Slackware</div>
+<div class="meta"><b>Dev:</b> Slackware LLC · <b>Year:</b> 1993 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> SLS-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Simplicity-first</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Solus</div>
+<div class="meta"><b>Dev:</b> Solus Project · <b>Year:</b> 2013 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> independent · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Rolling immutable-ish</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Tiny Core Linux</div>
+<div class="meta"><b>Dev:</b> Tiny Core team · <b>Year:</b> 2009 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> DSL-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Minimal live OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Ubuntu</div>
+<div class="meta"><b>Dev:</b> Canonical · <b>Year:</b> 2004 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian-derived · <b>Arch:</b> x86-64, ARM</div>
+<div class="meta"><b>Purpose:</b> General desktop/server</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Void Linux</div>
+<div class="meta"><b>Dev:</b> Void Linux team · <b>Year:</b> 2008 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> runit-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Minimal rolling</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Zorin OS</div>
+<div class="meta"><b>Dev:</b> Zorin Group · <b>Year:</b> 2009 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Ubuntu-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Windows-like desktop</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">antiX</div>
+<div class="meta"><b>Dev:</b> antiX team · <b>Year:</b> 2007 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Ultra-lightweight</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">openSUSE</div>
+<div class="meta"><b>Dev:</b> openSUSE Project · <b>Year:</b> 2005 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> SUSE-derived · <b>Arch:</b> x86-64, ARM</div>
+<div class="meta"><b>Purpose:</b> General desktop/server</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">openSUSE Leap</div>
+<div class="meta"><b>Dev:</b> openSUSE Project · <b>Year:</b> 2015 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> SUSE-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Stable enterprise</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">openSUSE Tumbleweed</div>
+<div class="meta"><b>Dev:</b> openSUSE Project · <b>Year:</b> 2014 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> SUSE-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Rolling release</div>
+<div class="meta"><b>License:</b> GPL/mixed · <b>Kernel/Parent:</b> Linux kernel</div></div></div><h2 id="cat6">Mainframe &amp; Enterprise Legacy</h2><div class="grid"><div class="card"><div class="osname">GCOS</div>
+<div class="meta"><b>Dev:</b> General Automation · <b>Year:</b> 1970s · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> — · <b>Arch:</b> GE-600 series</div>
+<div class="meta"><b>Purpose:</b> Business mainframe</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> GCOS</div></div><div class="card"><div class="osname">IBM i (OS/400)</div>
+<div class="meta"><b>Dev:</b> IBM · <b>Year:</b> 1988 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> CPF-derived · <b>Arch:</b> POWER</div>
+<div class="meta"><b>Purpose:</b> Business computing</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> IBM i</div></div><div class="card"><div class="osname">MVS</div>
+<div class="meta"><b>Dev:</b> IBM · <b>Year:</b> 1974 · <b>Status:</b> Historical→z/OS</div>
+<div class="meta"><b>Family:</b> OS/360-derived · <b>Arch:</b> S/370+</div>
+<div class="meta"><b>Purpose:</b> Mainframe OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> MVS</div></div><div class="card"><div class="osname">OS/360</div>
+<div class="meta"><b>Dev:</b> IBM · <b>Year:</b> 1966 · <b>Status:</b> Active (z/OS successor)</div>
+<div class="meta"><b>Family:</b> OS lineage · <b>Arch:</b> S/360</div>
+<div class="meta"><b>Purpose:</b> Mainframe OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> OS/360</div></div><div class="card"><div class="osname">VM/CMS</div>
+<div class="meta"><b>Dev:</b> IBM · <b>Year:</b> 1967 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> CP-40/CMS-derived · <b>Arch:</b> S/360</div>
+<div class="meta"><b>Purpose:</b> Time-sharing system</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> CMS</div></div><div class="card"><div class="osname">z/OS</div>
+<div class="meta"><b>Dev:</b> IBM · <b>Year:</b> 2000 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> MVS/OS successor · <b>Arch:</b> IBM Z</div>
+<div class="meta"><b>Purpose:</b> Mainframe OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> z/OS</div></div><div class="card"><div class="osname">z/TPF</div>
+<div class="meta"><b>Dev:</b> IBM · <b>Year:</b> 1999 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Transaction processing · <b>Arch:</b> IBM Z</div>
+<div class="meta"><b>Purpose:</b> Airline reservation OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> z/TPF</div></div><div class="card"><div class="osname">z/VM</div>
+<div class="meta"><b>Dev:</b> IBM · <b>Year:</b> 1972 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> VM/370-derived · <b>Arch:</b> IBM Z</div>
+<div class="meta"><b>Purpose:</b> Mainframe hypervisor</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> z/VM</div></div></div><h2 id="cat7">Mobile OS</h2><div class="grid"><div class="card"><div class="osname">Android</div>
+<div class="meta"><b>Dev:</b> Google/Open Handset Alliance · <b>Year:</b> 2008 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Linux-based · <b>Arch:</b> ARM, x86</div>
+<div class="meta"><b>Purpose:</b> Mobile/tablet OS</div>
+<div class="meta"><b>License:</b> Apache/GPL mix · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">BlackBerry OS</div>
+<div class="meta"><b>Dev:</b> RIM/BlackBerry · <b>Year:</b> 1999 · <b>Status:</b> Discontinued (2013 BB10)</div>
+<div class="meta"><b>Family:</b> BlackBerry 10 lineage · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Mobile OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> QNX-derived</div></div><div class="card"><div class="osname">ColorOS</div>
+<div class="meta"><b>Dev:</b> OPPO/BBK · <b>Year:</b> 2013 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Android fork · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> OPPO devices</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">EMUI</div>
+<div class="meta"><b>Dev:</b> Huawei · <b>Year:</b> 2012 · <b>Status:</b> Active (declining)</div>
+<div class="meta"><b>Family:</b> Android fork · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Huawei devices</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Fire OS</div>
+<div class="meta"><b>Dev:</b> Amazon · <b>Year:</b> 2011 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Android fork · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Fire tablets</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Firefox OS</div>
+<div class="meta"><b>Dev:</b> Mozilla · <b>Year:</b> 2013 · <b>Status:</b> Discontinued (2016)</div>
+<div class="meta"><b>Family:</b> Gonk/Linux · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Mobile OS (open web)</div>
+<div class="meta"><b>License:</b> MPL/GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Fuchsia</div>
+<div class="meta"><b>Dev:</b> Google · <b>Year:</b> 2016 · <b>Status:</b> Active (Nest Hub/AR)</div>
+<div class="meta"><b>Family:</b> Zircon-based · <b>Arch:</b> ARM64, x86-64</div>
+<div class="meta"><b>Purpose:</b> Capability-secure OS</div>
+<div class="meta"><b>License:</b> BSD-style (open) · <b>Kernel/Parent:</b> Zircon kernel</div></div><div class="card"><div class="osname">GrapheneOS</div>
+<div class="meta"><b>Dev:</b> GrapheneOS team · <b>Year:</b> 2019 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Android fork · <b>Arch:</b> ARM64</div>
+<div class="meta"><b>Purpose:</b> Privacy-hardened Android</div>
+<div class="meta"><b>License:</b> GPL+proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">HarmonyOS</div>
+<div class="meta"><b>Dev:</b> Huawei · <b>Year:</b> 2019 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> LiteOS-derived · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Mobile (no AOSP post-2019)</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom microkernel</div></div><div class="card"><div class="osname">KaiOS</div>
+<div class="meta"><b>Dev:</b> KaiOS Technologies · <b>Year:</b> 2013 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Firefox OS-derived · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Feature phones</div>
+<div class="meta"><b>License:</b> GPL+proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">LineageOS</div>
+<div class="meta"><b>Dev:</b> LineageOS team · <b>Year:</b> 2014 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> AOSP-derived · <b>Arch:</b> ARM, x86</div>
+<div class="meta"><b>Purpose:</b> Custom Android</div>
+<div class="meta"><b>License:</b> Apache/GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">MIUI</div>
+<div class="meta"><b>Dev:</b> Xiaomi · <b>Year:</b> 2010 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Android fork · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Xiaomi devices</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Maemo</div>
+<div class="meta"><b>Dev:</b> Nokia · <b>Year:</b> 2005 · <b>Status:</b> Discontinued (2010)</div>
+<div class="meta"><b>Family:</b> Debian-derived · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Mobile OS (Nokia N900)</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">MeeGo</div>
+<div class="meta"><b>Dev:</b> Nokia/Linux Foundation · <b>Year:</b> 2010 · <b>Status:</b> Discontinued (2011)</div>
+<div class="meta"><b>Family:</b> Maemo+Moblin merge · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Mobile OS</div>
+<div class="meta"><b>License:</b> GPL/LGPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Moblin</div>
+<div class="meta"><b>Dev:</b> Intel · <b>Year:</b> 2008 · <b>Status:</b> Discontinued (2010)</div>
+<div class="meta"><b>Family:</b> Fedora-derived · <b>Arch:</b> x86</div>
+<div class="meta"><b>Purpose:</b> Netbook OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Plasma Mobile</div>
+<div class="meta"><b>Dev:</b> KDE · <b>Year:</b> 2015 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Linux · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Linux mobile</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Sailfish OS</div>
+<div class="meta"><b>Dev:</b> Jolla · <b>Year:</b> 2013 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Mer-derived · <b>Arch:</b> ARM, x86</div>
+<div class="meta"><b>Purpose:</b> Mobile OS</div>
+<div class="meta"><b>License:</b> LGPL/GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Symbian</div>
+<div class="meta"><b>Dev:</b> Symbian Ltd/Nokia · <b>Year:</b> 1998 · <b>Status:</b> Discontinued (2012)</div>
+<div class="meta"><b>Family:</b> EPOC-derived · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Mobile OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> custom</div></div><div class="card"><div class="osname">Tizen</div>
+<div class="meta"><b>Dev:</b> Samsung/Linux Foundation · <b>Year:</b> 2012 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Linux-based · <b>Arch:</b> ARM, x86</div>
+<div class="meta"><b>Purpose:</b> Wearables/TV/mobile</div>
+<div class="meta"><b>License:</b> Apache/GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Ubuntu Touch</div>
+<div class="meta"><b>Dev:</b> UBports · <b>Year:</b> 2013 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Ubuntu mobile · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Mobile Linux</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Windows Phone</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 2010 · <b>Status:</b> Discontinued (2017)</div>
+<div class="meta"><b>Family:</b> Windows CE-derived · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Mobile OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> NT-derived</div></div><div class="card"><div class="osname">iOS</div>
+<div class="meta"><b>Dev:</b> Apple · <b>Year:</b> 2007 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Darwin/BSD · <b>Arch:</b> ARM64</div>
+<div class="meta"><b>Purpose:</b> Mobile/tablet OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> XNU/Darwin</div></div><div class="card"><div class="osname">iPadOS</div>
+<div class="meta"><b>Dev:</b> Apple · <b>Year:</b> 2019 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> iOS derivative · <b>Arch:</b> ARM64</div>
+<div class="meta"><b>Purpose:</b> Tablet OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> XNU</div></div><div class="card"><div class="osname">postmarketOS</div>
+<div class="meta"><b>Dev:</b> postmarketOS community · <b>Year:</b> 2017 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Alpine-derived · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Mobile Linux (mainline)</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux mainline</div></div><div class="card"><div class="osname">tvOS</div>
+<div class="meta"><b>Dev:</b> Apple · <b>Year:</b> 2015 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> iOS derivative · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Apple TV</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> XNU</div></div><div class="card"><div class="osname">visionOS</div>
+<div class="meta"><b>Dev:</b> Apple · <b>Year:</b> 2024 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> iOS derivative · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Spatial computing</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> XNU</div></div><div class="card"><div class="osname">watchOS</div>
+<div class="meta"><b>Dev:</b> Apple · <b>Year:</b> 2015 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> iOS derivative · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Smartwatch</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> XNU</div></div><div class="card"><div class="osname">webOS</div>
+<div class="meta"><b>Dev:</b> LG/HP/Palm lineage · <b>Year:</b> 2009 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Palm WebOS-derived · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Smart TV/IoT</div>
+<div class="meta"><b>License:</b> LGPL/proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div></div><h2 id="cat8">Real-Time &amp; Embedded</h2><div class="grid"><div class="card"><div class="osname">Apache Mynewt</div>
+<div class="meta"><b>Dev:</b> Apache · <b>Year:</b> 2015 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Apache · <b>Arch:</b> ARM, ESP32</div>
+<div class="meta"><b>Purpose:</b> IoT RTOS</div>
+<div class="meta"><b>License:</b> Apache 2.0 · <b>Kernel/Parent:</b> Mynewt kernel</div></div><div class="card"><div class="osname">Contiki</div>
+<div class="meta"><b>Dev:</b> Contiki-NG team · <b>Year:</b> 2004 · <b>Status:</b> Active (Contiki-NG)</div>
+<div class="meta"><b>Family:</b> uIP-based · <b>Arch:</b> AVR, ARM</div>
+<div class="meta"><b>Purpose:</b> IoT sensor networks</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> Contiki uIP</div></div><div class="card"><div class="osname">DD-WRT</div>
+<div class="meta"><b>Dev:</b> DD-WRT team · <b>Year:</b> 2005 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Linux-derived · <b>Arch:</b> many</div>
+<div class="meta"><b>Purpose:</b> Router firmware</div>
+<div class="meta"><b>License:</b> GPL/proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Embedded Linux (Yocto)</div>
+<div class="meta"><b>Dev:</b> Linux Foundation · <b>Year:</b> 2007 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Build system · <b>Arch:</b> ARM, many</div>
+<div class="meta"><b>Purpose:</b> Embedded Linux framework</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Erika Enterprise</div>
+<div class="meta"><b>Dev:</b> Evidence · <b>Year:</b> 2012 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> AUTOSAR · <b>Arch:</b> TriCore, ARM</div>
+<div class="meta"><b>Purpose:</b> Automotive RTOS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Erika kernel</div></div><div class="card"><div class="osname">FreeRTOS</div>
+<div class="meta"><b>Dev:</b> Amazon/Amazon Web Services · <b>Year:</b> 2017 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> FreeRTOS lineage · <b>Arch:</b> ARM Cortex-M, others</div>
+<div class="meta"><b>Purpose:</b> MCU real-time</div>
+<div class="meta"><b>License:</b> MIT · <b>Kernel/Parent:</b> FreeRTOS kernel</div></div><div class="card"><div class="osname">Mbed OS</div>
+<div class="meta"><b>Dev:</b> ARM · <b>Year:</b> 2009 · <b>Status:</b> Discontinued→Azure RTOS</div>
+<div class="meta"><b>Family:</b> RTOS · <b>Arch:</b> ARM Cortex-M</div>
+<div class="meta"><b>Purpose:</b> IoT devices</div>
+<div class="meta"><b>License:</b> Apache 2.0 · <b>Kernel/Parent:</b> Mbed OS</div></div><div class="card"><div class="osname">NuttX</div>
+<div class="meta"><b>Dev:</b> Apache · <b>Year:</b> 2015 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> POSIX RTOS · <b>Arch:</b> ARM, others</div>
+<div class="meta"><b>Purpose:</b> IoT/embedded</div>
+<div class="meta"><b>License:</b> Apache 2.0 · <b>Kernel/Parent:</b> NuttX kernel</div></div><div class="card"><div class="osname">OpenWrt</div>
+<div class="meta"><b>Dev:</b> OpenWrt project · <b>Year:</b> 2004 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Linux-derived · <b>Arch:</b> MIPS, ARM, x86</div>
+<div class="meta"><b>Purpose:</b> Router firmware</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">QNX</div>
+<div class="meta"><b>Dev:</b> BlackBerry/QNX · <b>Year:</b> 1982 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Microkernel Unix · <b>Arch:</b> ARM, x86</div>
+<div class="meta"><b>Purpose:</b> Embedded/automotive</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> QNX Neutrino</div></div><div class="card"><div class="osname">RIOT OS</div>
+<div class="meta"><b>Dev:</b> RIOT community · <b>Year:</b> 2013 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Contiki-inspired · <b>Arch:</b> ARM, AVR, x86</div>
+<div class="meta"><b>Purpose:</b> IoT OS</div>
+<div class="meta"><b>License:</b> LGPL/GPL · <b>Kernel/Parent:</b> RIOT kernel</div></div><div class="card"><div class="osname">RTEMS</div>
+<div class="meta"><b>Dev:</b> RTEMS project · <b>Year:</b> 1988 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> POSIX RTOS · <b>Arch:</b> many archs</div>
+<div class="meta"><b>Purpose:</b> Hard real-time</div>
+<div class="meta"><b>License:</b> modified GPL · <b>Kernel/Parent:</b> RTEMS kernel</div></div><div class="card"><div class="osname">Raspberry Pi OS</div>
+<div class="meta"><b>Dev:</b> Raspberry Pi Foundation · <b>Year:</b> 2012 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian-derived · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Pi OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">RouterOS</div>
+<div class="meta"><b>Dev:</b> MikroTik · <b>Year:</b> 1996 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Linux-derived · <b>Arch:</b> MIPS, ARM, x86</div>
+<div class="meta"><b>Purpose:</b> Router OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">ThreadX</div>
+<div class="meta"><b>Dev:</b> Microsoft/Azure RTOS · <b>Year:</b> 1997 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Azure RTOS · <b>Arch:</b> ARM, x86</div>
+<div class="meta"><b>Purpose:</b> Embedded RTOS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> ThreadX kernel</div></div><div class="card"><div class="osname">TinyOS</div>
+<div class="meta"><b>Dev:</b> UC Berkeley · <b>Year:</b> 2000 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> nesC-based · <b>Arch:</b> AVR, MSP430</div>
+<div class="meta"><b>Purpose:</b> Wireless sensor nets</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> TinyOS</div></div><div class="card"><div class="osname">VxWorks</div>
+<div class="meta"><b>Dev:</b> Wind River · <b>Year:</b> 1987 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> BSD-derived · <b>Arch:</b> x86, ARM, PowerPC</div>
+<div class="meta"><b>Purpose:</b> Hard RTOS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> VxWorks kernel</div></div><div class="card"><div class="osname">Zephyr</div>
+<div class="meta"><b>Dev:</b> Linux Foundation · <b>Year:</b> 2016 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Linux-derived · <b>Arch:</b> ARM, x86, RISC-V</div>
+<div class="meta"><b>Purpose:</b> IoT RTOS</div>
+<div class="meta"><b>License:</b> Apache 2.0 · <b>Kernel/Parent:</b> Zephyr kernel</div></div><div class="card"><div class="osname">pfSense/OPNsense</div>
+<div class="meta"><b>Dev:</b> Netgate/Deciso · <b>Year:</b> 2004/2015 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> FreeBSD-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Firewall OS</div>
+<div class="meta"><b>License:</b> Apache/GPL · <b>Kernel/Parent:</b> FreeBSD kernel</div></div></div><h2 id="cat9">Server &amp; Enterprise</h2><div class="grid"><div class="card"><div class="osname">Citrix Hypervisor</div>
+<div class="meta"><b>Dev:</b> Citrix · <b>Year:</b> 2011 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Xen-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Virtualization</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Xen</div></div><div class="card"><div class="osname">FreeNAS/TrueNAS CORE</div>
+<div class="meta"><b>Dev:</b> iXsystems · <b>Year:</b> 2005 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> FreeBSD-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> NAS OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> FreeBSD kernel</div></div><div class="card"><div class="osname">Hyper-V</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 2008 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Windows component · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Type-1 hypervisor</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Hyper-V</div></div><div class="card"><div class="osname">KVM/QEMU</div>
+<div class="meta"><b>Dev:</b> Linux community · <b>Year:</b> 2006 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Linux kernel · <b>Arch:</b> x86-64, ARM</div>
+<div class="meta"><b>Purpose:</b> Virtualization</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> KVM+QEMU</div></div><div class="card"><div class="osname">Nutanix AHV</div>
+<div class="meta"><b>Dev:</b> Nutanix · <b>Year:</b> 2011 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> KVM-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Hyperconverged OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> KVM</div></div><div class="card"><div class="osname">OmniOS</div>
+<div class="meta"><b>Dev:</b> omniosce · <b>Year:</b> 2012 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> OpenIndiana-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Server OS</div>
+<div class="meta"><b>License:</b> CDDL/BSD · <b>Kernel/Parent:</b> illumos</div></div><div class="card"><div class="osname">OpenStack</div>
+<div class="meta"><b>Dev:</b> OpenStack Foundation · <b>Year:</b> 2010 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Cloud OS · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> IaaS cloud platform</div>
+<div class="meta"><b>License:</b> Apache 2.0 · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Oracle Linux</div>
+<div class="meta"><b>Dev:</b> Oracle · <b>Year:</b> 2006 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> RHEL-compatible · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Enterprise Linux</div>
+<div class="meta"><b>License:</b> GPL+proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Proxmox VE</div>
+<div class="meta"><b>Dev:</b> Proxmox · <b>Year:</b> 2008 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Virtualization platform</div>
+<div class="meta"><b>License:</b> AGPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">RHEL</div>
+<div class="meta"><b>Dev:</b> Red Hat · <b>Year:</b> 2002 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Fedora-derived · <b>Arch:</b> x86-64, POWER, ARM</div>
+<div class="meta"><b>Purpose:</b> Enterprise Linux</div>
+<div class="meta"><b>License:</b> Commercial · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">SUSE Linux Enterprise</div>
+<div class="meta"><b>Dev:</b> SUSE · <b>Year:</b> 2000 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> SUSE-derived · <b>Arch:</b> x86-64, ARM, s390x</div>
+<div class="meta"><b>Purpose:</b> Enterprise Linux</div>
+<div class="meta"><b>License:</b> Commercial · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">SmartOS</div>
+<div class="meta"><b>Dev:</b> Joyent · <b>Year:</b> 2010 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> OpenSolaris-derived · <b>Arch:</b> x86-64, ARM</div>
+<div class="meta"><b>Purpose:</b> Cloud-native OS</div>
+<div class="meta"><b>License:</b> CDDL/BSD · <b>Kernel/Parent:</b> illumos</div></div><div class="card"><div class="osname">VMware ESXi</div>
+<div class="meta"><b>Dev:</b> Broadcom · <b>Year:</b> 2001 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Bare-metal hypervisor · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Server virtualization</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> VMkernel</div></div><div class="card"><div class="osname">VMware vSphere</div>
+<div class="meta"><b>Dev:</b> VMware · <b>Year:</b> 2001 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Virtualization suite · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Datacenter virtualization</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> ESXi</div></div><div class="card"><div class="osname">Windows Server</div>
+<div class="meta"><b>Dev:</b> Microsoft · <b>Year:</b> 2003 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Windows NT · <b>Arch:</b> x86-64, ARM64</div>
+<div class="meta"><b>Purpose:</b> Enterprise server</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> NT kernel</div></div><div class="card"><div class="osname">XCP-ng</div>
+<div class="meta"><b>Dev:</b> XCP-ng project · <b>Year:</b> 2018 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Citrix XenServer-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Open virtualization</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Xen</div></div></div><h2 id="cat10">Specialized &amp; Security</h2><div class="grid"><div class="card"><div class="osname">BlackArch</div>
+<div class="meta"><b>Dev:</b> BlackArch team · <b>Year:</b> 2013 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Arch-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Penetration testing</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux</div></div><div class="card"><div class="osname">ChromeOS Flex</div>
+<div class="meta"><b>Dev:</b> Google · <b>Year:</b> 2022 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> ChromeOS-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Repurpose old hardware</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Linux</div></div><div class="card"><div class="osname">Custom Debian derivatives</div>
+<div class="meta"><b>Dev:</b> — · <b>Year:</b> — · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian · <b>Arch:</b> x86, ARM</div>
+<div class="meta"><b>Purpose:</b> Embedded/kiosk</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux</div></div><div class="card"><div class="osname">FreeNAS/TrueNAS SCALE</div>
+<div class="meta"><b>Dev:</b> iXsystems · <b>Year:</b> 2005 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Linux+FreeBSD · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> NAS OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Linux/ZFS</div></div><div class="card"><div class="osname">Kodachi</div>
+<div class="meta"><b>Dev:</b> Kodachi team · <b>Year:</b> 2014 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Privacy OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux</div></div><div class="card"><div class="osname">OpenBSD</div>
+<div class="meta"><b>Dev:</b> OpenBSD Project · <b>Year:</b> 1995 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> BSD · <b>Arch:</b> x86, ARM, others</div>
+<div class="meta"><b>Purpose:</b> Security-hardened Unix</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> OpenBSD</div></div><div class="card"><div class="osname">Parrot OS</div>
+<div class="meta"><b>Dev:</b> Parrot Sec · <b>Year:</b> 2014 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Security/privacy OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux</div></div><div class="card"><div class="osname">PrivacyOS</div>
+<div class="meta"><b>Dev:</b> — · <b>Year:</b> — · <b>Status:</b> Niche</div>
+<div class="meta"><b>Family:</b> Android-based · <b>Arch:</b> ARM</div>
+<div class="meta"><b>Purpose:</b> Privacy mobile</div>
+<div class="meta"><b>License:</b> — · <b>Kernel/Parent:</b> Android</div></div><div class="card"><div class="osname">Qubes OS</div>
+<div class="meta"><b>Dev:</b> Qubes team · <b>Year:</b> 2010 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Xen-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Security isolation</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Xen</div></div><div class="card"><div class="osname">SELinux-based systems</div>
+<div class="meta"><b>Dev:</b> NSA/Red Hat · <b>Year:</b> 2000 · <b>Status:</b> Active (module)</div>
+<div class="meta"><b>Family:</b> Linux security · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Mandatory access control</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux</div></div><div class="card"><div class="osname">SecureBlue</div>
+<div class="meta"><b>Dev:</b> — · <b>Year:</b> — · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> RHEL-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Hardened Linux</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux</div></div><div class="card"><div class="osname">Subgraph OS</div>
+<div class="meta"><b>Dev:</b> Subgraph · <b>Year:</b> 2015 · <b>Status:</b> Discontinued</div>
+<div class="meta"><b>Family:</b> Debian-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Security-hardened desktop</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux</div></div><div class="card"><div class="osname">Tails</div>
+<div class="meta"><b>Dev:</b> Tails team · <b>Year:</b> 2009 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Amnesic privacy OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux</div></div><div class="card"><div class="osname">Webconverger</div>
+<div class="meta"><b>Dev:</b> — · <b>Year:</b> 2007 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian-based · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Kiosk OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux</div></div><div class="card"><div class="osname">Whonix</div>
+<div class="meta"><b>Dev:</b> Whonix · <b>Year:</b> 2012 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Debian · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Anonymity OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux</div></div></div><h2 id="cat11">Supercomputing &amp; HPC</h2><div class="grid"><div class="card"><div class="osname">Bright Cluster Manager</div>
+<div class="meta"><b>Dev:</b> Bright Computing · <b>Year:</b> 2005 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Cluster OS · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> HPC management</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Compute Node Linux</div>
+<div class="meta"><b>Dev:</b> HPC community · <b>Year:</b> — · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> — · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Cluster compute</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Cray Linux Environment</div>
+<div class="meta"><b>Dev:</b> Cray/HPE · <b>Year:</b> 2000s · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> SUSE-derived · <b>Arch:</b> x86, ARM</div>
+<div class="meta"><b>Purpose:</b> HPC Linux</div>
+<div class="meta"><b>License:</b> GPL/proprietary · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">PICS/Parastation</div>
+<div class="meta"><b>Dev:</b> Cornell · <b>Year:</b> 1990s · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> MPI stack · <b>Arch:</b> x86, others</div>
+<div class="meta"><b>Purpose:</b> Parallel OS layer</div>
+<div class="meta"><b>License:</b> open · <b>Kernel/Parent:</b> PICS</div></div><div class="card"><div class="osname">SUSE Manager/Uyuni</div>
+<div class="meta"><b>Dev:</b> SUSE · <b>Year:</b> — · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> SUSE-derived · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> HPC management</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Linux kernel</div></div><div class="card"><div class="osname">Slurm workload</div>
+<div class="meta"><b>Dev:</b> SchedMD · <b>Year:</b> 2002 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> — · <b>Arch:</b> Linux</div>
+<div class="meta"><b>Purpose:</b> Job scheduler</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> —</div></div><div class="card"><div class="osname">UNICOS</div>
+<div class="meta"><b>Dev:</b> Cray · <b>Year:</b> 1985 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> UNIX-derived · <b>Arch:</b> Cray vector</div>
+<div class="meta"><b>Purpose:</b> Cray supercomputers</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> UNIX-derived</div></div><div class="card"><div class="osname">Zeus (HPC)</div>
+<div class="meta"><b>Dev:</b> — · <b>Year:</b> — · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> — · <b>Arch:</b> x86</div>
+<div class="meta"><b>Purpose:</b> Early Beowulf OS</div>
+<div class="meta"><b>License:</b> open · <b>Kernel/Parent:</b> Linux-derived</div></div></div><h2 id="cat12">Unix &amp; Unix-like</h2><div class="grid"><div class="card"><div class="osname">AIX</div>
+<div class="meta"><b>Dev:</b> IBM · <b>Year:</b> 1986 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Unix System V · <b>Arch:</b> POWER</div>
+<div class="meta"><b>Purpose:</b> Enterprise Unix</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> AIX kernel</div></div><div class="card"><div class="osname">BSD</div>
+<div class="meta"><b>Dev:</b> UC Berkeley · <b>Year:</b> 1977 · <b>Status:</b> Historical→derivatives</div>
+<div class="meta"><b>Family:</b> Unix derivative · <b>Arch:</b> PDP-11, VAX</div>
+<div class="meta"><b>Purpose:</b> Research Unix</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> 4.4BSD-Lite</div></div><div class="card"><div class="osname">DragonFly BSD</div>
+<div class="meta"><b>Dev:</b> DragonFly BSD team · <b>Year:</b> 2003 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> FreeBSD 4.4 · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> SMP-scalable Unix</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> DragonFly kernel</div></div><div class="card"><div class="osname">FreeBSD</div>
+<div class="meta"><b>Dev:</b> FreeBSD Project · <b>Year:</b> 1993 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> BSD 4.4 · <b>Arch:</b> x86, ARM, RISC-V</div>
+<div class="meta"><b>Purpose:</b> General Unix</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> FreeBSD kernel</div></div><div class="card"><div class="osname">GNU Hurd</div>
+<div class="meta"><b>Dev:</b> GNU Project · <b>Year:</b> 1990 · <b>Status:</b> Experimental</div>
+<div class="meta"><b>Family:</b> Mach microkernel · <b>Arch:</b> x86, others</div>
+<div class="meta"><b>Purpose:</b> GNU OS</div>
+<div class="meta"><b>License:</b> GPL · <b>Kernel/Parent:</b> Mach</div></div><div class="card"><div class="osname">Genode</div>
+<div class="meta"><b>Dev:</b> Genode Labs · <b>Year:</b> 2006 · <b>Status:</b> Niche active</div>
+<div class="meta"><b>Family:</b> Capability OS · <b>Arch:</b> ARM, x86</div>
+<div class="meta"><b>Purpose:</b> Secure microkernel OS</div>
+<div class="meta"><b>License:</b> AGPL · <b>Kernel/Parent:</b> Genode kernel</div></div><div class="card"><div class="osname">HP-UX</div>
+<div class="meta"><b>Dev:</b> HP · <b>Year:</b> 1984 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Unix System V · <b>Arch:</b> PA-RISC, Itanium</div>
+<div class="meta"><b>Purpose:</b> Enterprise Unix</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> HP-UX kernel</div></div><div class="card"><div class="osname">HelenOS</div>
+<div class="meta"><b>Dev:</b> HelenOS team · <b>Year:</b> 2001 · <b>Status:</b> Niche active</div>
+<div class="meta"><b>Family:</b> SPARTAN-derived · <b>Arch:</b> x86, ARM, RISC-V</div>
+<div class="meta"><b>Purpose:</b> Research microkernel OS</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> HelenOS kernel</div></div><div class="card"><div class="osname">Illumos</div>
+<div class="meta"><b>Dev:</b> Illumos Foundation · <b>Year:</b> 2010 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> OpenSolaris-derived · <b>Arch:</b> SPARC, x86-64</div>
+<div class="meta"><b>Purpose:</b> Open Solaris continuation</div>
+<div class="meta"><b>License:</b> CDDL/BSD · <b>Kernel/Parent:</b> Illumos kernel</div></div><div class="card"><div class="osname">Inferno</div>
+<div class="meta"><b>Dev:</b> Bell Labs/Vita Nuova · <b>Year:</b> 1995 · <b>Status:</b> Discontinued (niche)</div>
+<div class="meta"><b>Family:</b> Plan 9-derived · <b>Arch:</b> x86, ARM</div>
+<div class="meta"><b>Purpose:</b> Distributed mobile OS</div>
+<div class="meta"><b>License:</b> GPL/LPL · <b>Kernel/Parent:</b> Inferno VM</div></div><div class="card"><div class="osname">MINIX</div>
+<div class="meta"><b>Dev:</b> Andrew Tanenbaum · <b>Year:</b> 1987 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Unix-like microkernel · <b>Arch:</b> x86, ARM</div>
+<div class="meta"><b>Purpose:</b> Teaching OS</div>
+<div class="meta"><b>License:</b> BSD-like · <b>Kernel/Parent:</b> MINIX kernel</div></div><div class="card"><div class="osname">NetBSD</div>
+<div class="meta"><b>Dev:</b> NetBSD Project · <b>Year:</b> 1992 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> 386BSD/4.4BSD · <b>Arch:</b> ~25 archs</div>
+<div class="meta"><b>Purpose:</b> Portability-focused</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> NetBSD kernel</div></div><div class="card"><div class="osname">OpenBSD</div>
+<div class="meta"><b>Dev:</b> OpenBSD Project · <b>Year:</b> 1995 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> 4.4BSD-Lite · <b>Arch:</b> x86, ARM, others</div>
+<div class="meta"><b>Purpose:</b> Security-focused Unix</div>
+<div class="meta"><b>License:</b> BSD · <b>Kernel/Parent:</b> OpenBSD kernel</div></div><div class="card"><div class="osname">OpenSolaris</div>
+<div class="meta"><b>Dev:</b> Sun Microsystems · <b>Year:</b> 2005 · <b>Status:</b> Discontinued (2010)</div>
+<div class="meta"><b>Family:</b> Solaris-derived · <b>Arch:</b> SPARC, x86</div>
+<div class="meta"><b>Purpose:</b> Open-source Solaris</div>
+<div class="meta"><b>License:</b> CDDL · <b>Kernel/Parent:</b> OpenSolaris kernel</div></div><div class="card"><div class="osname">Plan 9</div>
+<div class="meta"><b>Dev:</b> Bell Labs · <b>Year:</b> 1992 · <b>Status:</b> Niche active</div>
+<div class="meta"><b>Family:</b> Unix successor · <b>Arch:</b> x86, MIPS, others</div>
+<div class="meta"><b>Purpose:</b> Distributed OS</div>
+<div class="meta"><b>License:</b> Lucent Public License · <b>Kernel/Parent:</b> Plan 9 kernel</div></div><div class="card"><div class="osname">Solaris</div>
+<div class="meta"><b>Dev:</b> Sun Microsystems · <b>Year:</b> 1992 · <b>Status:</b> Discontinued (Oracle 2024)</div>
+<div class="meta"><b>Family:</b> SysV-derived · <b>Arch:</b> SPARC, x86-64</div>
+<div class="meta"><b>Purpose:</b> Enterprise Unix</div>
+<div class="meta"><b>License:</b> Proprietary→open (Illumos) · <b>Kernel/Parent:</b> SunOS kernel</div></div><div class="card"><div class="osname">Syllable OS</div>
+<div class="meta"><b>Dev:</b> Syllable · <b>Year:</b> 2002 · <b>Status:</b> Niche active</div>
+<div class="meta"><b>Family:</b> Linux-inspired custom · <b>Arch:</b> x86-64</div>
+<div class="meta"><b>Purpose:</b> Desktop OS</div>
+<div class="meta"><b>License:</b> GPL/BSD · <b>Kernel/Parent:</b> Aons kernel</div></div><div class="card"><div class="osname">UNIX (V7)</div>
+<div class="meta"><b>Dev:</b> Bell Labs · <b>Year:</b> 1979 · <b>Status:</b> Historical</div>
+<div class="meta"><b>Family:</b> Unix · <b>Arch:</b> PDP-11, VAX</div>
+<div class="meta"><b>Purpose:</b> Multi-user OS</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> Unix</div></div><div class="card"><div class="osname">Xinu</div>
+<div class="meta"><b>Dev:</b> Douglas Comer · <b>Year:</b> 1981 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> Teaching OS · <b>Arch:</b> 8086, others</div>
+<div class="meta"><b>Purpose:</b> Embedded/teaching</div>
+<div class="meta"><b>License:</b> educational · <b>Kernel/Parent:</b> Xinu kernel</div></div><div class="card"><div class="osname">macOS (XNU)</div>
+<div class="meta"><b>Dev:</b> Apple · <b>Year:</b> 2001 · <b>Status:</b> Active</div>
+<div class="meta"><b>Family:</b> BSD-derived · <b>Arch:</b> x86-64, ARM64</div>
+<div class="meta"><b>Purpose:</b> Desktop Unix</div>
+<div class="meta"><b>License:</b> Proprietary · <b>Kernel/Parent:</b> XNU (Mach+BSD)</div></div></div>
+<div class="foot">Built: 218 verified OS entries across 12 categories · SQLite: os_catalog.db · Sources: Wikipedia + vendor docs · Generated by os_catalog/build.py</div>
+</body></html>
