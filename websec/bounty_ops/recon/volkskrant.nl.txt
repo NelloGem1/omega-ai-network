@@ -25,3 +25,18 @@ api-labs 404 | openredactie/labs/wiki timeouts | crowdtech→Spotler SaaS
 3. IDOR targets: /abonnementen/delen (share subs!), /koppelen (link accounts),
    uitnodiging tokens, webwinkel orders, numeric IDs = CRITICAL per their guide
 4. ims.volkskrant.nl legacy .dll = worth probing for known-vuln patterns
+
+## SESSION 2 UPDATE — account created (gmail, free tier)
+Account UUID: bd2d2b0f-1364-4195-b0d5-a66bf84788b9
+Login: login.dpgmedia.nl (Piano SSO) — intigriti.me alias unresolved
+Portal routes (SSR, no API calls — routes ARE endpoints):
+  /account /abonnementen /facturen/betaalgegevens /mijn-activiteiten
+  /bezorgservice/klacht /verhuisservice/doorgeven /vakantieservice/doorgeven
+  /betaalservice/wijzigen /klantenservice/veelgestelde-vragen/...
+External svc: wijzigen.volkskrant.nl + opzeggen.volkskrant.nl = Nuxt.js SPA
+  (runtime baseURL, no exposed endpoints yet; /.env 403)
+ims.volkskrant.nl = SIMS image service → simims-nlpub.dpgmedia.net
+LIMITER: free account = no subscription = empty facturen/abonnementen
+deeper API discovery needs paid sub OR Nuxt chunk mining
+NEXT IDEAS: /abonnementen/uitnodiging token flow, webwinkel checkout,
+  Nuxt runtime config extraction, simims-nlpub.dpgmedia.net probing
