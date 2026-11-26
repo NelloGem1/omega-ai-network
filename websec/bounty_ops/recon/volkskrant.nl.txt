@@ -40,3 +40,10 @@ LIMITER: free account = no subscription = empty facturen/abonnementen
 deeper API discovery needs paid sub OR Nuxt chunk mining
 NEXT IDEAS: /abonnementen/uitnodiging token flow, webwinkel checkout,
   Nuxt runtime config extraction, simims-nlpub.dpgmedia.net probing
+
+## SESSION 2b — wijzigen runtime config extracted
+Nuxt app '@tapp/retention(1.169.0)' shared DPG subscription component
+Config leaks: APPLICATION_ID=abonnement.titel.nl, Storyblok token
+BcSilyZpsodozvMILkVxtQtt (CMS draft access possible?), bugsnag key
+SSO: pip.isSsoEnabled=true → data calls need login session
+No /api/* routes exposed; backend likely Nitro server routes or SSO-gated
