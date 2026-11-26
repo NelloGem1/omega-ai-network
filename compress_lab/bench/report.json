@@ -1,0 +1,272 @@
+[
+  {
+    "file": "log.txt",
+    "orig": 32100,
+    "entropy": 4.57,
+    "redundancy": 0.43,
+    "algos": {
+      "zlib": {
+        "size": 190,
+        "ratio": 168.95,
+        "time_ms": 0.2,
+        "roundtrip": true
+      },
+      "bz2": {
+        "size": 241,
+        "ratio": 133.2,
+        "time_ms": 6.6,
+        "roundtrip": true
+      },
+      "lzma": {
+        "size": 208,
+        "ratio": 154.33,
+        "time_ms": 39.5,
+        "roundtrip": true
+      },
+      "rle": {
+        "size": 32100,
+        "ratio": 1.0,
+        "time_ms": 6.5,
+        "roundtrip": true
+      },
+      "dict": {
+        "size": 8330,
+        "ratio": 3.85,
+        "time_ms": 27.8,
+        "roundtrip": "n/a"
+      },
+      "delta": {
+        "size": 32101,
+        "ratio": 1.0,
+        "time_ms": 1.6,
+        "roundtrip": true
+      }
+    },
+    "auto_algo": "zlib",
+    "auto_size": 190,
+    "auto_ratio": 168.95
+  },
+  {
+    "file": "metrics.csv",
+    "orig": 74629,
+    "entropy": 3.55,
+    "redundancy": 0.56,
+    "algos": {
+      "zlib": {
+        "size": 34256,
+        "ratio": 2.18,
+        "time_ms": 5.5,
+        "roundtrip": true
+      },
+      "bz2": {
+        "size": 26123,
+        "ratio": 2.86,
+        "time_ms": 5.9,
+        "roundtrip": true
+      },
+      "lzma": {
+        "size": 6556,
+        "ratio": 11.38,
+        "time_ms": 56.3,
+        "roundtrip": true
+      },
+      "rle": {
+        "size": 74614,
+        "ratio": 1.0,
+        "time_ms": 14.9,
+        "roundtrip": true
+      },
+      "dict": {
+        "error": "byte must be in range(0, 256)"
+      },
+      "delta": {
+        "size": 74630,
+        "ratio": 1.0,
+        "time_ms": 3.5,
+        "roundtrip": true
+      }
+    },
+    "auto_algo": "lzma",
+    "auto_size": 6556,
+    "auto_ratio": 11.38
+  },
+  {
+    "file": "random.bin",
+    "orig": 50000,
+    "entropy": 8.0,
+    "redundancy": 0.0,
+    "algos": {
+      "zlib": {
+        "size": 50026,
+        "ratio": 1.0,
+        "time_ms": 1.4,
+        "roundtrip": true
+      },
+      "bz2": {
+        "size": 50559,
+        "ratio": 0.99,
+        "time_ms": 7.0,
+        "roundtrip": true
+      },
+      "lzma": {
+        "size": 50060,
+        "ratio": 1.0,
+        "time_ms": 53.1,
+        "roundtrip": true
+      },
+      "rle": {
+        "size": 50000,
+        "ratio": 1.0,
+        "time_ms": 10.2,
+        "roundtrip": false
+      },
+      "dict": {
+        "error": "byte must be in range(0, 256)"
+      },
+      "delta": {
+        "size": 50001,
+        "ratio": 1.0,
+        "time_ms": 2.7,
+        "roundtrip": true
+      }
+    },
+    "auto_algo": "zlib",
+    "auto_size": 50026,
+    "auto_ratio": 1.0
+  },
+  {
+    "file": "code.py",
+    "orig": 191370,
+    "entropy": 5.0,
+    "redundancy": 0.37,
+    "algos": {
+      "zlib": {
+        "size": 3976,
+        "ratio": 48.13,
+        "time_ms": 1.2,
+        "roundtrip": true
+      },
+      "bz2": {
+        "size": 4805,
+        "ratio": 39.83,
+        "time_ms": 45.2,
+        "roundtrip": true
+      },
+      "lzma": {
+        "size": 2644,
+        "ratio": 72.38,
+        "time_ms": 57.5,
+        "roundtrip": true
+      },
+      "rle": {
+        "size": 171840,
+        "ratio": 1.11,
+        "time_ms": 36.6,
+        "roundtrip": true
+      },
+      "dict": {
+        "error": "byte must be in range(0, 256)"
+      },
+      "delta": {
+        "size": 191371,
+        "ratio": 1.0,
+        "time_ms": 9.7,
+        "roundtrip": true
+      }
+    },
+    "auto_algo": "lzma",
+    "auto_size": 2644,
+    "auto_ratio": 72.38
+  },
+  {
+    "file": "pattern.bin",
+    "orig": 40000,
+    "entropy": 3.0,
+    "redundancy": 0.62,
+    "algos": {
+      "zlib": {
+        "size": 88,
+        "ratio": 454.55,
+        "time_ms": 0.2,
+        "roundtrip": true
+      },
+      "bz2": {
+        "size": 61,
+        "ratio": 655.74,
+        "time_ms": 6.8,
+        "roundtrip": true
+      },
+      "lzma": {
+        "size": 144,
+        "ratio": 277.78,
+        "time_ms": 40.2,
+        "roundtrip": true
+      },
+      "rle": {
+        "size": 40000,
+        "ratio": 1.0,
+        "time_ms": 8.2,
+        "roundtrip": true
+      },
+      "dict": {
+        "size": 10033,
+        "ratio": 3.99,
+        "time_ms": 13.7,
+        "roundtrip": "n/a"
+      },
+      "delta": {
+        "size": 40001,
+        "ratio": 1.0,
+        "time_ms": 1.8,
+        "roundtrip": true
+      }
+    },
+    "auto_algo": "bz2",
+    "auto_size": 61,
+    "auto_ratio": 655.74
+  },
+  {
+    "file": "data.json",
+    "orig": 117480,
+    "entropy": 4.3,
+    "redundancy": 0.46,
+    "algos": {
+      "zlib": {
+        "size": 14853,
+        "ratio": 7.91,
+        "time_ms": 4.2,
+        "roundtrip": true
+      },
+      "bz2": {
+        "size": 8012,
+        "ratio": 14.66,
+        "time_ms": 6.9,
+        "roundtrip": true
+      },
+      "lzma": {
+        "size": 2928,
+        "ratio": 40.12,
+        "time_ms": 87.4,
+        "roundtrip": true
+      },
+      "rle": {
+        "size": 117476,
+        "ratio": 1.0,
+        "time_ms": 24.0,
+        "roundtrip": true
+      },
+      "dict": {
+        "error": "byte must be in range(0, 256)"
+      },
+      "delta": {
+        "size": 117481,
+        "ratio": 1.0,
+        "time_ms": 5.8,
+        "roundtrip": true
+      }
+    },
+    "auto_algo": "lzma",
+    "auto_size": 2928,
+    "auto_ratio": 40.12
+  }
+]
