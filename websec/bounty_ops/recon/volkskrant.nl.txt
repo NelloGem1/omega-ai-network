@@ -1,0 +1,27 @@
+# RECON — volkskrant.nl / DPG 'de Volkskrant' Intigriti program (2026-11-26)
+Program: https://app.intigriti.com/researcher/programs/dpgm/devolkskrant/detail
+Scope: myaccount.volkskrant.nl T2 | www.volkskrant.nl T2 | /abonnementen T2 | *.volkskrant.nl T3
+Rules: intigriti.me email ONLY | X-Intigriti-Username hdr | ≤5 req/s | NO scanners
+OOS highlights: UUID-IDORs=LOW | dir-listings w/o sensitive data | username enum | paywall bypass
+Severity: numeric IDOR mass R/W = CRIT | random-user PII = HIGH | IDOR non-critical = MED
+
+## Subdomains (certspotter, 40 total)
+Key: id.volkskrant.nl (Auth0/Piano SSO) | account.volkskrant.nl (login, WAF-blocks DC IP)
+mijnomgeving.volkskrant.nl = Next.js 'Mijn omgeving' account portal
+abonnement-/wijzigen-/opzeggen-(-acc/-test).volkskrant.nl = subscription lifecycle svc
+webwinkel.volkskrant.nl (200, webshop) | ims.volkskrant.nl (.dll = legacy ASP.NET!)
+files-prod-labs.volkskrant.nl = PUBLIC S3 LISTING 'kijkverder-files-bucket-prod'
+  → article images only = OOS (dir-listing rule). Parked.
+api-labs 404 | openredactie/labs/wiki timeouts | crowdtech→Spotler SaaS
+
+## Account portal routes (all auth-gated → account.volkskrant.nl/login)
+/abonnementen /persoonsgegevens /delen /koppelen → 307 login
+/abonnementen/uitnodiging → 404 BUT 381KB page (invite/token flow? PROBE)
+/api/preview/exit → 307 home
+
+## Attack plan
+1. User registers free account on account.volkskrant.nl (browser)
+2. Sniffer technique (kruidvat_sniffer.js pattern) on mijnomgeving
+3. IDOR targets: /abonnementen/delen (share subs!), /koppelen (link accounts),
+   uitnodiging tokens, webwinkel orders, numeric IDs = CRITICAL per their guide
+4. ims.volkskrant.nl legacy .dll = worth probing for known-vuln patterns
