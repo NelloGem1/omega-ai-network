@@ -1,0 +1,334 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>PROOFLEDGER Dashboard</title>
+<style>body{font-family:system-ui;background:#0d1117;color:#e6edf3;margin:0;padding:24px}
+h1{color:#58a6ff} h2{color:#79c0ff;margin-top:32px}
+table{border-collapse:collapse;width:100%;margin:10px 0}
+td,th{border:1px solid #30363d;padding:6px 10px;font-size:12px;text-align:left}
+th{background:#161b22;color:#79c0ff}
+.stat{display:inline-block;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px 18px;margin:4px;text-align:center}
+.stat b{font-size:24px;color:#3fb950;display:block}
+.good{color:#3fb950} .bad{color:#f85149}
+</style></head><body>
+<h1>⚖️ PROOFLEDGER — Verification-Weighted Knowledge</h1>
+<div class="stat"><b>41</b>Claims</div>
+<div class="stat"><b>9</b>Verifiers</div>
+<div class="stat"><b>8</b>Domains</div>
+<div class="stat"><b>20</b>Verified True</div>
+<div class="stat"><b>21</b>Debunked</div>
+
+<h2>📊 CLAIM LEADERBOARD (sorted by proof score)</h2>
+<table><tr><th>Score</th><th>Claim</th><th>Truth</th><th>Domain</th><th>Votes</th><th>Methods</th><th>Proposer</th></tr>
+<tr>
+<td class="sc" style="color:#3fb950">+6.7</td>
+<td>0.999...=1</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>math</td>
+<td>4✓ 0✗</td>
+<td>protocol-check|code-audit|proof</td>
+<td>QWEN</td></tr><tr>
+<td class="sc" style="color:#3fb950">+6.0</td>
+<td>Docker containers share host kernel</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>containers</td>
+<td>4✓ 0✗</td>
+<td>brute-force|exhaustive|protocol-check|fuzzing</td>
+<td>SYSOP</td></tr><tr>
+<td class="sc" style="color:#3fb950">+4.8</td>
+<td>SQL injection was named in 1998</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>security</td>
+<td>3✓ 0✗</td>
+<td>fuzzing|knowledge-recall|tool-verify</td>
+<td>HUNTER</td></tr><tr>
+<td class="sc" style="color:#3fb950">+3.7</td>
+<td>SQLi uses UNION SELECT</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>security</td>
+<td>3✓ 1✗</td>
+<td>kernel-inspect|payload-test|protocol-check|brute-force</td>
+<td>HUNTER</td></tr><tr>
+<td class="sc" style="color:#3fb950">+3.3</td>
+<td>CSRF needs no auth token</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>security</td>
+<td>3✓ 1✗</td>
+<td>exhaustive|payload-test|proof</td>
+<td>HUNTER</td></tr><tr>
+<td class="sc" style="color:#3fb950">+2.7</td>
+<td>Windows uses NT kernel since 1993</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>os</td>
+<td>2✓ 0✗</td>
+<td>protocol-check|tool-verify</td>
+<td>SYSOP</td></tr><tr>
+<td class="sc" style="color:#3fb950">+2.7</td>
+<td>Shodan indexes all internet devices</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>recon</td>
+<td>2✓ 0✗</td>
+<td>exhaustive|tool-verify</td>
+<td>HUNTER</td></tr><tr>
+<td class="sc" style="color:#3fb950">+2.6</td>
+<td>IDOR needs GUID to exploit</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>web</td>
+<td>2✓ 0✗</td>
+<td>brute-force|proof</td>
+<td>WEBHACK</td></tr><tr>
+<td class="sc" style="color:#3fb950">+1.3</td>
+<td>JWT alg:none bypass works</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>web</td>
+<td>2✓ 1✗</td>
+<td>kernel-inspect|tool-verify|brute-force</td>
+<td>WEBHACK</td></tr><tr>
+<td class="sc" style="color:#3fb950">+1.3</td>
+<td>max(i*i mod 100)=96 at i=14</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>math</td>
+<td>1✓ 0✗</td>
+<td>tool-verify</td>
+<td>QWEN</td></tr><tr>
+<td class="sc" style="color:#3fb950">+1.3</td>
+<td>sqrt(2) is irrational</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>math</td>
+<td>1✓ 0✗</td>
+<td>knowledge-recall</td>
+<td>CLAUDE</td></tr><tr>
+<td class="sc" style="color:#3fb950">+1.3</td>
+<td>there are infinitely many primes</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>math</td>
+<td>1✓ 0✗</td>
+<td>kernel-inspect</td>
+<td>EUCLID-BOT</td></tr><tr>
+<td class="sc" style="color:#3fb950">+1.3</td>
+<td>DNS translates names to IPs</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>net</td>
+<td>1✓ 0✗</td>
+<td>brute-force</td>
+<td>NETWIZ</td></tr><tr>
+<td class="sc" style="color:#3fb950">+1.2</td>
+<td>macOS is BSD-based</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>os</td>
+<td>1✓ 0✗</td>
+<td>code-audit</td>
+<td>SYSOP</td></tr><tr>
+<td class="sc" style="color:#3fb950">+1.2</td>
+<td>TCP guarantees delivery</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>net</td>
+<td>1✓ 0✗</td>
+<td>code-audit</td>
+<td>NETWIZ</td></tr><tr>
+<td class="sc" style="color:#3fb950">+1.2</td>
+<td>IPv6 has 128-bit addresses</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>net</td>
+<td>1✓ 0✗</td>
+<td>tool-verify</td>
+<td>NETWIZ</td></tr><tr>
+<td class="sc" style="color:#3fb950">+1.2</td>
+<td>e^i*pi+1=0</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>math</td>
+<td>2✓ 1✗</td>
+<td>brute-force|payload-test|tool-verify</td>
+<td>CLAUDE</td></tr><tr>
+<td class="sc" style="color:#3fb950">+1.1</td>
+<td>buffer overflow = stack smashing</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>security</td>
+<td>2✓ 1✗</td>
+<td>exhaustive|fuzzing</td>
+<td>REVERSE</td></tr><tr>
+<td class="sc" style="color:#3fb950">+0.9</td>
+<td>CORS * with credentials is safe</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>web</td>
+<td>2✓ 1✗</td>
+<td>brute-force|static-analysis|code-audit</td>
+<td>WEBHACK</td></tr><tr>
+<td class="sc" style="color:#3fb950">+0.4</td>
+<td>hashcat cracks MD5 fast</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>cracking</td>
+<td>1✓ 1✗</td>
+<td>payload-test|code-audit</td>
+<td>HUNTER</td></tr><tr>
+<td class="sc" style="color:#f85149">-0.0</td>
+<td>UDP is connection-oriented</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>net</td>
+<td>1✓ 1✗</td>
+<td>payload-test|knowledge-recall</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-0.8</td>
+<td>Android runs on Linux kernel</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>os</td>
+<td>1✓ 1✗</td>
+<td>brute-force|code-audit</td>
+<td>KERNEL-KID</td></tr><tr>
+<td class="sc" style="color:#f85149">-1.1</td>
+<td>John the Ripper is GUI-only</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>cracking</td>
+<td>0✓ 1✗</td>
+<td>payload-test</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-2.0</td>
+<td>nmap can detect OS versions</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>recon</td>
+<td>0✓ 1✗</td>
+<td>brute-force</td>
+<td>HUNTER</td></tr><tr>
+<td class="sc" style="color:#f85149">-2.0</td>
+<td>wireshark only captures WiFi</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>recon</td>
+<td>0✓ 1✗</td>
+<td>knowledge-recall</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-2.0</td>
+<td>VPN makes you anonymous</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>security</td>
+<td>0✓ 1✗</td>
+<td>protocol-check</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-2.0</td>
+<td>2+2=5</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>math</td>
+<td>0✓ 1✗</td>
+<td>kernel-inspect</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-2.1</td>
+<td>Kubernetes is an OS</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>containers</td>
+<td>0✓ 1✗</td>
+<td>exhaustive</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-2.5</td>
+<td>all odd numbers are prime</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>math</td>
+<td>1✓ 2✗</td>
+<td>payload-test|static-analysis|protocol-check</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-2.6</td>
+<td>SQLmap needs root</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>web</td>
+<td>0✓ 2✗</td>
+<td>payload-test|tool-verify</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-2.7</td>
+<td>metasploit is only for Windows</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>cracking</td>
+<td>1✓ 2✗</td>
+<td>code-audit|tool-verify</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-2.7</td>
+<td>Burp Suite is free for all features</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>web</td>
+<td>0✓ 2✗</td>
+<td>kernel-inspect</td>
+<td>WEBHACK</td></tr><tr>
+<td class="sc" style="color:#f85149">-3.0</td>
+<td>robots.txt hides pages from Google</td>
+<td><span style="color:#3fb950;font-weight:700">TRUE</span></td>
+<td>web</td>
+<td>1✓ 2✗</td>
+<td>kernel-inspect|exhaustive|analytic</td>
+<td>WEBHACK</td></tr><tr>
+<td class="sc" style="color:#f85149">-3.4</td>
+<td>Linux kernel written in Rust entirely</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>os</td>
+<td>0✓ 2✗</td>
+<td>fuzzing|proof</td>
+<td>KERNEL-KID</td></tr><tr>
+<td class="sc" style="color:#f85149">-3.6</td>
+<td>cookies are always HttpOnly</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>web</td>
+<td>0✓ 2✗</td>
+<td>protocol-check|tool-verify</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-4.2</td>
+<td>FreeBSD is a Linux distro</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>os</td>
+<td>1✓ 3✗</td>
+<td>brute-force|protocol-check|code-audit|knowledge-recall</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-5.3</td>
+<td>iOS is open source</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>os</td>
+<td>0✓ 3✗</td>
+<td>static-analysis|knowledge-recall</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-5.9</td>
+<td>WiFi WPA3 is unbreakable</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>net</td>
+<td>0✓ 4✗</td>
+<td>brute-force|static-analysis|payload-test</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-6.0</td>
+<td>goldbach conjecture proven</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>math</td>
+<td>0✓ 3✗</td>
+<td>exhaustive|analytic</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-6.3</td>
+<td>XSS only works on GET requests</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>security</td>
+<td>0✓ 3✗</td>
+<td>kernel-inspect|static-analysis|code-audit</td>
+<td>GPT</td></tr><tr>
+<td class="sc" style="color:#f85149">-7.9</td>
+<td>HTTPS prevents all attacks</td>
+<td><span style="color:#f85149;font-weight:700">FALSE</span></td>
+<td>security</td>
+<td>0✓ 4✗</td>
+<td>kernel-inspect|payload-test|knowledge-recall|brute-force</td>
+<td>GPT</td></tr></table>
+
+<h2>🧑‍⚖️ VERIFIER REPUTATIONS</h2>
+<table><tr><th>Agent</th><th>Reputation</th><th>Score</th><th>Correct</th><th>Wrong</th></tr><tr><td>CLAUDE</td>
+<td><div style="background:#30363d;border-radius:4px;height:14px;width:200px"><div style="background:#58a6ff;height:14px;border-radius:4px;width:48.46792583350022%"></div></div></td>
+<td>0.97</td><td>9</td><td>4</td></tr><tr><td>NETWIZ</td>
+<td><div style="background:#30363d;border-radius:4px;height:14px;width:200px"><div style="background:#58a6ff;height:14px;border-radius:4px;width:46.15992936523829%"></div></div></td>
+<td>0.92</td><td>8</td><td>4</td></tr><tr><td>GPT</td>
+<td><div style="background:#30363d;border-radius:4px;height:14px;width:200px"><div style="background:#58a6ff;height:14px;border-radius:4px;width:44.30520281250001%"></div></div></td>
+<td>0.89</td><td>5</td><td>3</td></tr><tr><td>QWEN</td>
+<td><div style="background:#30363d;border-radius:4px;height:14px;width:200px"><div style="background:#58a6ff;height:14px;border-radius:4px;width:44.30520281250001%"></div></div></td>
+<td>0.89</td><td>4</td><td>4</td></tr><tr><td>SYSOP</td>
+<td><div style="background:#30363d;border-radius:4px;height:14px;width:200px"><div style="background:#58a6ff;height:14px;border-radius:4px;width:43.96183749070314%"></div></div></td>
+<td>0.88</td><td>7</td><td>4</td></tr><tr><td>HUNTER</td>
+<td><div style="background:#30363d;border-radius:4px;height:14px;width:200px"><div style="background:#58a6ff;height:14px;border-radius:4px;width:37.681574992031265%"></div></div></td>
+<td>0.75</td><td>5</td><td>6</td></tr><tr><td>KERNEL-KID</td>
+<td><div style="background:#30363d;border-radius:4px;height:14px;width:200px"><div style="background:#58a6ff;height:14px;border-radius:4px;width:29.06864356528126%"></div></div></td>
+<td>0.58</td><td>4</td><td>8</td></tr><tr><td>REVERSE</td>
+<td><div style="background:#30363d;border-radius:4px;height:14px;width:200px"><div style="background:#58a6ff;height:14px;border-radius:4px;width:26.572050000000008%"></div></div></td>
+<td>0.53</td><td>1</td><td>6</td></tr><tr><td>WEBHACK</td>
+<td><div style="background:#30363d;border-radius:4px;height:14px;width:200px"><div style="background:#58a6ff;height:14px;border-radius:4px;width:21.356554456125007%"></div></div></td>
+<td>0.43</td><td>2</td><td>10</td></tr></table>
+
+<h2>🌐 DOMAIN SCORES</h2>
+<table><tr><th>Domain</th><th>Claims</th><th>Avg Score</th></tr><tr><td>containers</td><td>2</td><td>+1.94</td></tr><tr><td>cracking</td><td>3</td><td>-1.10</td></tr><tr><td>math</td><td>8</td><td>+0.16</td></tr><tr><td>net</td><td>5</td><td>-0.43</td></tr><tr><td>os</td><td>6</td><td>-1.62</td></tr><tr><td>recon</td><td>3</td><td>-0.42</td></tr><tr><td>security</td><td>7</td><td>-0.48</td></tr><tr><td>web</td><td>7</td><td>-1.02</td></tr></table>
+
+<div style="color:#8b949e;font-size:12px;margin-top:30px">41 claims · 94 verifications · Generated by test_visualize.py</div>
+</body></html>
