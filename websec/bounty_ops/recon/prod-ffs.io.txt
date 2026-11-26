@@ -1,0 +1,94 @@
+# RECON REPORT — prod-ffs.io
+# 2026-11-26T11:00:11.213195
+# ⚠ VERIFY SCOPE BEFORE ANY ACTIVE TESTING
+
+SCOPE CHECK: ✅ [('Monzo Bank', '*.prod-ffs.io')]
+
+== SUBDOMAINS (crt.sh passive) ==
+bizops-admin.tools.prod.prod-ffs.io
+bizops.tools.prod.prod-ffs.io
+flex-instalment-sel.payments.e.prod.prod-ffs.io
+ingress-web-monzo-com.prod.prod-ffs.io
+internal-sso.tools.prod.prod-ffs.io
+ivr.prod.prod-ffs.io
+okta-external.mpa.prod.prod-ffs.io
+redsys-bizum-api.payments.e.prod.prod-ffs.io
+self-service.tools.prod.prod-ffs.io
+supportal.tools.prod.prod-ffs.io
+tools.prod.prod-ffs.io
+visa.payments.e.prod.prod-ffs.io
+web.prod.prod-ffs.io
+weblets.prod.prod-ffs.io
+
+LIVE SUBDOMAINS (12):
+bizops-admin.tools.prod.prod-ffs.io
+bizops.tools.prod.prod-ffs.io
+flex-instalment-sel.payments.e.prod.prod-ffs.io
+ingress-web-monzo-com.prod.prod-ffs.io
+internal-sso.tools.prod.prod-ffs.io
+ivr.prod.prod-ffs.io
+okta-external.mpa.prod.prod-ffs.io
+redsys-bizum-api.payments.e.prod.prod-ffs.io
+self-service.tools.prod.prod-ffs.io
+supportal.tools.prod.prod-ffs.io
+visa.payments.e.prod.prod-ffs.io
+web.prod.prod-ffs.io
+
+== PORTS on prod-ffs.io (light web scan) ==
+(none of common web ports open)
+
+== JS FILES (endpoint leak candidates) ==
+ERROR: <urlopen error [Errno -5] No address associated with hostname>
+
+== WAYBACK URLS (historical endpoints) ==
+https://flex-instalment-sel.payments.e.prod.prod-ffs.io/
+https://web.prod.prod-ffs.io/
+https://web.prod.prod-ffs.io/_next/static/chunks/04bb9005f70b3167dd809ff110d6e07bd19e556b.f9137f143bad638f5f94.js
+https://web.prod.prod-ffs.io/_next/static/chunks/526715ca9cebc7f9ca0cc290a741dda1fa7168f2.cb55b69bb9d5a58992e8.js
+https://web.prod.prod-ffs.io/_next/static/chunks/5dec7d93c186598f3af7e0b2a46ecda975900e56.8330d273f4da50f5c1ab.js
+https://web.prod.prod-ffs.io/_next/static/chunks/framework.f8a63c3ee0f19227df4d.js
+https://web.prod.prod-ffs.io/_next/static/chunks/styles.36bf7c57f62dc6c9d474.js
+https://web.prod.prod-ffs.io/_next/static/chunks/webpack-7e827f325576e682ac28.js
+https://web.prod.prod-ffs.io/_next/static/css/1d868f4d89752bfd.css
+https://web.prod.prod-ffs.io/_next/static/css/7953c366862267253581.css
+https://web.prod.prod-ffs.io/_next/static/css/981a4a255d6ba5a3.css
+https://web.prod.prod-ffs.io/_next/static/css/9b32ab3ff43b66c46ac4.css
+https://web.prod.prod-ffs.io/_next/static/css/styles.f74c40e1.chunk.css
+https://web.prod.prod-ffs.io/_next/static/dxWc9zBisB4J_i0yGuAKs/_buildManifest.js
+https://web.prod.prod-ffs.io/_next/static/dxWc9zBisB4J_i0yGuAKs/_ssgManifest.js
+https://web.prod.prod-ffs.io/_next/static/dxWc9zBisB4J_i0yGuAKs/pages/_app.js
+https://web.prod.prod-ffs.io/_next/static/dxWc9zBisB4J_i0yGuAKs/pages/index.js
+https://web.prod.prod-ffs.io/_next/static/runtime/main-bda73e234ab9867e816f.js
+https://web.prod.prod-ffs.io/_next/static/runtime/webpack-83bd83ab777f80a6c75c.js
+https://web.prod.prod-ffs.io/cookies
+https://web.prod.prod-ffs.io/css/base.css
+https://web.prod.prod-ffs.io/images/appstore.svg
+https://web.prod.prod-ffs.io/images/facebook.svg
+https://web.prod.prod-ffs.io/images/favicon.png
+https://web.prod.prod-ffs.io/images/icons/icon-144x144.png
+https://web.prod.prod-ffs.io/images/linkedin.svg
+https://web.prod.prod-ffs.io/images/play-store.svg
+https://web.prod.prod-ffs.io/images/twitter.svg
+https://web.prod.prod-ffs.io/images/youtube.svg
+https://web.prod.prod-ffs.io/manifest.json
+https://web.prod.prod-ffs.io/static/css/monzo-framework.min.css
+https://web.prod.prod-ffs.io/static/env.js
+https://web.prod.prod-ffs.io/static/fonts/maisonneueweb-bold-webfont.woff2
+https://web.prod.prod-ffs.io/static/fonts/maisonneueweb-book-webfont.woff2
+https://web.prod.prod-ffs.io/static/images/appstore.svg
+https://web.prod.prod-ffs.io/static/images/facebook.svg
+https://web.prod.prod-ffs.io/static/images/favicon.png
+https://web.prod.prod-ffs.io/static/images/linkedin.svg
+https://web.prod.prod-ffs.io/static/images/monzo.svg
+https://web.prod.prod-ffs.io/static/images/play-store.svg
+
+== HUNTING CHECKLIST ==
+[ ] IDOR: change object IDs in API calls (orders/users/files)
+[ ] Access control: access admin paths as regular user
+[ ] Info disclosure: /.git /.env /backup /api/docs /swagger
+[ ] Auth: JWT alg confusion, password reset poisoning
+[ ] Injection: ' OR 1=1-- in every parameter
+[ ] XSS: reflected params, search boxes, error pages
+[ ] Business logic: negative quantities, race conditions, coupon abuse
+[ ] Subdomain takeover: dangling CNAMEs on live_subs
+[ ] JS files: grep for api_key, token, internal endpoints

@@ -1,0 +1,156 @@
+# RECON REPORT — monzo.com
+# 2026-11-26T10:59:59.032209
+# ⚠ VERIFY SCOPE BEFORE ANY ACTIVE TESTING
+
+SCOPE CHECK: ✅ [('Monzo Bank', '*.monzo.com'), ('Monzo Bank', 'monzo.com')]
+
+== SUBDOMAINS (crt.sh passive) ==
+api.monzo.com
+auth-s101.monzo.com
+auth.monzo.com
+blog.monzo.com
+business-s101.monzo.com
+business.monzo.com
+citi-staging.monzo.com
+citi.monzo.com
+clicks-s101.monzo.com
+clicks-s102.monzo.com
+clicks.monzo.com
+community.monzo.com
+contentful-previews-whizzing-bedeck-mohawk.contentful-previews-s101.monzo.com
+contentful-previews-whizzing-bedeck-mohawk.contentful-previews-s102.monzo.com
+contentful-previews-whizzing-bedeck-mohawk.contentful-previews.monzo.com
+crawlme-s101.monzo.com
+crawlme.monzo.com
+director-sign-s101.monzo.com
+director-sign.monzo.com
+email.research.monzo.com
+eu.monzo.com
+fincrime-signals-staging.monzo.com
+fincrime-signals.monzo.com
+internal-api.monzo.com
+join-s101.monzo.com
+join.monzo.com
+law-enforcement.monzo.com
+login.internal-s101.monzo.com
+login.internal.monzo.com
+mailgun-clicks.email.monzo.com
+marketing.business.monzo.com
+merchant-logos-s101.monzo.com
+merchant-logos-s102.monzo.com
+merchant-logos.monzo.com
+monzo-com-s102.monzo.com
+monzo-pay-s101.monzo.com
+monzo-pay.monzo.com
+monzo.com
+ocsp.internal-s101.monzo.com
+ocsp.internal.monzo.com
+openbanking-qwac.eu.monzo.com
+openbanking-s101.eu.monzo.com
+openbanking.eu.monzo.com
+pay-s101.monzo.com
+pay.monzo.com
+preview.s101.monzo.com
+prod-api.monzo.com
+prod-web.monzo.com
+public-web-projects-preview-s101.monzo.com
+public-web-projects-preview-s102.monzo.com
+public-web-projects-preview.monzo.com
+reward-assets-02.monzo.com
+reward-assets.monzo.com
+s101-api.monzo.com
+s101-web.monzo.com
+s102-api.monzo.com
+s102-web.monzo.com
+small-business-spotlight.monzo.com
+spain-aeat-nrc.monzo.com
+staffonboarding-s101.monzo.com
+staffonboarding.monzo.com
+static-assets.monzo.com
+verify-s101.monzo.com
+verify.monzo.com
+vop.monzo.com
+web-s101.monzo.com
+web.monzo.com
+webviews-s101.monzo.com
+webviews.monzo.com
+www-s102.monzo.com
+www-test.monzo.com
+www.monzo.com
+
+LIVE SUBDOMAINS (24):
+api.monzo.com
+auth-s101.monzo.com
+auth.monzo.com
+blog.monzo.com
+business-s101.monzo.com
+business.monzo.com
+citi-staging.monzo.com
+citi.monzo.com
+clicks.monzo.com
+community.monzo.com
+crawlme-s101.monzo.com
+crawlme.monzo.com
+director-sign-s101.monzo.com
+director-sign.monzo.com
+email.research.monzo.com
+fincrime-signals-staging.monzo.com
+fincrime-signals.monzo.com
+internal-api.monzo.com
+join-s101.monzo.com
+join.monzo.com
+law-enforcement.monzo.com
+login.internal-s101.monzo.com
+login.internal.monzo.com
+mailgun-clicks.email.monzo.com
+
+== PORTS on monzo.com (light web scan) ==
+[80, 443]
+
+== HTTP PROBE https://monzo.com ==
+{
+  "status": 200,
+  "server": "?",
+  "powered_by": "?",
+  "cookies": "__monzo_locale_v1__=%7B%22lc%22%3A%22en-GB%22%2C%22sn%22%3A%22nextjs_i18n%22%2C%22sp%22%3A4%2C%22ts%22%3A1795591240490%7",
+  "missing_sec": [],
+  "tech": [
+    "next"
+  ],
+  "title": "Monzo | Open a Free Account"
+}
+
+== JS FILES (endpoint leak candidates) ==
+https://internal-api.monzo.com/static/util.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/ENASFKHu4OHNAtPzPVWxl/_buildManifest.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/ENASFKHu4OHNAtPzPVWxl/_ssgManifest.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/2768-b6189304d16ef785.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/3456-1cc4c2d3b7b75d90.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/3955-f145d0abb3833d79.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/5032-450f1cc068b8f3d6.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/5170-d7816fe2b6eca039.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/6386-abbcfc60e82f83ee.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/6800-1bb65e45d93ef4a5.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/7014-acefb3374bf651ba.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/7055-8cbd8d088fcac782.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/7235-84e744511934160d.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/7359-3fc8afc7f330b255.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/8283-4aaf96fea00a1864.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/8459-37d1e624a80601fe.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/9108-7bf0f65268c5cd4f.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/abe7ba4e-d017701ff47f4aeb.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/framework-900f5b27238d0c5b.js
+https://static-assets.monzo.com/monzo-com/200b145e14767bb396621512d300a0c688f9c7fb/_next/static/chunks/main-b0b63e897605eb84.js
+
+== WAYBACK URLS (historical endpoints) ==
+
+== HUNTING CHECKLIST ==
+[ ] IDOR: change object IDs in API calls (orders/users/files)
+[ ] Access control: access admin paths as regular user
+[ ] Info disclosure: /.git /.env /backup /api/docs /swagger
+[ ] Auth: JWT alg confusion, password reset poisoning
+[ ] Injection: ' OR 1=1-- in every parameter
+[ ] XSS: reflected params, search boxes, error pages
+[ ] Business logic: negative quantities, race conditions, coupon abuse
+[ ] Subdomain takeover: dangling CNAMEs on live_subs
+[ ] JS files: grep for api_key, token, internal endpoints

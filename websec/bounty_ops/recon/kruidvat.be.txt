@@ -1,0 +1,114 @@
+# RECON REPORT — kruidvat.be
+# 2026-11-26T11:18:35.053179
+# ⚠ VERIFY SCOPE BEFORE ANY ACTIVE TESTING
+
+SCOPE CHECK: ✅ [('Kruidvat (AS Watson)', '*.kruidvat.be')]
+
+== SUBDOMAINS (crt.sh passive) ==
+api-s1.kruidvat.be
+api.kruidvat.be
+app-cc.kruidvat.be
+app.kruidvat.be
+beauty.kruidvat.be
+campaign.kruidvat.be
+cartepostale.kruidvat.be
+cartridge.kruidvat.be
+cataloguedesjouets.kruidvat.be
+cataloguespecialjouets.kruidvat.be
+cewe.kruidvat.be
+cewetest.kruidvat.be
+depliantdejouets.kruidvat.be
+digital.kruidvat.be
+ecom-data.kruidvat.be
+ecom-static.kruidvat.be
+fb.kruidvat.be
+folder.kruidvat.be
+foto.kruidvat.be
+fotoservice.kruidvat.be
+fr.kruidvat.be
+kaartsturen.kruidvat.be
+klantenservice.kruidvat.be
+kruidvat.be
+m.mail.kruidvat.be
+magazine.kruidvat.be
+mail.kruidvat.be
+media-s1.kruidvat.be
+media.kruidvat.be
+mta-sts.cewe.kruidvat.be
+mta-sts.klantenservice.kruidvat.be
+mta-sts.kruidvat.be
+mta-sts.learning.kruidvat.be
+mta-sts.luiers.kruidvat.be
+mta-sts.mail.kruidvat.be
+mta-sts.serviceclientele.kruidvat.be
+nieuws.kruidvat.be
+online.kruidvat.be
+personnalisation.kruidvat.be
+persoonlijk-tst.kruidvat.be
+persoonlijk.kruidvat.be
+photo.kruidvat.be
+prod-cc.kruidvat.be
+res.mail.kruidvat.be
+service-photos.kruidvat.be
+service.kruidvat.be
+serviceclientele.kruidvat.be
+servicefr.kruidvat.be
+speelgoed.kruidvat.be
+speelgoedfolder.kruidvat.be
+speelgoedspecial.kruidvat.be
+static.kruidvat.be
+t.mail.kruidvat.be
+www-s1.kruidvat.be
+www.cartridge.kruidvat.be
+www.fr.kruidvat.be
+www.kruidvat.be
+www.static.kruidvat.be
+
+LIVE SUBDOMAINS (22):
+api-s1.kruidvat.be
+api.kruidvat.be
+app.kruidvat.be
+campaign.kruidvat.be
+cartridge.kruidvat.be
+cewe.kruidvat.be
+cewetest.kruidvat.be
+depliantdejouets.kruidvat.be
+digital.kruidvat.be
+ecom-data.kruidvat.be
+ecom-static.kruidvat.be
+fb.kruidvat.be
+folder.kruidvat.be
+foto.kruidvat.be
+fotoservice.kruidvat.be
+kruidvat.be
+m.mail.kruidvat.be
+magazine.kruidvat.be
+mail.kruidvat.be
+media-s1.kruidvat.be
+media.kruidvat.be
+mta-sts.cewe.kruidvat.be
+
+== PORTS on kruidvat.be (light web scan) ==
+[80, 443]
+
+== HTTP PROBE https://kruidvat.be ==
+{
+  "status": 403,
+  "error": "HTTP Error 403: Forbidden"
+}
+
+== JS FILES (endpoint leak candidates) ==
+ERROR: HTTP Error 403: Forbidden
+
+== WAYBACK URLS (historical endpoints) ==
+
+== HUNTING CHECKLIST ==
+[ ] IDOR: change object IDs in API calls (orders/users/files)
+[ ] Access control: access admin paths as regular user
+[ ] Info disclosure: /.git /.env /backup /api/docs /swagger
+[ ] Auth: JWT alg confusion, password reset poisoning
+[ ] Injection: ' OR 1=1-- in every parameter
+[ ] XSS: reflected params, search boxes, error pages
+[ ] Business logic: negative quantities, race conditions, coupon abuse
+[ ] Subdomain takeover: dangling CNAMEs on live_subs
+[ ] JS files: grep for api_key, token, internal endpoints

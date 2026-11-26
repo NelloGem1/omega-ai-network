@@ -1,0 +1,200 @@
+{
+  "alive": [
+    "typescript",
+    "csharp",
+    "fsharp",
+    "haskell",
+    "lisp",
+    "elixir",
+    "verilog",
+    "vhdl",
+    "basic"
+  ],
+  "dead": [],
+  "results": {
+    "sum_range": {
+      "10": {
+        "expected": "55",
+        "legs": {
+          "typescript": "55",
+          "csharp": "55",
+          "fsharp": "55",
+          "haskell": "55",
+          "lisp": "55",
+          "elixir": "55",
+          "verilog": "55",
+          "vhdl": "55",
+          "basic": "55"
+        },
+        "agree": true
+      },
+      "100": {
+        "expected": "5050",
+        "legs": {
+          "typescript": "5050",
+          "csharp": "5050",
+          "fsharp": "5050",
+          "haskell": "5050",
+          "lisp": "5050",
+          "elixir": "5050",
+          "verilog": "5050",
+          "vhdl": "5050",
+          "basic": "5050"
+        },
+        "agree": true
+      },
+      "1000": {
+        "expected": "500500",
+        "legs": {
+          "typescript": "500500",
+          "csharp": "500500",
+          "fsharp": "500500",
+          "haskell": "500500",
+          "lisp": "500500",
+          "elixir": "500500",
+          "verilog": "500500",
+          "vhdl": "500500",
+          "basic": "500500"
+        },
+        "agree": true
+      },
+      "9999": {
+        "expected": "49995000",
+        "legs": {
+          "typescript": "49995000",
+          "csharp": "49995000",
+          "fsharp": "49995000",
+          "haskell": "49995000",
+          "lisp": "49995000",
+          "elixir": "49995000",
+          "verilog": "49995000",
+          "vhdl": "49995000",
+          "basic": "49995000"
+        },
+        "agree": true
+      }
+    },
+    "is_prime": {
+      "2": {
+        "expected": "1",
+        "legs": {
+          "typescript": "1",
+          "csharp": "1",
+          "fsharp": "1",
+          "haskell": "1",
+          "lisp": "1",
+          "elixir": "1",
+          "verilog": "1",
+          "vhdl": "1",
+          "basic": "1"
+        },
+        "agree": true
+      },
+      "3": {
+        "expected": "1",
+        "legs": {
+          "typescript": "1",
+          "csharp": "1",
+          "fsharp": "1",
+          "haskell": "1",
+          "lisp": "1",
+          "elixir": "1",
+          "verilog": "1",
+          "vhdl": "1",
+          "basic": "1"
+        },
+        "agree": true
+      },
+      "4": {
+        "expected": "0",
+        "legs": {
+          "typescript": "0",
+          "csharp": "0",
+          "fsharp": "0",
+          "haskell": "0",
+          "lisp": "0",
+          "elixir": "0",
+          "verilog": "0",
+          "vhdl": "0",
+          "basic": "0"
+        },
+        "agree": true
+      },
+      "17": {
+        "expected": "1",
+        "legs": {
+          "typescript": "1",
+          "csharp": "1",
+          "fsharp": "1",
+          "haskell": "1",
+          "lisp": "1",
+          "elixir": "1",
+          "verilog": "1",
+          "vhdl": "1",
+          "basic": "1"
+        },
+        "agree": true
+      },
+      "97": {
+        "expected": "1",
+        "legs": {
+          "typescript": "1",
+          "csharp": "1",
+          "fsharp": "1",
+          "haskell": "1",
+          "lisp": "1",
+          "elixir": "1",
+          "verilog": "1",
+          "vhdl": "1",
+          "basic": "1"
+        },
+        "agree": true
+      },
+      "100": {
+        "expected": "0",
+        "legs": {
+          "typescript": "0",
+          "csharp": "0",
+          "fsharp": "0",
+          "haskell": "0",
+          "lisp": "0",
+          "elixir": "0",
+          "verilog": "0",
+          "vhdl": "0",
+          "basic": "0"
+        },
+        "agree": true
+      },
+      "7919": {
+        "expected": "1",
+        "legs": {
+          "typescript": "1",
+          "csharp": "1",
+          "fsharp": "1",
+          "haskell": "1",
+          "lisp": "1",
+          "elixir": "1",
+          "verilog": "1",
+          "vhdl": "1",
+          "basic": "1"
+        },
+        "agree": true
+      },
+      "104729": {
+        "expected": "1",
+        "legs": {
+          "typescript": "1",
+          "csharp": "1",
+          "fsharp": "1",
+          "haskell": "1",
+          "lisp": "1",
+          "elixir": "1",
+          "verilog": "1",
+          "vhdl": "1",
+          "basic": "1"
+        },
+        "agree": true
+      }
+    }
+  }
+}

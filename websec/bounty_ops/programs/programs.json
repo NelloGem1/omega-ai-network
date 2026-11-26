@@ -1,0 +1,54 @@
+{
+  "TestProgram": {
+    "platform": "intigriti",
+    "scope": [
+      "*.example.com",
+      "example.com"
+    ],
+    "added": "2026-11-26",
+    "status": "active"
+  },
+  "Trouw (DPG Media)": {
+    "platform": "intigriti",
+    "scope": [
+      "myaccount.trouw.nl",
+      "shop.trouw.nl",
+      "webwinkel.trouw.nl",
+      "www.trouw.nl",
+      "*.trouw.nl"
+    ],
+    "added": "2026-11-26",
+    "status": "active"
+  },
+  "Monzo Bank": {
+    "platform": "intigriti",
+    "scope": [
+      "*.monzo.com",
+      "*.prod-ffs.io",
+      "1052238659",
+      "co.uk.getmondo",
+      "www.monzo.com",
+      "monzo.com"
+    ],
+    "added": "2026-11-26",
+    "status": "active"
+  },
+  "Kruidvat (AS Watson)": {
+    "platform": "intigriti",
+    "scope": [
+      "*.kruidvat.nl",
+      "*.kruidvat.be",
+      "*.trekpleister.nl",
+      "api.kruidvat.nl",
+      "api.kruidvat.be",
+      "app.kruidvat.nl",
+      "app.kruidvat.be",
+      "www.kruidvat.nl",
+      "www.kruidvat.be",
+      "www.kruidvatkids.nl",
+      "www.prijsmepper.nl"
+    ],
+    "added": "2026-11-26",
+    "status": "active"
+  }
+}
