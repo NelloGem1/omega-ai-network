@@ -42,3 +42,40 @@ whether cookie auth is accepted (no Set-Cookie observed on 401s).
 Creating a Monzo account from Philippines likely impossible
 (UK residency required). Options: ask Intigriti/Monzo for test
 account, or report as misconfiguration with hypothesis.
+
+## UPDATE 2026-11-26 (hunt session 2)
+
+### internal-api endpoint map (all auth-gated, no bypass found)
+- /ping/whoami → 200 {"authenticated":false,"client_ip":"..."} — minor info leak
+- /accounts /pots /card/freeze /accounts/main-account /transactions/export → 401
+- /transactions /feed /balance → 400 missing account_id → 401 with param
+- /minimal-banking/{profile,is-verified,secure-account/cards,sessions,status} → 401
+- /user-images/profile_picture/user_<uuid> → NO AUTH, returns 404 not_found for
+  random UUIDs. Avatar endpoint keyed by user_<uuid>; unguessable IDs → likely
+  public-by-design, LOW value unless user_ids leak elsewhere.
+- Auth = Bearer header only (JS: authorization: Bearer <token>) → CORS cookie
+  impact hypothesis WEAKENS; token theft still possible via XSS+reflection.
+
+### Auth bypass attempts — ALL FAILED (auth solid)
+path tricks (case, trailing, ;, %, //), method override, XFF/X-Original-URL/
+X-Rewrite-URL/X-User-Id header spoof, Bearer null/empty → all 401/400 correctly.
+
+### OAuth surface (auth.monzo.com → api.monzo.com/login/*)
+- OIDC discovery public: issuer auth.monzo.com, ES256, pairwise subs
+- client_id: oauth2client_00009XXTN0biZ3vgvysb21 (web app)
+- redirect_uri registered: https://web.monzo.com/callback
+- authorize endpoint does NOT validate redirect_uri upfront (deferred to
+  post-login) — evil redirect URIs load login page fine. UNTESTABLE without
+  account; likely validated at code exchange.
+- static assets: static-assets.monzo.com
+
+### prod-ffs.io
+- web.prod.prod-ffs.io = Next.js 'minimal-banking' web app (Monzo web banking)
+- tools.* / payments.e.* hosts = connection timeout (IP allowlist, expected)
+- JS leaks: apiPath=https://internal-api.monzo.com/, authEndpoint, gitCommit
+- Deep links: monzo:// / monzostage:// schemes
+
+### Verdict
+CORS reflection remains the best finding (reportable misconfig, Medium-ish).
+No unauthenticated data exposure found. Auth layer is well-built.
+BLOCKER: all impactful testing needs a Monzo account (UK residency).
