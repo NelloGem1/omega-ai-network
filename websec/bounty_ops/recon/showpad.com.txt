@@ -1,0 +1,29 @@
+# RECON — showpad.com (Intigriti VDP) 2026-11-26
+61 subdomains. Key hosts:
+
+LIVE:
+- share.value.showpad.com → 'Value Factory' Next.js share app
+- api.value.showpad.com → 403 (main Value API, auth-gated)
+- api.dobby.showpad.com → AWS API Gateway 'Missing Authentication Token'
+- developer.showpad.com → Docusaurus docs (FULL API docs public!)
+- docs.api.showpad.com → 301→developer
+- wopi.showpad.com → Office Online integration (200)
+- schema.showpad.com → S3 bucket (AccessDenied listing)
+- webhooks.showpad.com → 404 root
+- graphql.showpad.com → connection dead (internal?)
+- meetings-service(.staging/.development) → exists
+- *.staging.showpad.com hosts = softer targets often
+
+DOCS: developer.showpad.com/docs/apis/ → v3/v4 REST API,
+OAuth2 client-credentials, SCIM user mgmt, webhooks, coach/content
+reporting, buyer-engagement shares API, showql, asset mgmt.
+
+ATTACK IDEAS:
+- share tokens/IDs on share.value.showpad.com (IDOR on shares)
+- staging.* environments weaker auth
+- webhooks signature validation
+- wopi endpoints (file access?)
+- api.dobby paths (API GW enum)
+- developer trial account → get API creds → test IDOR on shares
+
+NEED: Showpad trial account (free signup at showpad.com)
